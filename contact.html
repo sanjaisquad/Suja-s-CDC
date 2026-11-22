@@ -256,47 +256,79 @@
   <!-- FOOTER with organic shapes -->
   <footer class="footer" role="contentinfo">
     <div class="footer__shapes" aria-hidden="true">
-      <!-- Large 4-petal flower -->
-      <div class="footer__shape footer__shape--flower anim-fall-footer" data-delay="0">
-        <svg viewBox="0 0 200 200" fill="#C4D600"><ellipse cx="100" cy="35" rx="30" ry="55"/><ellipse cx="35" cy="100" rx="55" ry="30"/><ellipse cx="165" cy="100" rx="55" ry="30"/><ellipse cx="100" cy="165" rx="30" ry="55"/><circle cx="100" cy="100" r="25"/></svg>
+      <!-- 4-petal complete flower that spins slowly in place at footer base -->
+      <div class="footer__shape footer__shape--flower">
+        <svg viewBox="0 0 200 200" fill="#C4D600">
+          <ellipse cx="100" cy="42" rx="30" ry="42" />
+          <ellipse cx="42" cy="100" rx="42" ry="30" />
+          <ellipse cx="158" cy="100" rx="42" ry="30" />
+          <ellipse cx="100" cy="158" rx="30" ry="42" />
+          <circle cx="100" cy="100" r="26" fill="#C4D600" />
+        </svg>
       </div>
-      <!-- Large circle -->
-      <div class="footer__shape footer__shape--circle1 anim-fall-footer" data-delay="100">
-        <svg viewBox="0 0 120 120" fill="#C4D600"><circle cx="60" cy="60" r="58"/></svg>
+      <!-- 7-petals curvy flower that falls down on scroll -->
+      <div class="footer__shape footer__shape--flower7 anim-fall-footer" data-delay="340">
+        <svg viewBox="0 0 200 200" fill="#C4D600">
+          <g transform="translate(100, 100)">
+            <ellipse cx="0" cy="-52" rx="20" ry="36" />
+            <ellipse cx="0" cy="-52" rx="20" ry="36" transform="rotate(51.43)" />
+            <ellipse cx="0" cy="-52" rx="20" ry="36" transform="rotate(102.86)" />
+            <ellipse cx="0" cy="-52" rx="20" ry="36" transform="rotate(154.29)" />
+            <ellipse cx="0" cy="-52" rx="20" ry="36" transform="rotate(205.71)" />
+            <ellipse cx="0" cy="-52" rx="20" ry="36" transform="rotate(257.14)" />
+            <ellipse cx="0" cy="-52" rx="20" ry="36" transform="rotate(308.57)" />
+            <circle cx="0" cy="0" r="28" fill="#C4D600" />
+          </g>
+        </svg>
       </div>
-      <!-- Small circle -->
-      <div class="footer__shape footer__shape--circle2 anim-fall-footer" data-delay="150">
-        <svg viewBox="0 0 80 80" fill="#C4D600"><circle cx="40" cy="40" r="38"/></svg>
+      <!-- Search (magnifying glass) that falls down on scroll -->
+      <div class="footer__shape footer__shape--search anim-fall-footer" data-delay="220">
+        <svg viewBox="0 0 120 120" fill="none">
+          <circle cx="48" cy="48" r="32" stroke="#C4D600" stroke-width="14" />
+          <line x1="72" y1="72" x2="104" y2="104" stroke="#C4D600" stroke-width="16" stroke-linecap="round" />
+        </svg>
       </div>
-      <!-- Leaf 1 -->
-      <div class="footer__shape footer__shape--leaf1 anim-fall-footer" data-delay="180">
-        <svg viewBox="0 0 60 120" fill="#C4D600"><ellipse cx="30" cy="60" rx="28" ry="55"/></svg>
+      <!-- Square that falls down on scroll -->
+      <div class="footer__shape footer__shape--square anim-fall-footer" data-delay="150">
+        <svg viewBox="0 0 100 100" fill="#C4D600">
+          <rect x="14" y="14" width="72" height="72" rx="20" />
+        </svg>
       </div>
-      <!-- Leaf 2 rotated -->
-      <div class="footer__shape footer__shape--leaf2 anim-fall-footer" data-delay="220">
-        <svg viewBox="0 0 80 140" fill="#C4D600"><ellipse cx="40" cy="70" rx="35" ry="65" transform="rotate(-25 40 70)"/></svg>
+      <!-- + (plus sign) that falls down on scroll -->
+      <div class="footer__shape footer__shape--plus anim-fall-footer" data-delay="80">
+        <svg viewBox="0 0 100 100" fill="#C4D600">
+          <rect x="37" y="12" width="26" height="76" rx="13" />
+          <rect x="12" y="37" width="76" height="26" rx="13" />
+        </svg>
       </div>
-      <!-- Starburst -->
-      <div class="footer__shape footer__shape--star anim-fall-footer" data-delay="260">
-        <svg viewBox="0 0 140 140" fill="#C4D600"><polygon points="70,0 85,50 140,45 95,75 120,130 70,95 20,130 45,75 0,45 55,50"/></svg>
+      <!-- Arrow that falls down on scroll -->
+      <div class="footer__shape footer__shape--arrow anim-fall-footer" data-delay="280">
+        <svg viewBox="0 0 100 120" fill="#C4D600">
+          <path d="M14,14 L86,14 L86,58 L50,106 L14,58 Z" />
+        </svg>
       </div>
-      <!-- Tiny circle -->
-      <div class="footer__shape footer__shape--circle3 anim-fall-footer" data-delay="300">
-        <svg viewBox="0 0 50 50" fill="#C4D600"><circle cx="25" cy="25" r="23"/></svg>
+      <!-- Oval that falls down on scroll -->
+      <div class="footer__shape footer__shape--oval anim-fall-footer" data-delay="190">
+        <svg viewBox="0 0 80 140" fill="#C4D600">
+          <ellipse cx="40" cy="70" rx="34" ry="60" />
+        </svg>
       </div>
     </div>
 
     <div class="container">
       <div class="footer__content">
-        <!-- Logo -->
         <div class="footer__brand">
-          <div class="footer__logo-badge">
-            <img src="assets/logo.jpg" alt="" width="50" height="50">
-          </div>
+          <a href="index.html" class="footer__brand-link" aria-label="Suja's Child Development Centre Home">
+            <div class="footer__logo-badge">
+              <img src="assets/logo.jpg" alt="Suja's Child Development Centre Logo" width="48" height="48">
+            </div>
+            <div class="footer__brand-text">
+              <span class="footer__brand-name">Suja's</span>
+              <span class="footer__brand-sub">Child Dev Centre</span>
+            </div>
+          </a>
         </div>
-
-        <!-- Navigation columns -->
-        <nav class="footer__nav">
+        <nav class="footer__nav" aria-label="Footer navigation">
           <div class="footer__nav-col">
             <a href="index.html" class="footer__nav-link">Home</a>
             <a href="about.html" class="footer__nav-link">About</a>
@@ -308,33 +340,39 @@
             <a href="services.html" class="footer__nav-link">Occupational Therapy</a>
             <a href="services.html" class="footer__nav-link">Speech Therapy</a>
             <a href="contact.html" class="footer__nav-link">Book Consultation</a>
-            <a href="https://maps.app.goo.gl/KU3LuL8oiaaAWXEZA" target="_blank" class="footer__nav-link footer__nav-link--external">
+            <a href="https://maps.app.goo.gl/KU3LuL8oiaaAWXEZA" target="_blank" rel="noopener noreferrer"
+              class="footer__nav-link footer__nav-link--external">
               Visit Centre
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
             </a>
           </div>
         </nav>
-
-        <!-- Social links placeholder -->
         <div class="footer__social">
           <span class="footer__social-label">FACEBOOK</span>
           <span class="footer__social-label">INSTAGRAM</span>
         </div>
       </div>
-
-      <!-- Bottom bar -->
       <div class="footer__bottom">
-        <div class="footer__legal">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Use</a>
+        <div class="footer__bottom-left">
+          <div class="footer__legal">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-of-use.html">Terms of Use</a>
+          </div>
+          <p class="footer__copyright">&copy; 2026 Suja's Child Development Centre. All rights reserved.</p>
         </div>
-        <p class="footer__copyright">&copy; 2026 Suja's Child Development Centre. All rights reserved.</p>
+        <div class="footer__credit">
+          <span>Build by <a href="https://beyaincorp.com" target="_blank" rel="noopener noreferrer">Beyaincorp.com</a></span>
+        </div>
       </div>
     </div>
   </footer>
 
   <!-- MOBILE BOTTOM BAR -->
-  <nav class="bottom-bar" aria-label="Mobile quick actions">
+  <!-- <nav class="bottom-bar" aria-label="Mobile quick actions">
     <a href="contact.html" class="bottom-bar__item">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
       Book
@@ -351,7 +389,7 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
       Locate
     </a>
-  </nav>
+  </nav> -->
 
   <script src="js/main.js"></script>
 </body>

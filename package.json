@@ -1,0 +1,17 @@
+{
+  "name": "sujas-child-development-centre",
+  "version": "1.0.0",
+  "description": "Suja's Child Development Centre Website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "child-development",
+    "occupational-therapy",
+    "speech-therapy"
+  ],
+  "author": "Suja's CDC",
+  "license": "ISC"
+}
