@@ -1,21 +1,25 @@
 /* ============================================================
    MAIN JS — Suja's Child Development Centre
-   Scroll reveals, header behavior, mobile nav, contact form,
-   and brochure lightbox modal
+   Ecolevision-inspired animations and interactions
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
   initScrollReveal();
+  initFooterFallAnimation();
   initHeader();
   initMobileNav();
   initSmoothScroll();
   initContactForm();
   initLightbox();
+  initParallaxShapes();
+  initHeroCardHover();
 });
 
-/* ── Scroll Reveal (IntersectionObserver — triggers once) ── */
+/* ══════════════════════════════════════════════════════════
+   SCROLL REVEAL (IntersectionObserver with stagger)
+   ══════════════════════════════════════════════════════════ */
 function initScrollReveal() {
-  const reveals = document.querySelectorAll('.reveal, .reveal--scale, .reveal--left, .reveal--right');
+  const reveals = document.querySelectorAll('.reveal, .reveal--scale, .reveal--left, .reveal--right, .reveal--rotate');
   if (!reveals.length) return;
 
   // Respect prefers-reduced-motion
@@ -24,44 +28,100 @@ function initScrollReveal() {
     return;
   }
 
+  const observerOptions = {
+    threshold: 0.12,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
+        // Add stagger delay for children in stagger containers
+        const parent = entry.target.closest('.reveal-stagger');
+        if (parent) {
+          const siblings = Array.from(parent.querySelectorAll('.reveal, .reveal--scale, .reveal--left, .reveal--right'));
+          const index = siblings.indexOf(entry.target);
+          entry.target.style.transitionDelay = `${index * 80}ms`;
+        }
+
         entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target); // trigger once
+        observer.unobserve(entry.target);
       }
     });
-  }, {
-    threshold: 0.1,
-    rootMargin: '0px 0px -30px 0px'
-  });
+  }, observerOptions);
 
   reveals.forEach(el => observer.observe(el));
 }
 
-/* ── Header scroll behavior (background + shrink) ── */
+/* ══════════════════════════════════════════════════════════
+   FOOTER FALLING ANIMATION (IntersectionObserver)
+   ══════════════════════════════════════════════════════════ */
+function initFooterFallAnimation() {
+  const footerShapes = document.querySelectorAll('.anim-fall-footer');
+  if (!footerShapes.length) return;
+
+  // Respect prefers-reduced-motion
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    footerShapes.forEach(el => el.classList.add('is-visible'));
+    return;
+  }
+
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -100px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  footerShapes.forEach(el => observer.observe(el));
+}
+
+/* ══════════════════════════════════════════════════════════
+   HEADER (scroll behavior with smooth transitions)
+   ══════════════════════════════════════════════════════════ */
 function initHeader() {
   const header = document.querySelector('.header');
   if (!header) return;
 
-  const scrollThreshold = 40;
+  const scrollThreshold = 50;
+  let lastScroll = 0;
+  let ticking = false;
 
-  function onScroll() {
+  function updateHeader() {
     const scrollY = window.scrollY;
+
     if (scrollY > scrollThreshold) {
       header.classList.add('is-scrolled');
     } else {
       header.classList.remove('is-scrolled');
     }
+
+    lastScroll = scrollY;
+    ticking = false;
   }
 
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(updateHeader);
+      ticking = true;
+    }
+  }, { passive: true });
+
+  updateHeader();
 }
 
-/* ── Mobile Navigation (Ecolevision clip-path reveal) ── */
+/* ══════════════════════════════════════════════════════════
+   MOBILE NAVIGATION (Ecolevision clip-path curtain reveal)
+   ══════════════════════════════════════════════════════════ */
 function initMobileNav() {
-  const toggleBtn = document.querySelector('.header__menu-toggle');
+  const toggleBtn = document.querySelector('.header__menu-btn, .header__menu-toggle');
   const closeBtn = document.querySelector('.mobile-nav__close');
   const mobileNav = document.querySelector('.mobile-nav');
   const body = document.body;
@@ -70,16 +130,20 @@ function initMobileNav() {
 
   function openNav() {
     mobileNav.classList.add('is-open');
+    mobileNav.setAttribute('aria-hidden', 'false');
     body.style.overflow = 'hidden';
     toggleBtn.setAttribute('aria-expanded', 'true');
+
+    // Focus first link after animation
     setTimeout(() => {
       const firstLink = mobileNav.querySelector('.mobile-nav-link');
       if (firstLink) firstLink.focus();
-    }, 450);
+    }, 500);
   }
 
   function closeNav() {
     mobileNav.classList.remove('is-open');
+    mobileNav.setAttribute('aria-hidden', 'true');
     body.style.overflow = '';
     toggleBtn.setAttribute('aria-expanded', 'false');
     toggleBtn.focus();
@@ -88,22 +152,31 @@ function initMobileNav() {
   toggleBtn.addEventListener('click', openNav);
   if (closeBtn) closeBtn.addEventListener('click', closeNav);
 
+  // Close on link click
   mobileNav.querySelectorAll('.mobile-nav-link').forEach(link => {
-    link.addEventListener('click', closeNav);
+    link.addEventListener('click', () => {
+      setTimeout(closeNav, 100);
+    });
   });
 
+  // Close on Escape
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && mobileNav.classList.contains('is-open')) {
       closeNav();
     }
   });
 
+  // Close on CTA button click
   mobileNav.querySelectorAll('.btn').forEach(btn => {
-    btn.addEventListener('click', closeNav);
+    btn.addEventListener('click', () => {
+      setTimeout(closeNav, 100);
+    });
   });
 }
 
-/* ── Smooth Scroll & Pre-focus Form ── */
+/* ══════════════════════════════════════════════════════════
+   SMOOTH SCROLL & ACTIVE NAV STATE
+   ══════════════════════════════════════════════════════════ */
 function initSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
@@ -114,8 +187,8 @@ function initSmoothScroll() {
       if (!target) return;
 
       e.preventDefault();
-      const headerHeight = document.querySelector('.header')?.offsetHeight || 75;
-      const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight - 15;
+      const headerHeight = document.querySelector('.header')?.offsetHeight || 80;
+      const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight - 20;
 
       window.scrollTo({
         top: targetPosition,
@@ -127,17 +200,17 @@ function initSmoothScroll() {
       const matchingNav = document.querySelector(`.nav-link[href="${targetId}"]`);
       if (matchingNav) matchingNav.classList.add('is-active');
 
-      // Pre-focus inquiry form if clicking Book Consultation
+      // Focus form if clicking Book Consultation
       if (this.textContent.toLowerCase().includes('book') || targetId === '#contact-section') {
         setTimeout(() => {
           const nameInput = document.getElementById('contactName');
           if (nameInput) nameInput.focus();
-        }, 600);
+        }, 700);
       }
     });
   });
 
-  // Set active nav on scroll
+  // Active nav on scroll
   const sections = document.querySelectorAll('section[id], div[id]');
   if (sections.length) {
     const navObserver = new IntersectionObserver((entries) => {
@@ -149,13 +222,15 @@ function initSmoothScroll() {
           if (link) link.classList.add('is-active');
         }
       });
-    }, { threshold: 0.25, rootMargin: '-80px 0px -40% 0px' });
+    }, { threshold: 0.2, rootMargin: '-100px 0px -40% 0px' });
 
     sections.forEach(s => navObserver.observe(s));
   }
 }
 
-/* ── Contact Form (Zero-Backend: WhatsApp + Email redirect) ── */
+/* ══════════════════════════════════════════════════════════
+   CONTACT FORM (Zero-Backend WhatsApp + Email)
+   ══════════════════════════════════════════════════════════ */
 function initContactForm() {
   const form = document.getElementById('contactForm');
   if (!form) return;
@@ -214,6 +289,10 @@ function initContactForm() {
 
   function showError(field, message) {
     field.classList.add('is-error');
+    // Add shake animation
+    field.style.animation = 'shake 0.4s ease';
+    setTimeout(() => field.style.animation = '', 400);
+
     let errEl = field.parentElement.querySelector('.error-message');
     if (errEl) {
       errEl.textContent = message;
@@ -296,7 +375,9 @@ ${message}`;
   });
 }
 
-/* ── Lightbox for Clinic Board / Brochure ── */
+/* ══════════════════════════════════════════════════════════
+   LIGHTBOX for Clinic Board
+   ══════════════════════════════════════════════════════════ */
 function initLightbox() {
   const trigger = document.getElementById('openBoardLightbox');
   const modal = document.getElementById('boardLightboxModal');
@@ -306,15 +387,26 @@ function initLightbox() {
 
   function openModal() {
     modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
+    if (closeBtn) closeBtn.focus();
   }
 
   function closeModal() {
     modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
+    trigger.focus();
   }
 
   trigger.addEventListener('click', openModal);
+  trigger.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      openModal();
+    }
+  });
+
   if (closeBtn) closeBtn.addEventListener('click', closeModal);
 
   modal.addEventListener('click', (e) => {
@@ -327,3 +419,110 @@ function initLightbox() {
     }
   });
 }
+
+/* ══════════════════════════════════════════════════════════
+   PARALLAX ORGANIC SHAPES (subtle mouse/scroll movement)
+   ══════════════════════════════════════════════════════════ */
+function initParallaxShapes() {
+  const shapes = document.querySelectorAll('.hero__shape');
+  if (!shapes.length) return;
+
+  // Skip on reduced motion or touch devices
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if ('ontouchstart' in window) return;
+
+  let mouseX = 0;
+  let mouseY = 0;
+  let currentX = 0;
+  let currentY = 0;
+
+  document.addEventListener('mousemove', (e) => {
+    mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
+    mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
+  });
+
+  function animate() {
+    // Smooth interpolation
+    currentX += (mouseX - currentX) * 0.05;
+    currentY += (mouseY - currentY) * 0.05;
+
+    shapes.forEach((shape, i) => {
+      const factor = (i + 1) * 8;
+      const x = currentX * factor;
+      const y = currentY * factor;
+      shape.style.transform = `translate(${x}px, ${y}px)`;
+    });
+
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+}
+
+/* ══════════════════════════════════════════════════════════
+   HERO CARD HOVER (enhanced spring physics)
+   ══════════════════════════════════════════════════════════ */
+function initHeroCardHover() {
+  const cards = document.querySelectorAll('.hero__photo--1, .hero__photo--2, .hero__photo--3');
+  if (!cards.length) return;
+
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const rotations = {
+    'hero__photo--1': 'rotate(15deg)',
+    'hero__photo--2': 'rotate(-5deg)',
+    'hero__photo--3': 'rotate(3deg)'
+  };
+
+  cards.forEach((card) => {
+    let bounds;
+    const classList = Array.from(card.classList);
+    const photoClass = classList.find(c => c.startsWith('hero__photo--'));
+    const originalRotation = rotations[photoClass] || '';
+
+    function rotateCard(e) {
+      bounds = card.getBoundingClientRect();
+      const mouseX = e.clientX;
+      const mouseY = e.clientY;
+      const centerX = bounds.left + bounds.width / 2;
+      const centerY = bounds.top + bounds.height / 2;
+      const percentX = (mouseX - centerX) / (bounds.width / 2);
+      const percentY = (mouseY - centerY) / (bounds.height / 2);
+
+      const rotateX = percentY * -5;
+      const rotateY = percentX * 5;
+
+      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.03)`;
+    }
+
+    function resetCard() {
+      card.style.transform = originalRotation;
+    }
+
+    card.addEventListener('mouseenter', () => {
+      card.style.transition = 'transform 0.1s ease-out';
+    });
+
+    card.addEventListener('mousemove', rotateCard);
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transition = 'transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)';
+      resetCard();
+    });
+  });
+}
+
+/* ══════════════════════════════════════════════════════════
+   CSS KEYFRAME INJECTION (shake animation for form errors)
+   ══════════════════════════════════════════════════════════ */
+const style = document.createElement('style');
+style.textContent = `
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20% { transform: translateX(-8px); }
+    40% { transform: translateX(8px); }
+    60% { transform: translateX(-6px); }
+    80% { transform: translateX(6px); }
+  }
+`;
+document.head.appendChild(style);

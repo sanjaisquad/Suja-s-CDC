@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description"
+    content="Our Pediatric Services - Comprehensive occupational therapy, speech training, sensory integration, and child development support programs at Suja's Child Development Centre." />
+  <title>Services | Suja's Child Development Centre</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: '#F7F5EE',
+            forest: '#172B23',
+            limePlay: '#C4D600',
+            limeBright: '#B5DC17',
+            skyPlay: '#00A3E1',
+            roseHeart: '#F43F85',
+            sageSoft: '#E8F2DF',
+            periwinkle: '#D8E8F8',
+            sunny: '#FFD13B',
+            whatsapp: '#25D366',
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    /* =========================================================
+       DESIGN TOKENS & BASE STYLES
+    ========================================================== */
+    :root {
+      --color-cream: #F7F5EE;
+      --color-forest: #172B23;
+      --color-lime: #C4D600;
+      --color-lime-bright: #B5DC17;
+      --color-sky: #00A3E1;
+      --color-rose: #F43F85;
+      --color-sage: #E8F2DF;
+      --color-periwinkle: #D8E8F8;
+      --color-sunny: #FFD13B;
+      --color-whatsapp: #25D366;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--color-cream);
+      color: var(--color-forest);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+      margin: 0;
+      padding-bottom: 4.5rem;
+    }
+
+    @media (min-width: 768px) {
+      body {
+        padding-bottom: 0;
+      }
+    }
+
+    /* Skip Link */
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 1rem;
+      background: var(--color-forest);
+      color: #fff;
+      padding: 0.65rem 1.25rem;
+      border-radius: 9999px;
+      z-index: 100;
+      font-weight: 600;
+      transition: top 0.2s ease;
+    }
+
+    .skip-link:focus {
+      top: 1rem;
+    }
+
+    /* =========================================================
+       PRIMARY BUTTONS
+    ========================================================== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      font-weight: 700;
+      font-size: 0.875rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 0.9rem 1.75rem;
+      border-radius: 9999px;
+      transition: all 0.28s cubic-bezier(0.34, 1.56, 0.64, 1);
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .btn--primary {
+      background-color: var(--color-forest);
+      color: #ffffff;
+      box-shadow: 0 8px 20px rgba(23, 43, 35, 0.14);
+    }
+
+    .btn--primary:hover {
+      background-color: var(--color-rose);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px rgba(244, 63, 133, 0.24);
+    }
+
+    .btn--outline {
+      background-color: transparent;
+      color: var(--color-forest);
+      border: 1.5px solid rgba(23, 43, 35, 0.25);
+    }
+
+    .btn--outline:hover {
+      background-color: var(--color-forest);
+      color: #ffffff;
+    }
+
+    /* =========================================================
+       DISPLAY TYPOGRAPHY & INLINE ICON LETTERS
+    ========================================================== */
+    .services-display-title,
+    .services-therapy-title {
+      font-weight: 800;
+      color: var(--color-forest);
+      letter-spacing: -0.025em;
+      line-height: 1.05;
+    }
+
+    .services-display-title__line,
+    .services-therapy-title__line {
+      display: block;
+    }
+
+    .title-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      vertical-align: baseline;
+      margin: 0 0.03em;
+    }
+
+    .title-icon--leaf svg {
+      width: 0.34em;
+      height: 0.62em;
+      transform: translateY(0.04em) rotate(-8deg);
+    }
+
+    .title-icon--circle svg {
+      width: 0.44em;
+      height: 0.44em;
+      transform: translateY(0.02em);
+    }
+
+    /* =========================================================
+       OVERLAPPING THERAPY CIRCLES
+    ========================================================== */
+    .therapy-circle {
+      border-radius: 9999px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+    }
+
+    .therapy-circle:hover {
+      transform: translateY(-6px) scale(1.02);
+      z-index: 20;
+    }
+
+    .therapy-circle--1 {
+      background-color: #ffffff;
+      box-shadow: 0 18px 40px rgba(23, 43, 35, 0.07);
+    }
+
+    .therapy-circle--2 {
+      background-color: var(--color-lime);
+      box-shadow: 0 20px 44px rgba(196, 214, 0, 0.25);
+    }
+
+    .therapy-circle--3 {
+      background-color: #ffffff;
+      box-shadow: 0 18px 40px rgba(23, 43, 35, 0.07);
+    }
+
+    /* =========================================================
+       CONDITION / SPECIALTY PILL TAGS
+    ========================================================== */
+    .condition-tag {
+      background-color: #ffffff;
+      border: 1px solid rgba(23, 43, 35, 0.1);
+      color: var(--color-forest);
+      font-weight: 600;
+      font-size: 0.9375rem;
+      padding: 0.75rem 1.35rem;
+      border-radius: 9999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      box-shadow: 0 3px 10px rgba(23, 43, 35, 0.03);
+      transition: all 0.25s ease;
+    }
+
+    .condition-tag::before {
+      content: '';
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 9999px;
+      background-color: var(--color-lime);
+      flex-shrink: 0;
+      transition: background-color 0.25s ease, transform 0.25s ease;
+    }
+
+    .condition-tag:hover {
+      border-color: var(--color-forest);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(23, 43, 35, 0.07);
+    }
+
+    .condition-tag:hover::before {
+      background-color: var(--color-rose);
+      transform: scale(1.25);
+    }
+
+    .condition-tag--sign::before {
+      background-color: var(--color-sky);
+    }
+
+    /* =========================================================
+       ANIMATIONS & SCROLL REVEAL
+    ========================================================== */
+    @keyframes spinVerySlow {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes floatGentle {
+
+      0%,
+      100% {
+        transform: translateY(0px) rotate(0deg);
+      }
+
+      50% {
+        transform: translateY(-10px) rotate(4deg);
+      }
+    }
+
+    .animate-spin-slow {
+      animation: spinVerySlow 42s linear infinite;
+    }
+
+    .animate-float-gentle {
+      animation: floatGentle 6s ease-in-out infinite;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1), transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Custom Modal Toast for Interactive Preview Actions */
+    .preview-toast {
+      position: fixed;
+      bottom: 5.25rem;
+      right: 1.25rem;
+      background-color: var(--color-forest);
+      color: #ffffff;
+      padding: 0.9rem 1.35rem;
+      border-radius: 1.25rem;
+      box-shadow: 0 16px 36px rgba(23, 43, 35, 0.22);
+      z-index: 90;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transform: translateY(140%);
+      opacity: 0;
+      transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    @media (min-width: 768px) {
+      .preview-toast {
+        bottom: 1.5rem;
+      }
+    }
+
+    .preview-toast.is-shown {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body class="bg-cream text-forest antialiased selection:bg-roseHeart/20 selection:text-forest">
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- =========================================================
+       HEADER
+  ========================================================== -->
+  <header class="relative z-30 w-full bg-cream" role="banner">
+    <div class="max-w-[1380px] mx-auto px-5 sm:px-10 pt-6 pb-4 flex items-center justify-between">
+
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-3 group focus:outline-none"
+        aria-label="Suja's Child Development Centre Home">
+        <div
+          class="w-11 h-11 rounded-2xl bg-white/95 border border-forest/10 shadow-sm flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+          <svg viewBox="0 0 64 64" class="w-8 h-8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path
+              d="M32 54C32 54 10 40.5 10 23.5C10 16.5 15.5 11 22 11C26.2 11 29.8 13.2 32 16.5C34.2 13.2 37.8 11 42 11C48.5 11 54 16.5 54 23.5C54 40.5 32 54 32 54Z"
+              stroke="#F43F85" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="#FFF5F9" />
+            <circle cx="25" cy="24" r="3.5" fill="#00A3E1" />
+            <circle cx="39" cy="24" r="3.5" fill="#B5DC17" />
+            <path d="M19 36C20.5 31.5 23.5 30 25 30C26.5 30 29.5 31.5 31 36" stroke="#00A3E1" stroke-width="3.2"
+              stroke-linecap="round" />
+            <path d="M33 36C34.5 31.5 37.5 30 39 30C40.5 30 43.5 31.5 45 36" stroke="#84B800" stroke-width="3.2"
+              stroke-linecap="round" />
+            <circle cx="32" cy="19" r="2" fill="#FFD13B" />
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-[19px] sm:text-[21px] font-extrabold tracking-tight text-forest leading-none">
+            Suja's
+          </span>
+          <span class="text-[9.5px] sm:text-[10.5px] font-semibold tracking-[0.14em] text-forest/75 uppercase mt-1">
+            Child Dev Centre
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-8 lg:gap-11" aria-label="Main navigation">
+        <a href="index.html"
+          class="text-[15.5px] font-medium text-forest/80 hover:text-forest transition-colors py-1">Home</a>
+        <a href="about.html"
+          class="text-[15.5px] font-medium text-forest/80 hover:text-forest transition-colors py-1">About</a>
+        <a href="services.html"
+          class="text-[15.5px] font-bold text-forest relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2.5px] after:rounded-full after:bg-roseHeart"
+          aria-current="page">Services</a>
+        <a href="gallery.html"
+          class="text-[15.5px] font-medium text-forest/80 hover:text-forest transition-colors py-1">Gallery</a>
+        <a href="contact.html"
+          class="text-[15.5px] font-medium text-forest/80 hover:text-forest transition-colors py-1">Contact</a>
+      </nav>
+
+      <!-- Right Actions -->
+      <div class="flex items-center gap-2.5">
+        <a href="#book-consultation" data-demo-action="Our Centre — Chennai, Tamil Nadu"
+          class="inline-flex items-center gap-2 bg-white hover:bg-forest hover:text-white text-forest font-semibold text-[14px] sm:text-[15px] px-4 sm:px-5 py-2.5 sm:py-3 rounded-full border border-forest/15 shadow-[0_2px_10px_rgba(23,43,35,0.04)] transition-all duration-250 group">
+          <svg class="w-4 h-4 text-forest group-hover:text-limeBright transition-colors" viewBox="0 0 24 24"
+            fill="currentColor" aria-hidden="true">
+            <path
+              d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+          </svg>
+          <span>Our Centre</span>
+        </a>
+        <button id="openMobileNavBtn" type="button"
+          class="md:hidden px-4 py-2.5 rounded-full bg-forest text-white text-sm font-semibold hover:bg-roseHeart transition-colors"
+          aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+          Menu
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       MOBILE NAVIGATION DRAWER
+  ========================================================== -->
+  <div id="mobileNav" class="fixed inset-0 z-50 hidden bg-cream flex-col justify-between p-6 overflow-y-auto"
+    role="dialog" aria-label="Mobile navigation" aria-hidden="true">
+    <div class="flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3" aria-label="Home">
+        <div class="w-11 h-11 rounded-2xl bg-white border border-forest/10 flex items-center justify-center">
+          <svg viewBox="0 0 64 64" class="w-8 h-8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path
+              d="M32 54C32 54 10 40.5 10 23.5C10 16.5 15.5 11 22 11C26.2 11 29.8 13.2 32 16.5C34.2 13.2 37.8 11 42 11C48.5 11 54 16.5 54 23.5C54 40.5 32 54 32 54Z"
+              stroke="#F43F85" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="#FFF5F9" />
+            <circle cx="25" cy="24" r="3.5" fill="#00A3E1" />
+            <circle cx="39" cy="24" r="3.5" fill="#B5DC17" />
+            <path d="M19 36C20.5 31.5 23.5 30 25 30C26.5 30 29.5 31.5 31 36" stroke="#00A3E1" stroke-width="3.2"
+              stroke-linecap="round" />
+            <path d="M33 36C34.5 31.5 37.5 30 39 30C40.5 30 43.5 31.5 45 36" stroke="#84B800" stroke-width="3.2"
+              stroke-linecap="round" />
+            <circle cx="32" cy="19" r="2" fill="#FFD13B" />
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-xl font-extrabold text-forest leading-none">Suja's</span>
+          <span class="text-[10px] font-semibold tracking-[0.14em] text-forest/75 uppercase mt-1">Child Dev
+            Centre</span>
+        </div>
+      </a>
+      <button id="closeMobileNavBtn" type="button"
+        class="px-4 py-2 rounded-full bg-white border border-forest/15 text-sm font-semibold text-forest"
+        aria-label="Close menu">
+        Close
+      </button>
+    </div>
+
+    <nav class="flex flex-col gap-3 my-8" aria-label="Mobile menu links">
+      <a href="index.html" class="text-2xl font-bold text-forest/75 hover:text-forest py-2">Home</a>
+      <a href="about.html" class="text-2xl font-bold text-forest/75 hover:text-forest py-2">About</a>
+      <a href="services.html" class="text-2xl font-extrabold text-forest py-2 flex items-center gap-2">
+        <span>Services</span>
+        <span class="w-2.5 h-2.5 rounded-full bg-roseHeart"></span>
+      </a>
+      <a href="gallery.html" class="text-2xl font-bold text-forest/75 hover:text-forest py-2">Gallery</a>
+      <a href="contact.html" class="text-2xl font-bold text-forest/75 hover:text-forest py-2">Contact</a>
+    </nav>
+
+    <div class="flex flex-col gap-3">
+      <a href="#book-consultation" data-demo-action="Booking Consultation Form Opened"
+        class="btn btn--primary w-full">Book Consultation</a>
+      <a href="tel:+918682870313" class="btn btn--outline w-full">Call +91 86828 70313</a>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       MAIN CONTENT
+  ========================================================== -->
+  <main id="main-content">
+
+    <!-- =======================================================
+         1. SERVICES HERO SECTION (Untouched Layout & Copy)
+    ======================================================== -->
+    <section class="relative overflow-hidden pt-10 pb-20 sm:pt-16 sm:pb-28 lg:pt-20 lg:pb-32">
+      <div class="max-w-[1280px] mx-auto px-5 sm:px-10 relative z-10">
+        <div class="max-w-3xl">
+          <p class="text-[16px] sm:text-[18.5px] font-medium text-forest/80 leading-[1.6] max-w-xl mb-6 sm:mb-8">
+            We are committed to supporting children to achieve balanced development and to reach their full potential.
+          </p>
+          <h1
+            class="text-[42px] sm:text-[62px] md:text-[74px] lg:text-[84px] font-extrabold text-forest tracking-[-0.025em] leading-[1.06]">
+            Placing the child at<br />
+            the centre of their<br />
+            development
+          </h1>
+        </div>
+      </div>
+
+      <!-- Large Starburst Shape -->
+      <div
+        class="pointer-events-none select-none absolute -right-16 sm:-right-10 lg:right-[4%] top-1/2 -translate-y-1/2 w-60 h-60 sm:w-80 sm:h-80 lg:w-[420px] lg:h-[420px] opacity-95"
+        aria-hidden="true">
+        <svg viewBox="0 0 200 200" fill="#C4D600" class="w-full h-full animate-spin-slow">
+          <polygon
+            points="100,0 115,40 140,10 130,50 175,30 145,65 200,60 155,85 195,115 145,105 165,150 120,120 130,170 100,130 70,170 80,120 35,150 55,105 5,115 45,85 0,60 55,65 25,30 70,50 60,10 85,40" />
+        </svg>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         2. OUR PEDIATRIC SERVICES DISPLAY TITLE & OVERVIEW
+    ======================================================== -->
+    <section class="pt-4 pb-8 sm:pt-8 sm:pb-12">
+      <div class="max-w-[1280px] mx-auto px-5 sm:px-10">
+        <h2 class="services-display-title text-[46px] sm:text-[72px] md:text-[88px] lg:text-[104px]">
+          <span class="services-display-title__line">Our Pediatric</span>
+          <span class="services-display-title__line">
+            Services
+          </span>
+        </h2>
+      </div>
+    </section>
+
+    <section class="pb-14 sm:pb-20">
+      <div class="max-w-[1280px] mx-auto px-5 sm:px-10">
+        <p
+          class="reveal text-[20px] sm:text-[26px] lg:text-[30px] font-semibold text-forest/90 leading-[1.42] max-w-3xl">
+          Comprehensive occupational therapy, speech training, sensory integration, and child development support
+          programs.
+        </p>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         3. PILLAR 1: OCCUPATIONAL THERAPY & SENSORY INTEGRATION
+    ======================================================== -->
+    <section class="py-10 sm:py-16">
+      <div class="max-w-[1280px] mx-auto px-5 sm:px-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+
+          <!-- Left: White Card with Bespoke Inline SVG Illustration -->
+          <div class="lg:col-span-5 reveal">
+            <div
+              class="relative bg-white rounded-[32px] p-6 sm:p-8 shadow-[0_20px_50px_rgba(23,43,35,0.06)] border border-forest/5">
+              <!-- Blue Diamond Chevron -->
+              <div class="absolute -top-5 -left-4 w-11 h-11 animate-float-gentle" aria-hidden="true">
+                <svg viewBox="0 0 40 40" fill="#00A3E1" class="w-full h-full">
+                  <path d="M20,0 L40,20 L20,40 L0,20 Z" />
+                </svg>
+              </div>
+
+              <!-- Bespoke Sensory Gym & Fine Motor SVG -->
+              <div class="rounded-2xl bg-cream/80 p-6 flex items-center justify-center aspect-[4/3] overflow-hidden">
+                <svg viewBox="0 0 360 260" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  role="img" aria-label="Sensory gym balance blocks and fine motor play illustration">
+                  <!-- Soft ambient circles -->
+                  <circle cx="110" cy="120" r="78" fill="#D8E8F8" opacity="0.7" />
+                  <circle cx="255" cy="145" r="64" fill="#E8F2DF" opacity="0.9" />
+                  <!-- Sensory Therapy Swing / Arch -->
+                  <path d="M75 210 C75 110, 285 110, 285 210" stroke="#172B23" stroke-width="6" stroke-linecap="round"
+                    stroke-dasharray="10 10" opacity="0.2" />
+                  <!-- Stacked Tactile Blocks -->
+                  <rect x="92" y="164" width="84" height="36" rx="12" fill="#00A3E1" />
+                  <rect x="108" y="124" width="68" height="36" rx="12" fill="#F43F85" />
+                  <polygon points="142,84 172,120 112,120" fill="#FFD13B" />
+                  <!-- Balance Ball -->
+                  <circle cx="238" cy="166" r="34" fill="#C4D600" />
+                  <path d="M210 156 Q238 172 266 156" stroke="#172B23" stroke-width="3" stroke-linecap="round"
+                    opacity="0.35" />
+                  <!-- Pencil & Star for Fine Motor & School Readiness -->
+                  <rect x="206" y="72" width="64" height="16" rx="8" transform="rotate(-18 206 72)" fill="#172B23" />
+                  <polygon points="268,52 276,66 260,68" fill="#FFD13B" />
+                  <path d="M76 74 L80 84 L91 85 L82 92 L85 103 L76 97 L67 103 L70 92 L61 85 L72 84 Z" fill="#F43F85" />
+                </svg>
+              </div>
+
+              <div class="mt-5 pt-4 border-t border-forest/10 flex items-center justify-between">
+                <span class="text-sm font-bold text-forest">Sensory &amp; Motor Gym</span>
+                <a href="#book-consultation" data-demo-action="Occupational Therapy & Sensory Integration Consultation"
+                  class="inline-flex items-center gap-1.5 text-sm font-bold text-skyPlay hover:text-forest transition-colors">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                    <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2" />
+                    <path d="M10 8l6 4-6 4V8z" />
+                  </svg>
+                  Book Now
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Content & Bullets -->
+          <div class="lg:col-span-7 reveal">
+            <h3
+              class="text-[28px] sm:text-[36px] lg:text-[42px] font-extrabold text-forest tracking-[-0.02em] leading-[1.15]">
+              Occupational Therapy &amp; Sensory Integration
+            </h3>
+            <p class="mt-4 text-[16px] sm:text-[17.5px] text-forest/80 leading-[1.65]">
+              Active sensory gym therapies, motor planning, and fine motor exercises to build physical confidence,
+              focus, and daily independence.
+            </p>
+
+            <ul class="mt-6 mb-8 space-y-4 text-[15.5px] sm:text-[16.5px] text-forest/90 leading-[1.6]">
+              <li class="flex items-start gap-3.5">
+                <span class="mt-1.5 w-2.5 h-2.5 rounded-full bg-skyPlay shrink-0"></span>
+                <span><strong class="font-bold text-forest">Sensory Integration Therapy:</strong> Active sensory gym
+                  sessions helping children regulate sensory input, improve focus, and build spatial balance.</span>
+              </li>
+              <li class="flex items-start gap-3.5">
+                <span class="mt-1.5 w-2.5 h-2.5 rounded-full bg-roseHeart shrink-0"></span>
+                <span><strong class="font-bold text-forest">Occupational &amp; Fine Motor Practice:</strong> Targeted
+                  exercises for hand strength, pencil grip, handwriting practice, and daily self-care routines.</span>
+              </li>
+              <li class="flex items-start gap-3.5">
+                <span class="mt-1.5 w-2.5 h-2.5 rounded-full bg-limePlay shrink-0"></span>
+                <span><strong class="font-bold text-forest">Sitting Tolerance &amp; School Readiness:</strong>
+                  Structured play routines designed to build sitting duration, attention span, and classroom
+                  readiness.</span>
+              </li>
+            </ul>
+
+            <a href="#book-consultation" data-demo-action="Occupational Therapy Consultation" class="btn btn--primary">
+              Book Consultation
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         4. PILLAR 2: SPEECH & LANGUAGE THERAPY
+    ======================================================== -->
+    <section class="py-10 sm:py-16">
+      <div class="max-w-[1280px] mx-auto px-5 sm:px-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+
+          <!-- Left: White Card with Bespoke Inline SVG Illustration -->
+          <div class="lg:col-span-5 reveal">
+            <div
+              class="relative bg-white rounded-[32px] p-6 sm:p-8 shadow-[0_20px_50px_rgba(23,43,35,0.06)] border border-forest/5">
+              <!-- Lime Circle Accent -->
+              <div class="absolute -top-5 -left-4 w-11 h-11 animate-float-gentle" aria-hidden="true">
+                <svg viewBox="0 0 40 40" fill="#C4D600" class="w-full h-full">
+                  <circle cx="20" cy="20" r="20" />
+                </svg>
+              </div>
+
+              <!-- Bespoke Speech & Communication SVG -->
+              <div class="rounded-2xl bg-cream/80 p-6 flex items-center justify-center aspect-[4/3] overflow-hidden">
+                <svg viewBox="0 0 360 260" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  role="img" aria-label="Speech and language therapy communication bubbles illustration">
+                  <circle cx="220" cy="115" r="76" fill="#D8E8F8" opacity="0.65" />
+                  <circle cx="115" cy="155" r="58" fill="#FFF0F6" />
+                  <!-- Primary Speech Bubble -->
+                  <path
+                    d="M74 74 C74 58.5 86.5 46 102 46 H194 C209.5 46 222 58.5 222 74 V124 C222 139.5 209.5 152 194 152 H126 L94 176 V152 H102 C86.5 152 74 139.5 74 124 Z"
+                    fill="#00A3E1" />
+                  <!-- Sound Waves inside bubble -->
+                  <circle cx="118" cy="99" r="7" fill="#ffffff" />
+                  <path d="M138 83 C148 92 148 106 138 115" stroke="#ffffff" stroke-width="5" stroke-linecap="round" />
+                  <path d="M156 73 C172 88 172 110 156 125" stroke="#FFD13B" stroke-width="5" stroke-linecap="round" />
+                  <path d="M174 64 C195 84 195 114 174 134" stroke="#ffffff" stroke-width="5" stroke-linecap="round" />
+                  <!-- Response Bubble -->
+                  <rect x="166" y="138" width="124" height="68" rx="24" fill="#C4D600" />
+                  <polygon points="256,204 274,222 272,200" fill="#C4D600" />
+                  <!-- Heart & Musical/Speech Dots -->
+                  <path
+                    d="M228 186 C228 186 212 175 212 164 C212 158 216.5 154 221.5 154 C224.8 154 227.2 155.8 228 158 C228.8 155.8 231.2 154 234.5 154 C239.5 154 244 158 244 164 C244 175 228 186 228 186 Z"
+                    fill="#F43F85" />
+                </svg>
+              </div>
+
+              <div class="mt-5 pt-4 border-t border-forest/10 flex items-center justify-between">
+                <span class="text-sm font-bold text-forest">Speech &amp; Communication</span>
+                <a href="#book-consultation" data-demo-action="Speech & Language Therapy Consultation"
+                  class="inline-flex items-center gap-1.5 text-sm font-bold text-skyPlay hover:text-forest transition-colors">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                    <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2" />
+                    <path d="M10 8l6 4-6 4V8z" />
+                  </svg>
+                  Book Now
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Content & Bullets -->
+          <div class="lg:col-span-7 reveal">
+            <h3
+              class="text-[28px] sm:text-[36px] lg:text-[42px] font-extrabold text-forest tracking-[-0.02em] leading-[1.15]">
+              Speech &amp; Language Therapy
+            </h3>
+            <p class="mt-4 text-[16px] sm:text-[17.5px] text-forest/80 leading-[1.65]">
+              Interactive speech training to enhance vocabulary, speech clarity, oral motor control, and social
+              communication confidence.
+            </p>
+
+            <ul class="mt-6 mb-8 space-y-4 text-[15.5px] sm:text-[16.5px] text-forest/90 leading-[1.6]">
+              <li class="flex items-start gap-3.5">
+                <span class="mt-1.5 w-2.5 h-2.5 rounded-full bg-skyPlay shrink-0"></span>
+                <span><strong class="font-bold text-forest">Speech Training &amp; Articulation:</strong> Targeted
+                  exercises to improve sound production, word clarity, and expressive language skills.</span>
+              </li>
+              <li class="flex items-start gap-3.5">
+                <span class="mt-1.5 w-2.5 h-2.5 rounded-full bg-roseHeart shrink-0"></span>
+                <span><strong class="font-bold text-forest">Oral Stimulation &amp; Motor Therapy:</strong> Specialized
+                  oral stimulation techniques to support feeding, swallowing, and speech muscle coordination.</span>
+              </li>
+              <li class="flex items-start gap-3.5">
+                <span class="mt-1.5 w-2.5 h-2.5 rounded-full bg-limePlay shrink-0"></span>
+                <span><strong class="font-bold text-forest">Social Communication &amp; Fluency:</strong> Interactive
+                  sessions to build conversational skills, listening comprehension, and social confidence.</span>
+              </li>
+            </ul>
+
+            <a href="#book-consultation" data-demo-action="Speech & Language Therapy Consultation"
+              class="btn btn--primary">
+              Book Consultation
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         5. AUTISM CARE & BEHAVIORAL SUPPORT + SPECIAL EDUCATION
+            & PEDIATRIC PHYSICAL THERAPY (Sage Green Section)
+    ======================================================== -->
+    <section class="relative bg-sageSoft py-16 sm:py-24 lg:py-28 my-10 overflow-hidden">
+
+      <!-- Decorative Organic Shapes -->
+      <div class="pointer-events-none select-none" aria-hidden="true">
+        <div class="absolute top-12 right-6 sm:right-14 w-24 h-24 sm:w-32 sm:h-32 opacity-70 animate-spin-slow">
+          <svg viewBox="0 0 200 200" fill="#C4D600" class="w-full h-full">
+            <ellipse cx="100" cy="35" rx="30" ry="55" />
+            <ellipse cx="35" cy="100" rx="55" ry="30" />
+            <ellipse cx="165" cy="100" rx="55" ry="30" />
+            <ellipse cx="100" cy="165" rx="30" ry="55" />
+            <circle cx="100" cy="100" r="25" />
+          </svg>
+        </div>
+        <div class="absolute bottom-12 left-6 w-12 h-20 opacity-60 animate-float-gentle">
+          <svg viewBox="0 0 60 100" fill="#C4D600" class="w-full h-full">
+            <ellipse cx="30" cy="50" rx="28" ry="48" />
+          </svg>
+        </div>
+      </div>
+
+      <div class="max-w-[1280px] mx-auto px-5 sm:px-10 relative z-10">
+
+        <!-- Large Display Title -->
+        <h2 class="services-therapy-title text-[42px] sm:text-[66px] md:text-[82px] lg:text-[96px]">
+          <span class="services-therapy-title__line">Autism Care &amp;</span>
+          <span class="services-therapy-title__line">
+            Behav<span class="title-icon title-icon--circle" aria-hidden="true"><svg viewBox="0 0 60 60" fill="#C4D600">
+                <circle cx="30" cy="30" r="28" />
+              </svg></span>oral Support
+          </span>
+        </h2>
+
+        <!-- Intro + Overlapping Circular Cards Grid -->
+        <div class="mt-10 sm:mt-14 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+
+          <!-- Left: Intro Description & CTA -->
+          <div class="lg:col-span-4 reveal">
+            <p class="text-[18px] sm:text-[21px] font-semibold text-forest/90 leading-[1.55]">
+              Compassionate, evidence-based intervention programs for children with ASD, ADHD, and emotional regulation
+              needs.
+            </p>
+            <div class="mt-7">
+              <a href="#book-consultation" data-demo-action="Autism Care & Behavioral Support Consultation"
+                class="btn btn--primary">
+                Book Consultation
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: 3 Overlapping Circular Cards -->
+          <div class="lg:col-span-8 reveal">
+            <div class="flex flex-col md:flex-row items-center justify-center lg:justify-end">
+
+              <!-- Circle 1: Autism Care (ASD Support) -->
+              <div class="therapy-circle therapy-circle--1 w-64 h-64 sm:w-72 sm:h-72 relative z-10">
+                <span class="w-3 h-3 rounded-full bg-roseHeart mb-3"></span>
+                <h4 class="text-[18px] sm:text-[20px] font-extrabold text-forest leading-snug">
+                  Autism Care (ASD Support)
+                </h4>
+                <p class="mt-2.5 text-[13.5px] sm:text-[14px] text-forest/80 leading-[1.55]">
+                  Individualized therapy plans tailored to autism spectrum milestones, eye contact, and social
+                  engagement.
+                </p>
+              </div>
+
+              <!-- Circle 2: ADHD & Hyperactivity Support (Lime) -->
+              <div
+                class="therapy-circle therapy-circle--2 w-64 h-64 sm:w-72 sm:h-72 relative z-20 -mt-6 md:mt-12 md:-ml-7">
+                <span class="w-3 h-3 rounded-full bg-forest mb-3"></span>
+                <h4 class="text-[18px] sm:text-[20px] font-extrabold text-forest leading-snug">
+                  ADHD &amp; Hyperactivity Support
+                </h4>
+                <p class="mt-2.5 text-[13.5px] sm:text-[14px] text-forest/90 leading-[1.55]">
+                  Behavioral strategies to manage hyperactivity, reduce impulsivity, and channel active energy
+                  constructively.
+                </p>
+              </div>
+
+              <!-- Circle 3: Behavioral & Tantrum Management -->
+              <div
+                class="therapy-circle therapy-circle--3 w-64 h-64 sm:w-72 sm:h-72 relative z-10 -mt-6 md:mt-0 md:-ml-7">
+                <span class="w-3 h-3 rounded-full bg-skyPlay mb-3"></span>
+                <h4 class="text-[18px] sm:text-[20px] font-extrabold text-forest leading-snug">
+                  Behavioral &amp; Tantrum Management
+                </h4>
+                <p class="mt-2.5 text-[13.5px] sm:text-[14px] text-forest/80 leading-[1.55]">
+                  Nurturing techniques to address aggression, stubbornness, emotional regulation, and social behavior.
+                </p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Two-Column Block: Special Education & Pediatric Physical Therapy -->
+        <div
+          class="mt-16 sm:mt-24 pt-12 sm:pt-16 border-t border-forest/10 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+
+          <!-- Left: Media Card with Blue Magnifying Glass Shape -->
+          <div class="lg:col-span-5 reveal">
+            <div class="relative bg-white rounded-[32px] p-6 sm:p-8 shadow-[0_20px_50px_rgba(23,43,35,0.06)]">
+              <div class="relative rounded-2xl bg-cream/90 p-6 flex items-center justify-center aspect-[4/3]">
+                <!-- Bespoke Special Education & Brain Gym SVG -->
+                <svg viewBox="0 0 360 260" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  role="img" aria-label="Special education, brain gym, and pediatric physical therapy illustration">
+                  <circle cx="175" cy="130" r="88" fill="#E8F2DF" />
+                  <!-- Open Learning Book -->
+                  <path d="M84 166 C115 152, 150 156, 176 172 V102 C150 86, 115 82, 84 96 Z" fill="#ffffff"
+                    stroke="#172B23" stroke-width="3.5" stroke-linejoin="round" />
+                  <path d="M268 166 C237 152, 202 156, 176 172 V102 C202 86, 237 82, 268 96 Z" fill="#ffffff"
+                    stroke="#172B23" stroke-width="3.5" stroke-linejoin="round" />
+                  <!-- ABC & Cognitive Spark Nodes -->
+                  <text x="108" y="134" fill="#00A3E1" font-family="Plus Jakarta Sans, sans-serif" font-weight="800"
+                    font-size="22">ABC</text>
+                  <circle cx="212" cy="122" r="9" fill="#F43F85" />
+                  <circle cx="238" cy="134" r="9" fill="#C4D600" />
+                  <path d="M212 122 L238 134" stroke="#172B23" stroke-width="3" stroke-linecap="round" />
+                  <!-- Sunny Star above book -->
+                  <path d="M176 34 L183 50 L200 52 L187 63 L191 80 L176 71 L161 80 L165 63 L152 52 L169 50 Z"
+                    fill="#FFD13B" />
+                </svg>
+
+                <!-- Blue Magnifying Glass Shape -->
+                <div class="absolute -bottom-5 -right-4 w-16 h-16 sm:w-20 sm:h-20 bg-white rounded-2xl p-2.5 shadow-md"
+                  aria-hidden="true">
+                  <svg viewBox="0 0 100 100" fill="#00A3E1" class="w-full h-full">
+                    <circle cx="40" cy="40" r="32" fill="none" stroke="#00A3E1" stroke-width="9" />
+                    <line x1="64" y1="64" x2="92" y2="92" stroke="#00A3E1" stroke-width="12" stroke-linecap="round" />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="mt-5 pt-4 border-t border-forest/10 flex items-center justify-between">
+                <span class="text-sm font-bold text-forest">Learning &amp; Mobility</span>
+                <a href="#book-consultation"
+                  data-demo-action="Special Education & Pediatric Physical Therapy Consultation"
+                  class="inline-flex items-center gap-1.5 text-sm font-bold text-skyPlay hover:text-forest transition-colors">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                    <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2" />
+                    <path d="M10 8l6 4-6 4V8z" />
+                  </svg>
+                  Book Consultation
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Special Education & Pediatric Physical Therapy Details -->
+          <div class="lg:col-span-7 reveal">
+            <h3
+              class="text-[28px] sm:text-[36px] lg:text-[42px] font-extrabold text-forest tracking-[-0.02em] leading-[1.15]">
+              Special Education &amp; Pediatric Physical Therapy
+            </h3>
+            <p class="mt-4 text-[16px] sm:text-[17.5px] text-forest/85 leading-[1.65]">
+              Tailored academic strategies and physical rehabilitation for children with developmental delays, Cerebral
+              Palsy, and Down Syndrome.
+            </p>
+
+            <ul class="mt-6 mb-8 space-y-4 text-[15.5px] sm:text-[16.5px] text-forest/90 leading-[1.6]">
+              <li class="flex items-start gap-3.5">
+                <span class="mt-1.5 w-2.5 h-2.5 rounded-full bg-forest shrink-0"></span>
+                <span><strong class="font-bold text-forest">Special Education &amp; Learning Support:</strong>
+                  Customized educational support for reading, writing, dyslexia, and intellectual disabilities.</span>
+              </li>
+              <li class="flex items-start gap-3.5">
+                <span class="mt-1.5 w-2.5 h-2.5 rounded-full bg-skyPlay shrink-0"></span>
+                <span><strong class="font-bold text-forest">Pediatric Physiotherapy &amp; Physical Therapy:</strong>
+                  Physical rehabilitation for Cerebral Palsy, gross motor coordination, posture control, and
+                  mobility.</span>
+              </li>
+              <li class="flex items-start gap-3.5">
+                <span class="mt-1.5 w-2.5 h-2.5 rounded-full bg-roseHeart shrink-0"></span>
+                <span><strong class="font-bold text-forest">Brain Gym &amp; Cognitive Enhancement:</strong> Brain-body
+                  coordination exercises designed to enhance focus, memory, and cognitive processing.</span>
+              </li>
+            </ul>
+
+            <a href="#book-consultation" data-demo-action="Special Education & Physical Therapy Consultation"
+              class="btn btn--primary">
+              Book Consultation
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         6. COMPLETE CARE FOR CHILD DEVELOPMENT (3 Tag Grids)
+    ======================================================== -->
+    <section class="py-14 sm:py-24">
+      <div class="max-w-[1280px] mx-auto px-5 sm:px-10">
+
+        <div class="reveal max-w-2xl">
+          <h2
+            class="text-[34px] sm:text-[48px] lg:text-[56px] font-extrabold text-forest tracking-[-0.025em] leading-[1.1]">
+            Complete Care for Child Development
+          </h2>
+          <p class="mt-4 text-[16.5px] sm:text-[18px] text-forest/80 leading-[1.6]">
+            Expert multi-speciality pediatric therapies tailored to your child's growth and milestones.
+          </p>
+        </div>
+
+        <!-- Group 1: Specialized In (10 tags) -->
+        <div class="mt-10 sm:mt-12 reveal">
+          <h3 class="text-[20px] sm:text-[23px] font-extrabold text-forest mb-4">
+            Specialized In
+          </h3>
+          <div class="flex flex-wrap gap-3">
+            <span class="condition-tag">Autism Care</span>
+            <span class="condition-tag">Sensory Integration</span>
+            <span class="condition-tag">Speech Training</span>
+            <span class="condition-tag">Brain Gym Therapy</span>
+            <span class="condition-tag">School Readiness Program</span>
+            <span class="condition-tag">Vocational Training</span>
+            <span class="condition-tag">Feeding Therapy</span>
+            <span class="condition-tag">Oral Stimulation</span>
+            <span class="condition-tag">Sitting Tolerance Practice</span>
+            <span class="condition-tag">Handwriting Practice</span>
+          </div>
+        </div>
+
+        <!-- Group 2: We Deal With (9 tags) -->
+        <div class="mt-10 sm:mt-12 reveal">
+          <h3 class="text-[20px] sm:text-[23px] font-extrabold text-forest mb-4">
+            We Deal With
+          </h3>
+          <div class="flex flex-wrap gap-3">
+            <span class="condition-tag">ASD - Autism</span>
+            <span class="condition-tag">ADHD</span>
+            <span class="condition-tag">Developmental Delay</span>
+            <span class="condition-tag">Cerebral Palsy</span>
+            <span class="condition-tag">Intellectual Disability</span>
+            <span class="condition-tag">Reading &amp; Writing Difficulties</span>
+            <span class="condition-tag">Down Syndrome</span>
+            <span class="condition-tag">Learning Difficulties</span>
+            <span class="condition-tag">Behavioral Issues</span>
+          </div>
+        </div>
+
+        <!-- Group 3: Signs to Reach Us (8 tags) -->
+        <div class="mt-10 sm:mt-12 reveal">
+          <h3 class="text-[20px] sm:text-[23px] font-extrabold text-forest mb-4">
+            Signs to Reach Us
+          </h3>
+          <div class="flex flex-wrap gap-3">
+            <span class="condition-tag condition-tag--sign">Frequent Tantrums</span>
+            <span class="condition-tag condition-tag--sign">Aggressive Behavior</span>
+            <span class="condition-tag condition-tag--sign">Hyperactivity</span>
+            <span class="condition-tag condition-tag--sign">Stubbornness</span>
+            <span class="condition-tag condition-tag--sign">Delay in Development</span>
+            <span class="condition-tag condition-tag--sign">Delay in Speech</span>
+            <span class="condition-tag condition-tag--sign">Unclear Speech</span>
+            <span class="condition-tag condition-tag--sign">Lack of Eye Contact</span>
+          </div>
+        </div>
+
+        <!-- Final CTA -->
+        <div id="book-consultation" class="mt-12 reveal">
+          <a href="contact.html" data-demo-action="Consultation Request Ready — Call +91 86828 70313"
+            class="btn btn--primary">
+            Book Consultation
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================== -->
+  <footer class="relative bg-forest text-white pt-16 pb-12 overflow-hidden" role="contentinfo">
+
+    <!-- Falling Lime Organic Shapes -->
+    <div class="pointer-events-none select-none" aria-hidden="true">
+      <div class="absolute -top-10 right-[8%] w-28 h-28 sm:w-36 sm:h-36 opacity-90 animate-spin-slow">
+        <svg viewBox="0 0 200 200" fill="#C4D600" class="w-full h-full">
+          <ellipse cx="100" cy="35" rx="30" ry="55" />
+          <ellipse cx="35" cy="100" rx="55" ry="30" />
+          <ellipse cx="165" cy="100" rx="55" ry="30" />
+          <ellipse cx="100" cy="165" rx="30" ry="55" />
+          <circle cx="100" cy="100" r="25" />
+        </svg>
+      </div>
+      <div class="absolute top-24 right-[26%] w-12 h-12 opacity-85 animate-float-gentle">
+        <svg viewBox="0 0 120 120" fill="#C4D600" class="w-full h-full">
+          <circle cx="60" cy="60" r="58" />
+        </svg>
+      </div>
+      <div class="absolute bottom-14 right-[18%] w-10 h-20 opacity-80 rotate-12">
+        <svg viewBox="0 0 60 120" fill="#C4D600" class="w-full h-full">
+          <ellipse cx="30" cy="60" rx="28" ry="55" />
+        </svg>
+      </div>
+      <div class="absolute -bottom-8 left-[42%] w-24 h-24 opacity-85">
+        <svg viewBox="0 0 140 140" fill="#C4D600" class="w-full h-full">
+          <polygon points="70,0 85,50 140,45 95,75 120,130 70,95 20,130 45,75 0,45 55,50" />
+        </svg>
+      </div>
+    </div>
+
+    <div class="max-w-[1280px] mx-auto px-5 sm:px-10 relative z-10">
+      <div class="flex flex-col md:flex-row justify-between gap-12 pb-12 border-b border-white/15">
+
+        <!-- Brand Emblem -->
+        <div class="flex items-start gap-3.5">
+          <div class="w-12 h-12 rounded-2xl bg-white flex items-center justify-center shadow-md">
+            <svg viewBox="0 0 64 64" class="w-9 h-9" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path
+                d="M32 54C32 54 10 40.5 10 23.5C10 16.5 15.5 11 22 11C26.2 11 29.8 13.2 32 16.5C34.2 13.2 37.8 11 42 11C48.5 11 54 16.5 54 23.5C54 40.5 32 54 32 54Z"
+                stroke="#F43F85" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="#FFF5F9" />
+              <circle cx="25" cy="24" r="3.5" fill="#00A3E1" />
+              <circle cx="39" cy="24" r="3.5" fill="#B5DC17" />
+              <path d="M19 36C20.5 31.5 23.5 30 25 30C26.5 30 29.5 31.5 31 36" stroke="#00A3E1" stroke-width="3.2"
+                stroke-linecap="round" />
+              <path d="M33 36C34.5 31.5 37.5 30 39 30C40.5 30 43.5 31.5 45 36" stroke="#84B800" stroke-width="3.2"
+                stroke-linecap="round" />
+              <circle cx="32" cy="19" r="2" fill="#FFD13B" />
+            </svg>
+          </div>
+          <div>
+            <div class="text-xl font-extrabold tracking-tight text-white">Suja's</div>
+            <div class="text-[10.5px] font-semibold tracking-[0.14em] text-white/75 uppercase mt-1">Child Dev Centre
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Columns -->
+        <nav class="grid grid-cols-2 gap-10 sm:gap-16" aria-label="Footer navigation">
+          <div class="flex flex-col gap-3 text-[15px]">
+            <a href="index.html" class="text-white/80 hover:text-limePlay transition-colors">Home</a>
+            <a href="about.html" class="text-white/80 hover:text-limePlay transition-colors">About</a>
+            <a href="services.html" class="text-limePlay font-bold">Services</a>
+            <a href="gallery.html" class="text-white/80 hover:text-limePlay transition-colors">Gallery</a>
+            <a href="contact.html" class="text-white/80 hover:text-limePlay transition-colors">Contact</a>
+          </div>
+          <div class="flex flex-col gap-3 text-[15px]">
+            <a href="services.html" class="text-white/80 hover:text-limePlay transition-colors">Occupational Therapy</a>
+            <a href="services.html" class="text-white/80 hover:text-limePlay transition-colors">Speech Therapy</a>
+            <a href="#book-consultation" data-demo-action="Booking Consultation"
+              class="text-white/80 hover:text-limePlay transition-colors">Book Consultation</a>
+            <a href="https://maps.app.goo.gl/KU3LuL8oiaaAWXEZA" target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 text-white/80 hover:text-limePlay transition-colors">
+              <span>Visit Centre</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+            </a>
+          </div>
+        </nav>
+
+        <!-- Social Labels -->
+        <div class="flex md:flex-col gap-5 text-xs font-bold tracking-[0.16em] text-white/75">
+          <span class="hover:text-limePlay cursor-pointer transition-colors">FACEBOOK</span>
+          <span class="hover:text-limePlay cursor-pointer transition-colors">INSTAGRAM</span>
+        </div>
+      </div>
+
+      <!-- Bottom Legal & Copyright -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/65">
+        <div class="flex items-center gap-6">
+          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-white transition-colors">Terms of Use</a>
+        </div>
+        <p>&copy; 2026 Suja's Child Development Centre. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================
+       MOBILE BOTTOM QUICK-ACTION BAR
+  ========================================================== -->
+  <nav
+    class="md:hidden fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur-md border-t border-forest/10 px-2 py-2 grid grid-cols-4 gap-1 shadow-[0_-6px_20px_rgba(23,43,35,0.06)]"
+    aria-label="Mobile quick actions">
+    <a href="#book-consultation" data-demo-action="Booking Consultation"
+      class="flex flex-col items-center justify-center py-1 text-[11px] font-bold text-forest">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-5 h-5 mb-0.5">
+        <rect x="3" y="4" width="18" height="18" rx="2" />
+        <line x1="16" y1="2" x2="16" y2="6" />
+        <line x1="8" y1="2" x2="8" y2="6" />
+        <line x1="3" y1="10" x2="21" y2="10" />
+      </svg>
+      Book
+    </a>
+    <a href="https://wa.me/918682870313" target="_blank" rel="noopener noreferrer"
+      class="flex flex-col items-center justify-center py-1 text-[11px] font-bold" style="color: #25D366;">
+      <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 mb-0.5">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+      </svg>
+      WhatsApp
+    </a>
+    <a href="tel:+918682870313"
+      class="flex flex-col items-center justify-center py-1 text-[11px] font-bold text-forest">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-5 h-5 mb-0.5">
+        <path
+          d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+      </svg>
+      Call
+    </a>
+    <a href="https://maps.app.goo.gl/KU3LuL8oiaaAWXEZA" target="_blank" rel="noopener noreferrer"
+      class="flex flex-col items-center justify-center py-1 text-[11px] font-bold text-forest">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-5 h-5 mb-0.5">
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+        <circle cx="12" cy="10" r="3" />
+      </svg>
+      Locate
+    </a>
+  </nav>
+
+  <!-- Preview Feedback Toast -->
+  <div id="previewToast" class="preview-toast" role="status" aria-live="polite">
+    <span class="w-2.5 h-2.5 rounded-full bg-limePlay shrink-0"></span>
+    <span id="previewToastMsg">Suja's Child Development Centre</span>
+  </div>
+
+  <!-- =========================================================
+       INTERACTIVE SCRIPTS (Mobile Nav + IntersectionObserver)
+  ========================================================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Mobile Navigation Drawer Toggle
+      const openBtn = document.getElementById('openMobileNavBtn');
+      const closeBtn = document.getElementById('closeMobileNavBtn');
+      const mobileNav = document.getElementById('mobileNav');
+
+      function openMobileNav() {
+        if (!mobileNav) return;
+        mobileNav.classList.remove('hidden');
+        mobileNav.classList.add('flex');
+        mobileNav.setAttribute('aria-hidden', 'false');
+        if (openBtn) openBtn.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeMobileNav() {
+        if (!mobileNav) return;
+        mobileNav.classList.add('hidden');
+        mobileNav.classList.remove('flex');
+        mobileNav.setAttribute('aria-hidden', 'true');
+        if (openBtn) openBtn.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+
+      if (openBtn) openBtn.addEventListener('click', openMobileNav);
+      if (closeBtn) closeBtn.addEventListener('click', closeMobileNav);
+
+      // 2. Smooth Scroll Reveal via IntersectionObserver
+      const revealEls = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.12, rootMargin: '0px 0px -30px 0px' }
+        );
+        revealEls.forEach((el) => observer.observe(el));
+      } else {
+        revealEls.forEach((el) => el.classList.add('is-visible'));
+      }
+
+      // 3. Interactive Preview Toast Feedback for CTA buttons
+      const toast = document.getElementById('previewToast');
+      const toastMsg = document.getElementById('previewToastMsg');
+      let toastTimer = null;
+
+      document.querySelectorAll('[data-demo-action]').forEach((trigger) => {
+        trigger.addEventListener('click', (e) => {
+          const href = trigger.getAttribute('href') || '';
+          if (href.startsWith('#') || href === 'contact.html') {
+            e.preventDefault();
+            closeMobileNav();
+            const message = trigger.getAttribute('data-demo-action');
+            if (toast && toastMsg && message) {
+              toastMsg.textContent = message;
+              toast.classList.add('is-shown');
+              clearTimeout(toastTimer);
+              toastTimer = setTimeout(() => {
+                toast.classList.remove('is-shown');
+              }, 3400);
+            }
+          }
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

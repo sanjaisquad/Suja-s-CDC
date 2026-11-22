@@ -1,146 +1,205 @@
 /* ============================================================
    DESIGN TOKENS — Suja's Child Development Centre
-   Adapted from DESIGN.md with Ecolevision-inspired motion tokens
+   Ecolevision-exact design system with logo color integration
    ============================================================ */
 
 :root {
-  /* ── Brand Colors ── */
-  --color-primary:        #0095DA;
-  --color-primary-hover:  #007BB5;
-  --color-primary-light:  #EBF7FD;
-  --color-accent-magenta: #E91E8C;
-  --color-accent-green:   #5E9E2A;
-  --color-accent-gold:    #E08E00;
+  /* ══════════════════════════════════════════════════════════
+     ECOLEVISION COLOR PALETTE
+     ══════════════════════════════════════════════════════════ */
 
-  /* ── Surfaces ── */
-  --color-bg:        #FFFFFF;
-  --color-bg-warm:   #FAF8F3;
-  --surface-sky:     #EBF7FD;
-  --surface-rose:    #FFF0F7;
-  --surface-mint:    #EEF8E6;
-  --surface-honey:   #FFF7E6;
+  /* Core Ecolevision Colors (EXACT) */
+  --color-gable:      #162A24;  /* Deep forest charcoal - primary text */
+  --color-ecru:       #F7F5EE;  /* Warm cream - main background */
+  --color-white:      #FFFFFF;
+  --color-black:      #000000;
 
-  /* ── Text & Borders ── */
-  --color-text:           #0F2942;
-  --color-text-secondary: #4A5D73;
+  /* Accent Colors (EXACT) */
+  --color-wattle:     #B8E619;  /* Electric lime - primary accent */
+  --color-primrose:   #DEF2AC;  /* Light lime */
+  --color-cerulean:   #1FA2F3;  /* Sky blue - secondary accent */
+  --color-water:      #D0E5F4;  /* Light blue */
+  --color-tangerine:  #FFA06A;  /* Peach/orange */
+  --color-derby:      #FFDECB;  /* Light peach */
+  --color-melanie:    #F1B7DE;  /* Pink */
+  --color-wisp:       #FEDAF4;  /* Light pink */
+
+  /* Logo-derived Colors (mapped to Ecolevision style) */
+  --color-primary:        #1FA2F3;  /* Sky blue - exact Ecolevision */
+  --color-primary-hover:  #0090C8;
+  --color-primary-light:  #D0E5F4;
+
+  --color-accent:         #B8E619;  /* Electric lime - exact Ecolevision */
+  --color-accent-hover:   #A5D016;
+  --color-accent-light:   #DEF2AC;
+
+  --color-magenta:        #E91E8C;  /* From logo pink heart */
+  --color-magenta-light:  #FEDAF4;
+
+  --color-green:          #5E9E2A;  /* From logo green hands */
+  --color-green-light:    #DEF2AC;
+
+  --color-gold:           #FFA06A;  /* Tangerine - warm accent */
+  --color-gold-light:     #FFDECB;
+
+  /* Text Colors */
+  --color-text:           #162A24;  /* Deep forest charcoal - exact */
+  --color-text-secondary: rgba(22, 42, 36, 0.7);
+  --color-text-muted:     rgba(22, 42, 36, 0.5);
   --color-text-on-dark:   #FFFFFF;
-  --color-border:         #E2E8F0;
-  --color-border-warm:    #EADFC8;
+  --color-text-on-accent: #162A24;
 
-  /* ── WhatsApp ── */
+  /* Backgrounds */
+  --color-bg:             #F7F5EE;  /* Warm cream - exact */
+  --color-bg-white:       #FFFFFF;
+  --color-bg-dark:        #162A24;  /* Deep forest - footer/dark */
+  --color-bg-light:       #F7F5EE;
+
+  /* Borders */
+  --color-border:         rgba(22, 42, 36, 0.1);
+  --color-border-dark:    rgba(22, 42, 36, 0.2);
+
+  /* Functional */
   --color-whatsapp:       #25D366;
   --color-whatsapp-hover: #1DA851;
+  --color-error:          #DC2626;
+  --color-success:        #C4D600;
 
-  /* ── Radii (Ecolevision-inspired: generous, rounded) ── */
-  --radius-xs:   12px;
-  --radius-sm:   16px;
-  --radius-card: 28px;
-  --radius-lg:   40px;
-  --radius-xl:   100px;
-  --radius-pill: 9999px;
+  /* ══════════════════════════════════════════════════════════
+     BORDER RADII (Ecolevision: very rounded)
+     ══════════════════════════════════════════════════════════ */
+  --radius-xs:    1.5rem;   /* 24px */
+  --radius-sm:    2rem;     /* 32px */
+  --radius-md:    3rem;     /* 48px */
+  --radius-lg:    4rem;     /* 64px */
+  --radius-xl:    10rem;    /* 160px */
+  --radius-2xl:   100%;
+  --radius-pill:  100px;
 
-  /* ── Shadows ── */
-  --shadow-card: 0 10px 30px rgba(15, 41, 66, 0.06);
-  --shadow-soft: 0 4px 16px rgba(15, 41, 66, 0.05);
-  --shadow-nav:  0 0 30px 3px rgba(0, 0, 0, 0.05);
+  /* ══════════════════════════════════════════════════════════
+     SHADOWS (Ecolevision: soft, subtle)
+     ══════════════════════════════════════════════════════════ */
+  --shadow:       0 0 3rem 0.3rem rgba(0, 0, 0, 0.05);
+  --shadow-sm:    0 2px 8px rgba(19, 50, 43, 0.06);
+  --shadow-md:    0 4px 20px rgba(19, 50, 43, 0.08);
+  --shadow-lg:    0 8px 40px rgba(19, 50, 43, 0.1);
+  --shadow-card:  0 0 30px 3px rgba(0, 0, 0, 0.05);
 
-  /* ── Spacing Scale ── */
-  --space-3xs: 4px;
-  --space-2xs: 8px;
-  --space-xs:  12px;
-  --space-sm:  16px;
-  --space-md:  24px;
-  --space-lg:  32px;
-  --space-xl:  48px;
-  --space-2xl: 64px;
-  --space-3xl: 96px;
-  --space-4xl: 128px;
+  /* ══════════════════════════════════════════════════════════
+     SPACING (Ecolevision: generous, 40px base)
+     ══════════════════════════════════════════════════════════ */
+  --spacer:       3rem;     /* 48px base */
+  --spacer-3xs:   0.5rem;   /* 8px */
+  --spacer-2xs:   1rem;     /* 16px */
+  --spacer-xs:    1.5rem;   /* 24px */
+  --spacer-sm:    2rem;     /* 32px */
+  --spacer-md:    3rem;     /* 48px */
+  --spacer-lg:    4rem;     /* 64px */
+  --spacer-xl:    6rem;     /* 96px */
+  --spacer-2xl:   8.5rem;   /* 136px */
+  --spacer-3xl:   12rem;    /* 192px */
 
-  /* ── Container ── */
-  --container-max: 1280px;
-  --container-gap: 24px;
+  /* ══════════════════════════════════════════════════════════
+     CONTAINER & GRID
+     ══════════════════════════════════════════════════════════ */
+  --container-max:  1400px;
+  --container-gap:  1.5rem;
+  --grid-columns:   12;
+  --grid-gap:       1.5rem;
 
-  /* ── Typography ── */
-  --ff-body: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+  /* ══════════════════════════════════════════════════════════
+     TYPOGRAPHY (Ecolevision: Labil Grotesk style)
+     ══════════════════════════════════════════════════════════ */
+  --ff-body: 'Plus Jakarta Sans', 'Labil Grotesk', system-ui, sans-serif;
+
+  /* Weights */
   --fw-regular: 400;
   --fw-medium:  500;
   --fw-semi:    600;
   --fw-bold:    700;
   --fw-extra:   800;
 
-  /* Type Scale */
-  --fs-display: clamp(36px, 5vw, 56px);
-  --fs-h1:      clamp(32px, 4vw, 42px);
-  --fs-h2:      clamp(26px, 3vw, 32px);
-  --fs-h3:      clamp(20px, 2.2vw, 22px);
-  --fs-h4:      18px;
-  --fs-body-lg: 18px;
-  --fs-body:    16px;
-  --fs-small:   14px;
-  --fs-xs:      12px;
+  /* Font Sizes (Ecolevision scale) */
+  --fs-caption: 0.875rem;  /* 14px */
+  --fs-xs:      1rem;      /* 16px */
+  --fs-sm:      1.125rem;  /* 18px */
+  --fs-base:    1.25rem;   /* 20px */
+  --fs-md:      1.375rem;  /* 22px */
+  --fs-lg:      1.5rem;    /* 24px */
+  --fs-xl:      1.925rem;  /* 30.8px */
+  --fs-2xl:     2.64rem;   /* 42.2px */
+  --fs-3xl:     5.1rem;    /* 81.5px */
+  --fs-display: clamp(3rem, 8vw + 1rem, 12rem);  /* Oversized hero */
 
-  --lh-tight:   1.12;
-  --lh-heading: 1.2;
-  --lh-snug:    1.35;
-  --lh-body:    1.6;
-  --lh-relaxed: 1.5;
+  /* Line Heights */
+  --lh-none:    1;
+  --lh-tight:   1.1;
+  --lh-snug:    1.2;
+  --lh-normal:  1.4;
+  --lh-relaxed: 1.6;
 
-  --ls-display: -0.02em;
-  --ls-heading: -0.01em;
-  --ls-body:    0;
+  /* Letter Spacing */
+  --ls-tight:   -0.03em;
+  --ls-normal:  normal;
+  --ls-wide:    0.02em;
 
-  /* ── Z-Index ── */
-  --z-base:    1;
-  --z-dropdown:100;
-  --z-sticky:  200;
-  --z-nav:     300;
-  --z-modal:   400;
-  --z-toast:   500;
+  /* ══════════════════════════════════════════════════════════
+     Z-INDEX
+     ══════════════════════════════════════════════════════════ */
+  --z-behind:   -1;
+  --z-base:     1;
+  --z-hero:     50;
+  --z-dropdown: 100;
+  --z-header:   200;
+  --z-modal:    300;
+  --z-loader:   500;
 
-  /* ── Motion Tokens (Ecolevision-inspired) ── */
-  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
-  --ease-spring: cubic-bezier(0.34, 1.56, 0.61, 1.41);
-  --ease-smooth: cubic-bezier(0.77, 0, 0.175, 1);
-  --ease-default:ease;
+  /* ══════════════════════════════════════════════════════════
+     MOTION (Ecolevision-style)
+     ══════════════════════════════════════════════════════════ */
+  --ease-default: ease;
+  --ease-out:     cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring:  cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-smooth:  cubic-bezier(0.77, 0, 0.175, 1);
 
   --duration-fast:   150ms;
   --duration-normal: 300ms;
-  --duration-slow:   500ms;
-  --duration-reveal: 700ms;
-  --duration-long:   1000ms;
+  --duration-medium: 400ms;
+  --duration-slow:   600ms;
+  --duration-reveal: 800ms;
 
-  --stagger-step: 80ms;
+  --stagger-step: 100ms;
 }
 
-/* ── Responsive Container Gaps (Ecolevision-style) ── */
+/* Responsive adjustments */
 @media (min-width: 768px) {
   :root {
-    --container-gap: 40px;
-  }
-}
-@media (min-width: 1200px) {
-  :root {
-    --container-gap: 64px;
+    --container-gap: 2.5rem;
+    --grid-gap: 2.5rem;
   }
 }
 
-/* ── Reduced Motion ── */
+@media (min-width: 1024px) {
+  :root {
+    --container-gap: 4rem;
+    --grid-gap: 4rem;
+  }
+}
+
+/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   :root {
-    --duration-fast:   0ms;
+    --duration-fast: 0ms;
     --duration-normal: 0ms;
-    --duration-slow:   0ms;
+    --duration-medium: 0ms;
+    --duration-slow: 0ms;
     --duration-reveal: 0ms;
-    --duration-long:   0ms;
-    --stagger-step:    0ms;
+    --stagger-step: 0ms;
   }
 
-  *,
-  *::before,
-  *::after {
+  *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
   }
 }

@@ -1,957 +1,859 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="description" content="Suja's Child Development Centre — Comprehensive Occupational Therapy, Speech Therapy, Special Education & Early Intervention in Perumbakkam, Chennai. Led by Dr. J. Jansirani, B.O.T.">
-  <meta name="keywords" content="Child Development Centre Chennai, Occupational Therapy Perumbakkam, Speech Therapy Chennai, Early Intervention, Special Education, Autism Care, ADHD, Sensory Integration">
-  <meta name="author" content="Suja's Child Development Centre">
-  <meta name="theme-color" content="#0095DA">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suja's Child Dev Centre — Bringing Every Child Thrive</title>
 
-  <title>Suja's Child Development Centre — Bringing Every Child Thrive | Perumbakkam, Chennai</title>
-
-  <!-- Google Fonts: Plus Jakarta Sans -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Google Fonts: Plus Jakarta Sans for clean, modern geometric friendliness -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
 
   <!-- Core Design Tokens & Styles -->
-  <link rel="stylesheet" href="css/tokens.css">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg" />
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: '#F7F5EE',
+            forest: '#172B23',
+            limePlay: '#B5DC17',
+            skyPlay: '#00A3FF',
+            roseHeart: '#F43F85',
+            periwinkle: '#D8E8F8',
+            sunny: '#FFD13B',
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
 
-  <!-- Open Graph / Meta -->
-  <meta property="og:title" content="Suja's Child Development Centre — Bringing Every Child Thrive">
-  <meta property="og:description" content="Multi-speciality pediatric therapy centre in Perumbakkam, Chennai. Occupational Therapy, Speech Therapy, Special Education & Early Intervention.">
-  <meta property="og:image" content="assets/logo.jpg">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://sujaschilddevelopmentcenter.in">
+  <style>
+    /* Base typography & smooth rendering */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #F7F5EE;
+      color: #172B23;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Hero Headline Typography: Generous character gap & clean vertical clearance */
+    .hero-headline {
+      font-weight: 800;
+      color: #172B23;
+      letter-spacing: 0.015em;
+      line-height: 1.14;
+    }
+
+    /* Custom dotless 'i' with rose heart */
+    .heart-i-wrapper {
+      position: relative;
+      display: inline-block;
+      line-height: 1;
+    }
+
+    .rose-heart-dot {
+      position: absolute;
+      left: 50%;
+      top: -0.05em;
+      transform: translateX(-50%);
+      width: 0.25em;
+      height: 0.25em;
+      pointer-events: none;
+      animation: heartPulse 2.8s ease-in-out infinite;
+    }
+
+    @keyframes heartPulse {
+
+      0%,
+      100% {
+        transform: translateX(-50%) scale(1);
+      }
+
+      50% {
+        transform: translateX(-50%) scale(1.14);
+      }
+    }
+
+    /* Gentle organic floating animations for playful geometric shapes */
+    @keyframes floatSlow {
+
+      0%,
+      100% {
+        transform: translateY(0px) rotate(var(--rot, 0deg));
+      }
+
+      50% {
+        transform: translateY(-10px) rotate(calc(var(--rot, 0deg) + 3deg));
+      }
+    }
+
+    @keyframes floatReverse {
+
+      0%,
+      100% {
+        transform: translateY(0px) rotate(var(--rot, 0deg));
+      }
+
+      50% {
+        transform: translateY(9px) rotate(calc(var(--rot, 0deg) - 3deg));
+      }
+    }
+
+    @keyframes spinVerySlow {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .animate-float-slow {
+      animation: floatSlow 6s ease-in-out infinite;
+    }
+
+    .animate-float-reverse {
+      animation: floatReverse 7s ease-in-out infinite;
+    }
+
+    .animate-spin-slow {
+      animation: spinVerySlow 36s linear infinite;
+    }
+
+    /* Interactive hover delight on geometric shapes */
+    .play-shape {
+      transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.3s ease;
+      cursor: pointer;
+    }
+
+    .play-shape:hover {
+      transform: scale(1.08) rotate(6deg);
+      filter: drop-shadow(0 12px 20px rgba(23, 43, 35, 0.08));
+    }
+  </style>
 </head>
-<body>
 
-  <!-- Skip Navigation for Accessibility -->
-  <a href="#main-content" class="skip-link">Skip to main content</a>
+<body class="bg-cream text-forest antialiased selection:bg-roseHeart/20 selection:text-forest">
 
-  <!-- ============================================================
-       1. STICKY TOP NAVBAR
-       Ecolevision-inspired: fixed top, floating glass on scroll
-       ============================================================ -->
+  <!-- =========================================================
+       NAVIGATION HEADER (Solid background & z-30 keeps all hero
+       elements strictly underneath the navbar)
+  ========================================================== -->
+  <!-- HEADER -->
   <header class="header" role="banner">
-    <div class="container">
-      <div class="header__inner">
-        <div class="header__bg" aria-hidden="true"></div>
-
-        <!-- Logo -->
-        <a href="#" class="header__logo" aria-label="Suja's Child Development Centre Home">
-          <img src="assets/logo.jpg" alt="Suja's Child Development Centre Logo" class="header__logo-img" width="70" height="46">
-          <div class="header__logo-text">
-            Suja's Child Dev Centre
-            <span>Perumbakkam, Chennai</span>
-          </div>
-        </a>
-
-        <!-- Desktop Navigation -->
-        <nav class="header__nav" aria-label="Main navigation">
-          <a href="#hero" class="nav-link is-active">Home</a>
-          <a href="#about" class="nav-link">About</a>
-          <a href="#services" class="nav-link">Services</a>
-          <a href="#early-intervention" class="nav-link">Early Intervention</a>
-          <a href="#contact-section" class="nav-link">Contact</a>
-        </nav>
-
-        <!-- Desktop Action Buttons -->
-        <div class="header__actions">
-          <a href="#contact-section" class="btn btn--outline btn--sm">Contact Us</a>
-          <a href="#contact-section" class="btn btn--primary btn--sm">Book Consultation</a>
+    <div class="header__container">
+      <a href="index.html" class="header__logo" aria-label="Suja's Child Development Centre Home">
+        <div class="header__logo-badge">
+          <img src="assets/logo.jpg" alt="" width="44" height="44">
         </div>
-
-        <!-- Mobile Hamburger Toggle -->
-        <button class="header__menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
-          <div class="hamburger" aria-hidden="true">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+        <div class="header__logo-text">
+          <span class="header__logo-name">Suja's</span>
+          <span class="header__logo-sub">Child Dev Centre</span>
+        </div>
+      </a>
+      <nav class="header__nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-link is-active">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="header__actions">
+        <a href="contact.html" class="header__location-btn">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+            <path
+              d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+          </svg>
+          Our Centre
+        </a>
+        <button class="header__menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+          Menu
         </button>
       </div>
     </div>
   </header>
 
-  <!-- ============================================================
-       MOBILE NAVIGATION OVERLAY
-       Ecolevision clip-path polygon curtain reveal
-       ============================================================ -->
+  <!-- MOBILE NAV -->
   <div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Mobile navigation" aria-hidden="true">
     <div class="mobile-nav__header">
-      <a href="#" class="header__logo" aria-label="Home">
-        <img src="assets/logo.jpg" alt="Suja's Child Development Centre" class="header__logo-img" width="60" height="40">
+      <a href="index.html" class="header__logo" aria-label="Home">
+        <div class="header__logo-badge">
+          <img src="assets/logo.jpg" alt="" width="44" height="44">
+        </div>
         <div class="header__logo-text">
-          Suja's Child Dev Centre
-          <span>Perumbakkam, Chennai</span>
+          <span class="header__logo-name">Suja's</span>
+          <span class="header__logo-sub">Child Dev Centre</span>
         </div>
       </a>
-      <button class="mobile-nav__close" aria-label="Close menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-          <line x1="18" y1="6" x2="6" y2="18"/>
-          <line x1="6" y1="6" x2="18" y2="18"/>
-        </svg>
-      </button>
+      <button class="mobile-nav__close" aria-label="Close menu">Close</button>
     </div>
     <nav class="mobile-nav__body" aria-label="Mobile menu links">
-      <a href="#hero" class="mobile-nav-link">Home</a>
-      <a href="#about" class="mobile-nav-link">About</a>
-      <a href="#services" class="mobile-nav-link">Services</a>
-      <a href="#early-intervention" class="mobile-nav-link">Early Intervention</a>
-      <a href="#contact-section" class="mobile-nav-link">Contact</a>
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="about.html" class="mobile-nav-link">About</a>
+      <a href="services.html" class="mobile-nav-link">Services</a>
+      <a href="gallery.html" class="mobile-nav-link">Gallery</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
     </nav>
     <div class="mobile-nav__footer">
-      <a href="#contact-section" class="btn btn--primary" style="width:100%;">Book Consultation</a>
-      <a href="tel:+918682870313" class="btn btn--outline" style="width:100%;">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
-        </svg>
-        Call +91 86828 70313
-      </a>
+      <a href="contact.html" class="btn btn--primary" style="width:100%;">Book Consultation</a>
+      <a href="tel:+918682870313" class="btn btn--outline" style="width:100%;">Call +91 86828 70313</a>
     </div>
   </div>
 
-  <main id="main-content">
+  <!-- =========================================================
+       MAIN HERO SECTION
+       - Strictly positioned beneath the navbar (z-10)
+       - Includes "The SCDC Advantage" block below "Thrive"
+  ========================================================== -->
+  <section
+    class="relative z-10 min-h-[calc(100vh-92px)] flex flex-col justify-between px-5 sm:px-10 pt-32 sm:pt-40 lg:pt-48 pb-16 sm:pb-24 overflow-hidden">
 
-    <!-- ============================================================
-         2. HERO SECTION
-         Ecolevision-inspired: oversized dark headline with multi-hue
-         brand accents, organic floating blobs, and rotated photo cards
-         ============================================================ -->
-    <section class="hero" id="hero" aria-label="Welcome section">
-      <!-- Ambient organic shapes -->
-      <div class="hero__shapes" aria-hidden="true">
-        <div class="hero__shape hero__shape--1"></div>
-        <div class="hero__shape hero__shape--2"></div>
-        <div class="hero__shape hero__shape--3"></div>
-        <div class="hero__shape hero__shape--4"></div>
-      </div>
+    <!-- =======================================================
+         DECORATIVE ELEMENTS (Strictly below the navbar)
+    ======================================================== -->
+    <div aria-hidden="true" class="pointer-events-none select-none">
 
-      <div class="container">
-        <div class="hero__content reveal-stagger">
-          <!-- Badge / Eyebrow -->
-          <div class="hero__badge reveal">
-            <span class="badge">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-              </svg>
-              Led by Dr. J. Jansirani, B.O.T. • Perumbakkam, Chennai
-            </span>
-          </div>
 
-          <!-- Centered Title (H1) with Multi-Accent Styling -->
-          <h1 class="hero__title reveal">
-            Bringing Every Child <span class="word--blue">Thrive</span> — Our <span class="word--magenta">Pediatric</span> <span class="word--green">Therapy</span> Services
-          </h1>
-
-          <!-- Subtitle -->
-          <p class="hero__subtitle reveal">
-            Comprehensive Occupational Therapy, Speech Therapy, Special Education, Early Intervention, and Sensory Integration programs designed to help children <strong>play, learn, and grow together</strong>.
-          </p>
-
-          <!-- Hero CTAs -->
-          <div class="hero__ctas reveal">
-            <a href="#contact-section" class="btn btn--primary">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                <line x1="16" y1="2" x2="16" y2="6"/>
-                <line x1="8" y1="2" x2="8" y2="6"/>
-                <line x1="3" y1="10" x2="21" y2="10"/>
-              </svg>
-              BOOK CONSULTATION
-            </a>
-            <a href="tel:+918682870313" class="btn btn--outline">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
-              </svg>
-              CALL +91 86828 70313
-            </a>
-          </div>
-        </div>
-
-        <!-- Hero Rotated Photo Cards (Ecolevision signature style) -->
-        <div class="hero__photos reveal-stagger" aria-label="Therapy highlights">
-          <div class="hero__photo reveal--scale">
-            <img src="assets/hero-sensory.svg" alt="Sensory and motor gym activities for children" width="400" height="480">
-          </div>
-          <div class="hero__photo reveal--scale">
-            <img src="assets/hero-care.svg" alt="Dr. J. Jansirani, B.O.T. - Support, Guide, Build Skills, Grow" width="400" height="480">
-          </div>
-          <div class="hero__photo reveal--scale">
-            <img src="assets/hero-speech.svg" alt="Speech, language, and communication confidence therapy" width="400" height="480">
+      <!-- 1. Top-Left (Below Navbar): Tilted Rounded Square Block with Math Symbols -->
+      <div data-parallax="0.03"
+        class="parallax-item pointer-events-auto play-shape absolute top-24 sm:top-28 lg:top-32 left-[3%] sm:left-[5%] lg:left-[7%] w-20 h-20 sm:w-26 sm:h-26 lg:w-28 lg:h-28">
+        <div class="animate-float-slow w-full h-full" style="--rot: -12deg;">
+          <div
+            class="w-full h-full rounded-[22px] sm:rounded-[26px] bg-periwinkle flex flex-col items-center justify-center p-2 shadow-sm">
+            <div
+              class="flex items-center gap-1.5 text-forest font-extrabold text-sm sm:text-base lg:text-lg tracking-wider">
+              <span class="text-skyPlay">1</span>
+              <span class="text-roseHeart">+</span>
+              <span class="text-forest">2</span>
+            </div>
+            <div class="mt-1 flex items-center gap-1.5">
+              <span class="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-sunny"></span>
+              <span class="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-sm bg-limePlay rotate-12"></span>
+              <span class="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-roseHeart"></span>
+            </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- ============================================================
-         ABOUT & CORE PHILOSOPHY SECTION
-         ============================================================ -->
-    <section class="section" id="about" aria-label="About the centre">
-      <div class="container">
-        <div class="about-banner reveal">
-          <div>
-            <span class="section-label" style="color: var(--color-primary);">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
-              </svg>
-              Our Core Philosophy
-            </span>
-            <h2 class="mb-sm">Support • Guide • Build Skills • Grow</h2>
-            <p class="t-body-lg text-secondary mb-md">
-              At <strong>Suja's Child Development Centre (SCDC)</strong> in Perumbakkam, Chennai, we believe every child has unique strengths and potential. Led by <strong>Dr. J. Jansirani, B.O.T.</strong> (Bachelor of Occupational Therapy), our multidisciplinary centre combines evidence-based therapies, sensory-rich play environments, and individualized family-centered care.
-            </p>
-            <p class="text-secondary mb-lg">
-              Whether your child is facing developmental milestones delays, sensory sensitivities, speech clarity challenges, or social learning difficulties, our team creates a compassionate roadmap for their growth, independence, and happiness.
-            </p>
-            <div style="display:flex; gap: 12px; flex-wrap: wrap;">
-              <span class="badge badge--green">Occupational Therapy</span>
-              <span class="badge badge--magenta">Speech Therapy</span>
-              <span class="badge badge--gold">Special Education</span>
-              <span class="badge">Early Intervention</span>
-            </div>
-          </div>
-          <div class="about-banner__card">
-            <img src="assets/logo-tagline.jpg" alt="Suja's Child Development Centre Official Logo with 4 core therapy icons" width="500" height="440">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         3. CORE SERVICE SECTIONS (Alternating 2-Column Layout)
-         Sections A, B, C, D
-         ============================================================ -->
-    <div id="services">
-
-      <!-- Section A: Occupational Therapy & Sensory Integration -->
-      <section class="service-section" data-accent="blue" aria-label="Occupational Therapy &amp; Sensory Integration">
-        <div class="container">
-          <div class="service-section__grid">
-            <div class="service-section__image reveal--left">
-              <img src="assets/therapy-ot.svg" alt="Occupational Therapy and Sensory Integration active gym session" width="600" height="450">
-            </div>
-            <div class="service-section__content reveal--right">
-              <span class="section-label service-section__label">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                </svg>
-                Core Speciality
-              </span>
-              <h2>Occupational Therapy &amp; Sensory Integration</h2>
-              <p class="service-section__intro">
-                Active sensory gym therapies, motor planning, and fine motor exercises to build physical confidence, focus, and daily independence.
-              </p>
-
-              <div class="service-items reveal-stagger">
-                <div class="service-item reveal">
-                  <h4 class="service-item__title">
-                    <span style="color: var(--color-primary);">●</span>
-                    Sensory Integration Therapy
-                  </h4>
-                  <p class="service-item__desc">
-                    Active sensory gym sessions helping children with Sensory Processing Disorder regulate sensory input, improve focus, and build spatial balance.
-                  </p>
-                </div>
-                <div class="service-item reveal">
-                  <h4 class="service-item__title">
-                    <span style="color: var(--color-primary);">●</span>
-                    Occupational &amp; Fine Motor Practice
-                  </h4>
-                  <p class="service-item__desc">
-                    Targeted exercises for hand strength, pencil grip, handwriting practice, and daily self-care routines.
-                  </p>
-                </div>
-                <div class="service-item reveal">
-                  <h4 class="service-item__title">
-                    <span style="color: var(--color-primary);">●</span>
-                    Sitting Tolerance &amp; School Readiness
-                  </h4>
-                  <p class="service-item__desc">
-                    Structured play routines designed to build sitting duration, attention span, and classroom readiness.
-                  </p>
-                </div>
-              </div>
-
-              <div>
-                <a href="#contact-section" class="btn btn--primary mt-sm">BOOK CONSULTATION</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Section B: Speech & Language Therapy -->
-      <section class="service-section" data-accent="magenta" aria-label="Speech &amp; Language Therapy">
-        <div class="container">
-          <div class="service-section__grid">
-            <div class="service-section__image reveal--right">
-              <img src="assets/therapy-speech.svg" alt="Speech and Language Therapy interactive articulation session" width="600" height="450">
-            </div>
-            <div class="service-section__content reveal--left">
-              <span class="section-label service-section__label">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
-                </svg>
-                Communication &amp; Fluency
-              </span>
-              <h2>Speech &amp; Language Therapy</h2>
-              <p class="service-section__intro">
-                Interactive speech training to enhance vocabulary, speech clarity, oral motor control, and social communication confidence.
-              </p>
-
-              <div class="service-items reveal-stagger">
-                <div class="service-item reveal">
-                  <h4 class="service-item__title">
-                    <span style="color: var(--color-accent-magenta);">●</span>
-                    Speech Training &amp; Articulation
-                  </h4>
-                  <p class="service-item__desc">
-                    Targeted exercises to address speech disorders, improve sound production, word clarity, and expressive language skills.
-                  </p>
-                </div>
-                <div class="service-item reveal">
-                  <h4 class="service-item__title">
-                    <span style="color: var(--color-accent-magenta);">●</span>
-                    Oral Stimulation &amp; Motor Therapy
-                  </h4>
-                  <p class="service-item__desc">
-                    Specialized oral stimulation techniques to support feeding, swallowing, and speech muscle coordination.
-                  </p>
-                </div>
-                <div class="service-item reveal">
-                  <h4 class="service-item__title">
-                    <span style="color: var(--color-accent-magenta);">●</span>
-                    Social Communication &amp; Fluency
-                  </h4>
-                  <p class="service-item__desc">
-                    Interactive sessions to build conversational skills, listening comprehension, and social confidence.
-                  </p>
-                </div>
-              </div>
-
-              <div>
-                <a href="#contact-section" class="btn btn--primary mt-sm" style="background: var(--color-accent-magenta);">BOOK CONSULTATION</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Section C: Early Intervention & Neuro Developmental Therapy -->
-      <section class="service-section" data-accent="gold" id="early-intervention" aria-label="Early Intervention &amp; Neuro Developmental Therapy">
-        <div class="container">
-          <div class="service-section__grid">
-            <div class="service-section__image reveal--left">
-              <img src="assets/therapy-ei.svg" alt="Early Intervention and Neuro Developmental Therapy milestone ladder" width="600" height="450">
-            </div>
-            <div class="service-section__content reveal--right">
-              <span class="section-label service-section__label">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                Early Childhood Support (0–6 Years)
-              </span>
-              <h2>Early Intervention &amp; Neuro Developmental Therapy</h2>
-              <p class="service-section__intro">
-                Timely, nurturing early intervention programmes and neuro-developmental support to unlock foundational milestones during a child's most critical growth years.
-              </p>
-
-              <div class="service-items reveal-stagger">
-                <div class="service-item reveal">
-                  <h4 class="service-item__title">
-                    <span style="color: var(--color-accent-gold);">●</span>
-                    Early Intervention Programme
-                  </h4>
-                  <p class="service-item__desc">
-                    Holistic milestone tracking and play-based stimulation for infants and toddlers showing early developmental delays.
-                  </p>
-                </div>
-                <div class="service-item reveal">
-                  <h4 class="service-item__title">
-                    <span style="color: var(--color-accent-gold);">●</span>
-                    Neuro Developmental Therapy (NDT)
-                  </h4>
-                  <p class="service-item__desc">
-                    Specialized therapeutic handling and movement facilitation for children with neurological conditions and Cerebral Palsy.
-                  </p>
-                </div>
-                <div class="service-item reveal">
-                  <h4 class="service-item__title">
-                    <span style="color: var(--color-accent-gold);">●</span>
-                    Cognitive &amp; Play-Based Skill Building
-                  </h4>
-                  <p class="service-item__desc">
-                    Guided activities rooted in our <em>"Support • Guide • Build Skills • Grow"</em> philosophy to foster curiosity and independence.
-                  </p>
-                </div>
-              </div>
-
-              <div>
-                <a href="#contact-section" class="btn btn--primary mt-sm" style="background: var(--color-accent-gold);">BOOK CONSULTATION</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Section D: Behavioural Modification & Special Education -->
-      <section class="service-section" data-accent="green" aria-label="Behavioural Modification &amp; Special Education">
-        <div class="container">
-          <div class="service-section__grid">
-            <div class="service-section__image reveal--right">
-              <img src="assets/therapy-se.svg" alt="Behavioural Modification and Special Education structured learning session" width="600" height="450">
-            </div>
-            <div class="service-section__content reveal--left">
-              <span class="section-label service-section__label">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/>
-                </svg>
-                Behavior &amp; Academic Learning
-              </span>
-              <h2>Behavioural Modification &amp; Special Education</h2>
-              <p class="service-section__intro">
-                Compassionate, individualized behavioral strategies and remedial academic support for children with Autism, ADHD, and learning disabilities.
-              </p>
-
-              <div class="service-items reveal-stagger">
-                <div class="service-item reveal">
-                  <h4 class="service-item__title">
-                    <span style="color: var(--color-accent-green);">●</span>
-                    Autism (ASD) &amp; ADHD Care
-                  </h4>
-                  <p class="service-item__desc">
-                    Individualized therapy plans tailored to autism spectrum milestones, eye contact, hyperactivity management, and social engagement.
-                  </p>
-                </div>
-                <div class="service-item reveal">
-                  <h4 class="service-item__title">
-                    <span style="color: var(--color-accent-green);">●</span>
-                    Behavioural Modification Therapy
-                  </h4>
-                  <p class="service-item__desc">
-                    Nurturing, evidence-based techniques to address behavioral disorders, tantrums, impulsivity, and emotional regulation.
-                  </p>
-                </div>
-                <div class="service-item reveal">
-                  <h4 class="service-item__title">
-                    <span style="color: var(--color-accent-green);">●</span>
-                    Special Education &amp; Learning Support
-                  </h4>
-                  <p class="service-item__desc">
-                    Customized educational strategies for children with Learning Disabilities, Intellectual Disability, and reading/writing difficulties.
-                  </p>
-                </div>
-              </div>
-
-              <div>
-                <a href="#contact-section" class="btn btn--primary mt-sm" style="background: var(--color-accent-green);">BOOK CONSULTATION</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-    </div><!-- /#services -->
-
-    <!-- ============================================================
-         4. COMPLETE CARE OVERVIEW (3-Column Grid)
-         ============================================================ -->
-    <section class="overview" aria-label="Complete Care Overview">
-      <div class="container">
-        <div class="overview__header reveal">
-          <span class="section-label" style="color: var(--color-primary);">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-            </svg>
-            Comprehensive Pediatric Support
+      <!-- 2. Mid-Left: Bold Multi-Pointed Lime Starburst -->
+      <div data-parallax="-0.04"
+        class="parallax-item pointer-events-auto play-shape absolute top-[40%] sm:top-[38%] -left-10 sm:left-[1.5%] lg:left-[3.5%] w-28 h-28 sm:w-40 sm:h-40 lg:w-48 lg:h-48">
+        <svg viewBox="0 0 220 220" class="w-full h-full animate-spin-slow" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <polygon
+            points="110,6 123,54 156,16 151,65 194,42 172,87 216,81 180,115 218,127 173,144 202,172 155,170 171,208 130,187 129,218 103,187 86,216 76,178 44,199 52,158 12,163 39,131 4,116 44,98 18,69 64,71 53,29 91,53"
+            fill="#B5DC17" />
+        </svg>
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <span class="text-[10px] sm:text-[12px] lg:text-[13px] font-bold text-forest tracking-wide -rotate-6">
+            Play &amp; Learn
           </span>
-          <h2>Complete Care for Child Development</h2>
-          <p>Play • Learn • Grow Together — Multi-speciality pediatric support in Perumbakkam, Chennai.</p>
-        </div>
-
-        <div class="overview__grid reveal-stagger">
-
-          <!-- Column 1: Specialized Therapies & Services -->
-          <div class="overview__column reveal">
-            <h3 class="overview__column-title">
-              <span class="overview__column-icon" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                  <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>
-                </svg>
-              </span>
-              Specialized Therapies &amp; Services
-            </h3>
-            <ul class="overview__list">
-              <li class="overview__list-item"><span class="overview__list-item__bullet" aria-hidden="true"></span>Occupational Therapy</li>
-              <li class="overview__list-item"><span class="overview__list-item__bullet" aria-hidden="true"></span>Speech Therapy</li>
-              <li class="overview__list-item"><span class="overview__list-item__bullet" aria-hidden="true"></span>Special Education</li>
-              <li class="overview__list-item"><span class="overview__list-item__bullet" aria-hidden="true"></span>Early Intervention Programme</li>
-              <li class="overview__list-item"><span class="overview__list-item__bullet" aria-hidden="true"></span>Neuro Developmental Therapy</li>
-              <li class="overview__list-item"><span class="overview__list-item__bullet" aria-hidden="true"></span>Behavioural Modification Therapy</li>
-              <li class="overview__list-item"><span class="overview__list-item__bullet" aria-hidden="true"></span>Sensory Integration Therapy</li>
-              <li class="overview__list-item"><span class="overview__list-item__bullet" aria-hidden="true"></span>Sitting Tolerance &amp; School Readiness</li>
-              <li class="overview__list-item"><span class="overview__list-item__bullet" aria-hidden="true"></span>Oral Stimulation &amp; Feeding Therapy</li>
-              <li class="overview__list-item"><span class="overview__list-item__bullet" aria-hidden="true"></span>Handwriting &amp; Fine Motor Practice</li>
-            </ul>
-          </div>
-
-          <!-- Column 2: Conditions We Support -->
-          <div class="overview__column reveal">
-            <h3 class="overview__column-title">
-              <span class="overview__column-icon" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                  <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
-                </svg>
-              </span>
-              Conditions We Support
-            </h3>
-            <ul class="overview__list">
-              <li class="overview__list-item"><span class="overview__list-item__bullet" aria-hidden="true"></span>Autism (ASD)</li>
-              <li class="overview__list-item"><span class="overview__list-item__bullet" aria-hidden="true"></span>ADHD</li>
-              <li class="overview__list-item"><span class="overview__list-item__bullet" aria-hidden="true"></span>Developmental Delay</li>
-              <li class="overview__list-item"><span class="overview__list-item__bullet" aria-hidden="true"></span>Cerebral Palsy</li>
-              <li class="overview__list-item"><span class="overview__list-item__bullet" aria-hidden="true"></span>Sensory Processing Disorder</li>
-              <li class="overview__list-item"><span class="overview__list-item__bullet" aria-hidden="true"></span>Speech Disorder</li>
-              <li class="overview__list-item"><span class="overview__list-item__bullet" aria-hidden="true"></span>Learning Disability</li>
-              <li class="overview__list-item"><span class="overview__list-item__bullet" aria-hidden="true"></span>Behavioural Disorder</li>
-              <li class="overview__list-item"><span class="overview__list-item__bullet" aria-hidden="true"></span>Neurological Disorder</li>
-              <li class="overview__list-item"><span class="overview__list-item__bullet" aria-hidden="true"></span>Intellectual Disability</li>
-            </ul>
-          </div>
-
-          <!-- Column 3: Signs to Reach Us -->
-          <div class="overview__column reveal">
-            <h3 class="overview__column-title">
-              <span class="overview__column-icon" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                  <circle cx="12" cy="12" r="10"/>
-                  <line x1="12" y1="8" x2="12" y2="12"/>
-                  <line x1="12" y1="16" x2="12.01" y2="16"/>
-                </svg>
-              </span>
-              Signs to Reach Us
-            </h3>
-            <ul class="overview__list">
-              <li class="overview__list-item"><span class="overview__list-item__bullet" aria-hidden="true"></span>Delay in Speech or Unclear Speech</li>
-              <li class="overview__list-item"><span class="overview__list-item__bullet" aria-hidden="true"></span>Delay in Developmental Milestones</li>
-              <li class="overview__list-item"><span class="overview__list-item__bullet" aria-hidden="true"></span>Lack of Eye Contact or Social Response</li>
-              <li class="overview__list-item"><span class="overview__list-item__bullet" aria-hidden="true"></span>Hyperactivity &amp; Restlessness</li>
-              <li class="overview__list-item"><span class="overview__list-item__bullet" aria-hidden="true"></span>Frequent Tantrums or Behavioral Challenges</li>
-              <li class="overview__list-item"><span class="overview__list-item__bullet" aria-hidden="true"></span>Difficulty with Sensory Inputs (Sounds, Textures)</li>
-              <li class="overview__list-item"><span class="overview__list-item__bullet" aria-hidden="true"></span>Poor Sitting Tolerance or Attention Span</li>
-              <li class="overview__list-item"><span class="overview__list-item__bullet" aria-hidden="true"></span>Reading, Writing &amp; Learning Difficulties</li>
-            </ul>
-          </div>
-
         </div>
       </div>
-    </section>
 
-    <!-- ============================================================
-         OFFICIAL CLINIC SHOWCASE / BROCHURE BOARD
-         Interactive modal zoom
-         ============================================================ -->
-    <section class="section" aria-label="Official centre board">
-      <div class="container">
-        <div class="showcase-banner reveal">
-          <span class="section-label" style="color: var(--color-primary);">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+      <!-- 3. Inner-Left Floating Accent: Sunny 5-Point Star -->
+      <div data-parallax="-0.025"
+        class="parallax-item pointer-events-auto play-shape absolute top-[27%] sm:top-[25%] left-[20%] sm:left-[21%] lg:left-[23%] w-6 h-6 sm:w-8 sm:h-8">
+        <svg viewBox="0 0 36 36" class="w-full h-full animate-float-slow" style="--rot: 15deg;" fill="none">
+          <path d="M18 2L22.3 12.6L33.8 13.5L25 21L27.7 32.2L18 26.2L8.3 32.2L11 21L2.2 13.5L13.7 12.6L18 2Z"
+            fill="#FFD13B" />
+        </svg>
+      </div>
+
+      <!-- 4. Top-Right (Below Navbar): Tilted Geometric Blocks Card -->
+      <div data-parallax="-0.035"
+        class="parallax-item pointer-events-auto play-shape absolute top-24 sm:top-28 lg:top-32 right-[4%] sm:right-[5%] lg:right-[7%] w-20 h-20 sm:w-26 sm:h-26 lg:w-28 lg:h-28">
+        <div class="animate-float-reverse w-full h-full" style="--rot: 14deg;">
+          <div
+            class="w-full h-full rounded-[22px] sm:rounded-[28px] bg-white border border-forest/10 shadow-[0_10px_25px_rgba(23,43,35,0.05)] flex flex-col items-center justify-center p-2">
+            <svg viewBox="0 0 64 64" class="w-10 h-10 sm:w-13 sm:h-13" fill="none">
+              <polygon points="32,8 46,24 18,24" fill="#FFD13B" />
+              <rect x="20" y="26" width="24" height="12" rx="4" fill="#F43F85" />
+              <rect x="14" y="40" width="36" height="13" rx="5" fill="#00A3FF" />
             </svg>
-            Official Centre Board
-          </span>
-          <h2>Our Services &amp; Facility At A Glance</h2>
-          <p class="text-secondary" style="max-width: 600px; margin: 8px auto 0;">
-            Click the official centre board below to view all therapies, conditions, and contact details in high resolution.
-          </p>
-
-          <div class="showcase-banner__image-wrap" id="openBoardLightbox" role="button" tabindex="0" aria-label="Click to enlarge official centre board">
-            <img src="assets/brochure-banner.jpg" alt="Suja's Child Development Centre Official Clinic Information Board" width="1200" height="800">
-            <div class="showcase-banner__overlay">
-              <span class="btn btn--primary btn--sm">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-                  <circle cx="11" cy="11" r="8"/>
-                  <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-                  <line x1="11" y1="8" x2="11" y2="14"/>
-                  <line x1="8" y1="11" x2="14" y2="11"/>
-                </svg>
-                Click to Enlarge Board
-              </span>
-            </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- Lightbox Modal for Board -->
-    <div class="modal-lightbox" id="boardLightboxModal" role="dialog" aria-label="Official Centre Board View" aria-hidden="true">
-      <div class="modal-lightbox__content">
-        <button class="modal-lightbox__close" id="closeBoardLightbox" aria-label="Close image">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
-            <line x1="18" y1="6" x2="6" y2="18"/>
-            <line x1="6" y1="6" x2="18" y2="18"/>
+      <!-- 5. Mid-Right: Bold Chunky Lime-Green Plus '+' Sign -->
+      <div data-parallax="0.04"
+        class="parallax-item pointer-events-auto play-shape absolute top-[42%] sm:top-[40%] -right-4 sm:right-[2.5%] lg:right-[5%] w-24 h-24 sm:w-32 sm:h-32 lg:w-40 lg:h-40">
+        <div class="animate-float-slow w-full h-full" style="--rot: -14deg;">
+          <svg viewBox="0 0 160 160" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="58" y="12" width="44" height="136" rx="10" fill="#B5DC17" />
+            <rect x="12" y="58" width="136" height="44" rx="10" fill="#B5DC17" />
           </svg>
-        </button>
-        <img src="assets/brochure-banner.jpg" alt="Suja's Child Development Centre Official Clinic Board">
+        </div>
+      </div>
+
+      <!-- 6. Lower-Right: Scalloped Sky-Blue Cloud Badge (Balances the bottom-left SCDC Advantage text) -->
+      <div data-parallax="0.035"
+        class="parallax-item pointer-events-auto play-shape hidden md:block absolute bottom-[8%] right-[16%] lg:right-[22%] w-32 h-32 lg:w-40 lg:h-40">
+        <div class="animate-float-reverse w-full h-full" style="--rot: 8deg;">
+          <svg viewBox="0 0 200 200" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M100 18C118 18 132 30 135 46C151 42 168 50 175 66C182 82 175 99 161 108C174 118 179 136 171 151C163 166 145 173 130 167C125 183 110 193 93 191C76 189 63 176 61 160C45 164 28 155 22 139C16 123 23 106 37 97C24 87 19 69 27 54C35 39 53 32 68 38C74 25 86 18 100 18Z"
+              fill="#00A3FF" />
+          </svg>
+          <div class="absolute inset-0 flex flex-col items-center justify-center -rotate-6">
+            <svg class="w-6 h-6 text-sunny mb-0.5" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z" />
+            </svg>
+            <span class="text-[11px] lg:text-[12px] font-bold tracking-wide text-forest">Growth</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7. Far Bottom-Right: Tilted Periwinkle Square -->
+      <div data-parallax="-0.03"
+        class="parallax-item pointer-events-auto play-shape hidden sm:block absolute bottom-[6%] right-[4%] lg:right-[7%] w-24 h-24 lg:w-32 lg:h-32">
+        <div class="animate-float-slow w-full h-full" style="--rot: -16deg;">
+          <div class="w-full h-full rounded-[24px] bg-periwinkle flex flex-col items-center justify-center p-3">
+            <div class="flex items-center gap-2">
+              <div class="w-4 h-4 lg:w-5 lg:h-5 rounded-full bg-roseHeart"></div>
+              <div class="w-4 h-4 lg:w-5 lg:h-5 rounded-md bg-skyPlay"></div>
+            </div>
+            <div class="mt-2 flex items-center gap-1.5 text-forest font-extrabold text-xs">
+              <span>A</span>
+              <span class="text-roseHeart">•</span>
+              <span>B</span>
+              <span class="text-skyPlay">•</span>
+              <span>C</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8. Inner-Right Floating Accent: Crisp Rose Heart -->
+      <div data-parallax="0.025"
+        class="parallax-item pointer-events-auto play-shape absolute top-[28%] sm:top-[26%] right-[20%] sm:right-[21%] lg:right-[23%] w-6 h-6 sm:w-7 sm:h-7">
+        <svg viewBox="0 0 24 24" class="w-full h-full animate-float-slow" style="--rot: 12deg;" fill="#F43F85">
+          <path
+            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+        </svg>
       </div>
     </div>
 
-    <!-- ============================================================
-         5. PRE-FOOTER CALL TO ACTION BANNER
-         ============================================================ -->
-    <section class="cta-banner" aria-label="Call to action banner">
-      <div class="cta-banner__shapes" aria-hidden="true">
-        <div class="cta-banner__shape cta-banner__shape--1"></div>
-        <div class="cta-banner__shape cta-banner__shape--2"></div>
+    <!-- =======================================================
+         CENTER HERO HEADLINE
+    ======================================================== -->
+    <div class="relative z-20 max-w-4xl mx-auto text-center my-auto pt-14 sm:pt-20 lg:pt-28 pb-10 sm:pb-16 select-none">
+      <h1 class="hero-headline text-[44px] sm:text-[66px] md:text-[78px] lg:text-[90px] tracking-[0.015em]">
+        <!-- Line 1 -->
+        <span class="block">Bringing</span>
+
+        <!-- Line 2: "Every Child" with dotless 'i' + rose heart -->
+        <span class="block mt-2 sm:mt-3.5 lg:mt-5">
+          Every Ch<span class="heart-i-wrapper">ı<!-- Rose-colored heart replacing the dot on 'i' --><svg
+              class="rose-heart-dot" viewBox="0 0 24 24" fill="#F43F85" xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true">
+              <path
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+            </svg></span>ld
+        </span>
+
+        <!-- Line 3 -->
+        <span class="block mt-2 sm:mt-3.5 lg:mt-5">Thrive</span>
+      </h1>
+    </div>
+
+    <!-- =======================================================
+         LOWER-LEFT EDITORIAL FEATURE BLOCK ("The SCDC Advantage")
+         - Styled directly after "The Vision Advantage" in reference
+         - Includes circular dark forest arrow CTA navigating to About
+    ======================================================== -->
+    <div class="relative z-20 w-full max-w-[1280px] mx-auto mt-14 sm:mt-16 lg:mt-20">
+      <div class="max-w-[390px] sm:max-w-[430px] text-left">
+
+        <!-- Section Subheading -->
+        <h2 class="text-[22px] sm:text-[26px] font-bold text-forest tracking-[-0.015em] leading-snug">
+          The SCDC Advantage
+        </h2>
+
+        <!-- Supporting Description -->
+        <p class="mt-2.5 text-[14.5px] sm:text-[15.5px] font-normal text-forest/85 leading-[1.55]">
+          An innovative approach, personalized programs, a professional and caring team, and inspiring therapeutic
+          environments.
+        </p>
+
+        <!-- Reference-Style Circular Arrow CTA Button -> Navigates to About -->
+        <a href="about.html" class="mt-5 inline-flex items-center gap-3.5 group focus:outline-none">
+          <span
+            class="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-forest text-white flex items-center justify-center shadow-sm transition-all duration-300 group-hover:bg-roseHeart group-hover:scale-105">
+            <svg class="w-4 h-4 sm:w-[18px] sm:h-[18px] transition-transform duration-300 group-hover:translate-x-0.5"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
+          </span>
+          <span
+            class="text-[14.5px] sm:text-[15.5px] font-semibold text-forest tracking-[-0.01em] group-hover:text-roseHeart transition-colors duration-200">
+            Discover Our Centre
+          </span>
+        </a>
+
       </div>
+    </div>
+
+  </section>
+
+  <main id="main-content">
+
+    <!-- ═══════════════════════════════════════════════════════
+         LIVING THERAPY SECTION
+         ═══════════════════════════════════════════════════════ -->
+    <section class="section living-section">
       <div class="container">
-        <div class="cta-banner__content reveal">
-          <h2>Not sure where to start?</h2>
-          <p>
-            Consult with <strong>Dr. J. Jansirani, B.O.T.</strong> and our care team to discuss the right therapy program for your child.
-          </p>
-          <a href="#contact-section" class="btn btn--primary">CONTACT US</a>
+        <div class="living-grid">
+          <div class="living-card reveal">
+            <div class="living-card__media">
+              <img src="assets/hero-sensory.svg" alt="Therapy session">
+            </div>
+            <div class="living-card__footer">
+              <span>Therapy at SCDC</span>
+              <button class="watch-btn">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14">
+                  <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2" />
+                  <path d="M10 8l6 4-6 4V8z" />
+                </svg>
+                Watch
+              </button>
+            </div>
+          </div>
+          <div class="living-text reveal">
+            <h3 class="living-text__title">Living Therapy to Learn Naturally</h3>
+            <p>Therapeutic immersion as a learning method, where therapy is used naturally and daily, fostering deep and
+              lasting development.</p>
+            <a href="services.html" class="living-text__link">
+              Our Therapy Approach
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ============================================================
-         6. ZERO-BACKEND INTERACTIVE CONTACT & CONSULTATION SECTION
-         WhatsApp & Email Auto-Compiler + Embedded Map
-         ============================================================ -->
-    <section class="contact" id="contact-section" aria-label="Contact and consultation section">
-      <div class="container">
-        <div class="contact__header reveal">
-          <span class="section-label" style="color: var(--color-primary);">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-            </svg>
-            Consultation &amp; Enquiries
-          </span>
-          <h2>Connect With Our Team</h2>
-          <p>Send an instant message via WhatsApp, drop an email, or visit our centre in Perumbakkam, Chennai.</p>
+    <!-- ═══════════════════════════════════════════════════════
+         IMAGE MARQUEE - Conveyor Belt (6 images, 2 rows)
+         ═══════════════════════════════════════════════════════ -->
+    <section class="home-marquee">
+      <!-- Row 1: Left to Right -->
+      <div class="marquee-row">
+        <div class="marquee-track marquee-track--left">
+          <div class="marquee-content">
+            <div class="marquee-img"><img src="assets/hero-sensory.svg" alt="Therapy 1"></div>
+            <div class="marquee-img marquee-img--shape-blue"><img src="assets/hero-care.svg" alt="Therapy 2"></div>
+            <div class="marquee-img"><img src="assets/hero-speech.svg" alt="Therapy 3"></div>
+            <div class="marquee-img marquee-img--shape-lime"><img src="assets/hero-sensory.svg" alt="Therapy 4"></div>
+            <div class="marquee-img"><img src="assets/hero-care.svg" alt="Therapy 5"></div>
+            <div class="marquee-img"><img src="assets/hero-speech.svg" alt="Therapy 6"></div>
+            <!-- Duplicate for seamless loop -->
+            <div class="marquee-img"><img src="assets/hero-sensory.svg" alt="Therapy 1"></div>
+            <div class="marquee-img marquee-img--shape-blue"><img src="assets/hero-care.svg" alt="Therapy 2"></div>
+            <div class="marquee-img"><img src="assets/hero-speech.svg" alt="Therapy 3"></div>
+            <div class="marquee-img marquee-img--shape-lime"><img src="assets/hero-sensory.svg" alt="Therapy 4"></div>
+            <div class="marquee-img"><img src="assets/hero-care.svg" alt="Therapy 5"></div>
+            <div class="marquee-img"><img src="assets/hero-speech.svg" alt="Therapy 6"></div>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <div class="contact__grid">
-
-          <!-- Left Column: Clinic Details & Map -->
-          <div class="contact__details reveal--left">
-            <div class="contact__info-card">
-              <!-- Consultant -->
-              <div class="contact__info-item">
-                <span class="contact__info-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                    <path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
-                    <circle cx="8.5" cy="7" r="4"/>
-                    <path d="M20 8v6M23 11h-6"/>
-                  </svg>
-                </span>
-                <div class="contact__info-text">
-                  <span class="contact__info-label">Consultant / Founder</span>
-                  <span class="contact__info-value"><strong>Dr. J. Jansirani, B.O.T.</strong> (Bachelor of Occupational Therapy)</span>
-                </div>
-              </div>
-
-              <!-- Address -->
-              <div class="contact__info-item">
-                <span class="contact__info-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
-                    <circle cx="12" cy="10" r="3"/>
-                  </svg>
-                </span>
-                <div class="contact__info-text">
-                  <span class="contact__info-label">Address</span>
-                  <span class="contact__info-value">
-                    No. 42A, 3rd Main Road, Radha Nagar,<br>
-                    Perumbakkam, Chennai - 600100, Tamil Nadu, India
-                  </span>
-                </div>
-              </div>
-
-              <!-- Timings -->
-              <div class="contact__info-item">
-                <span class="contact__info-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                    <circle cx="12" cy="12" r="10"/>
-                    <polyline points="12 6 12 12 16 14"/>
-                  </svg>
-                </span>
-                <div class="contact__info-text">
-                  <span class="contact__info-label">Operating Hours</span>
-                  <span class="contact__info-value">
-                    Monday – Friday: 9:30 AM – 8:00 PM<br>
-                    Saturday: 9:30 AM – 2:00 PM<br>
-                    Sunday: Closed
-                  </span>
-                </div>
-              </div>
-
-              <!-- Direct Call Links -->
-              <div class="contact__info-item">
-                <span class="contact__info-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
-                  </svg>
-                </span>
-                <div class="contact__info-text">
-                  <span class="contact__info-label">Direct Phone Numbers</span>
-                  <span class="contact__info-value">
-                    <a href="tel:+918682870313">+91 86828 70313</a> (Primary &amp; WhatsApp)<br>
-                    <a href="tel:+916369368177">+91 63693 68177</a> (Secondary)
-                  </span>
-                </div>
-              </div>
-
-              <!-- Email -->
-              <div class="contact__info-item">
-                <span class="contact__info-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                    <polyline points="22,6 12,13 2,6"/>
-                  </svg>
-                </span>
-                <div class="contact__info-text">
-                  <span class="contact__info-label">Direct Email</span>
-                  <span class="contact__info-value">
-                    <a href="mailto:sujascdc0313@gmail.com">sujascdc0313@gmail.com</a>
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Responsive Google Map -->
-            <div class="contact__map">
-              <iframe
-                src="https://maps.google.com/maps?q=Radha%20Nagar,%20Perumbakkam,%20Chennai%20600100&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                width="100%"
-                height="100%"
-                style="border:0;"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                title="Suja's Child Development Centre location in Radha Nagar, Perumbakkam, Chennai"
-              ></iframe>
-            </div>
-
-            <a href="https://maps.app.goo.gl/KU3LuL8oiaaAWXEZA" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm" style="width:100%;">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
-                <polyline points="15 3 21 3 21 9"/>
-                <line x1="10" y1="14" x2="21" y2="3"/>
-              </svg>
-              Open Directions in Google Maps
+    <!-- ═══════════════════════════════════════════════════════
+         STATS - The Centre at a Glance (Properly Aligned)
+         ═══════════════════════════════════════════════════════ -->
+    <section class="section glance-section">
+      <div class="container">
+        <div class="glance-grid">
+          <div class="glance-left reveal">
+            <h2 class="glance-title">
+              The Centre<br>at a Glance
+            </h2>
+            <p class="glance-desc">Pioneers in the field of pediatric therapy in Chennai, our team offers comprehensive
+              care from infancy through childhood, without compromising their learning and development.</p>
+            <a href="about.html" class="glance-link">
+              <span class="arrow-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg></span>
+              About Us
             </a>
           </div>
-
-          <!-- Right Column: Interactive Consultation Inquiry Form -->
-          <div class="contact__form-wrapper reveal--right">
-            <h3 class="mb-xs">Book a Consultation</h3>
-            <p class="text-secondary mb-md" style="font-size: var(--fs-small);">
-              Fill in your details below and choose whether to send via WhatsApp or Email. No login required.
-            </p>
-
-            <form id="contactForm" class="contact__form" novalidate>
-              <div class="form-group">
-                <label for="contactName">Parent / Guardian Name <span aria-hidden="true" style="color:#e53e3e;">*</span></label>
-                <input type="text" id="contactName" name="name" required placeholder="e.g. Priya Sharma" autocomplete="name">
-                <span class="error-message" role="alert">Please enter your name</span>
-              </div>
-
-              <div class="form-group">
-                <label for="contactEmail">Email Address</label>
-                <input type="email" id="contactEmail" name="email" placeholder="e.g. parent@example.com" autocomplete="email">
-                <span class="error-message" role="alert">Please enter a valid email address</span>
-              </div>
-
-              <div class="form-group">
-                <label for="contactPhone">Phone / WhatsApp Number <span aria-hidden="true" style="color:#e53e3e;">*</span></label>
-                <input type="tel" id="contactPhone" name="phone" required placeholder="e.g. +91 98765 43210" autocomplete="tel">
-                <span class="error-message" role="alert">Please enter your phone number</span>
-              </div>
-
-              <div class="form-group">
-                <label for="contactMessage">Message / Child's Requirement <span aria-hidden="true" style="color:#e53e3e;">*</span></label>
-                <textarea id="contactMessage" name="message" rows="4" required placeholder="Tell us about your child's age and the therapy or support you are looking for..."></textarea>
-                <span class="error-message" role="alert">Please describe your child's needs</span>
-              </div>
-
-              <div class="contact__form-actions">
-                <button type="button" id="sendWhatsApp" class="btn btn--whatsapp">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                  </svg>
-                  Send via WhatsApp
-                </button>
-                <button type="button" id="sendEmail" class="btn btn--secondary">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                    <polyline points="22,6 12,13 2,6"/>
-                  </svg>
-                  Send via Email
-                </button>
-              </div>
-            </form>
+          <div class="glance-right">
+            <div class="glance-stat reveal">
+              <span class="glance-stat__num">10+</span>
+              <span class="glance-stat__label">years of dedicated service</span>
+            </div>
+            <div class="glance-stat reveal">
+              <span class="glance-stat__num">500+</span>
+              <span class="glance-stat__label">children supported annually</span>
+            </div>
+            <div class="glance-stat reveal">
+              <span class="glance-stat__num">15</span>
+              <span class="glance-stat__label">therapy specializations</span>
+            </div>
           </div>
+        </div>
+      </div>
+      <!-- Background Numbers -->
+      <div class="glance-bg" aria-hidden="true">
+        <span class="glance-bg__num glance-bg__num--1">1</span>
+        <span class="glance-bg__num glance-bg__num--2">2</span>
+        <span class="glance-bg__num glance-bg__num--3">3</span>
+      </div>
+    </section>
 
+    <!-- ═══════════════════════════════════════════════════════
+         OUR IMPACT - Review Carousel with Google Stars
+         ═══════════════════════════════════════════════════════ -->
+    <section class="section impact-section">
+      <div class="container">
+        <h2 class="impact-title reveal">Our Impact</h2>
+      </div>
+
+      <!-- Review Carousel -->
+      <div class="review-carousel">
+        <div class="review-track">
+          <div class="review-content">
+            <!-- Review 1 -->
+            <div class="review-card">
+              <div class="review-card__header">
+                <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
+                  alt="Google" class="review-card__google">
+                <div class="review-card__stars">
+                  <svg viewBox="0 0 24 24" fill="#FBBC04">
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="#FBBC04">
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="#FBBC04">
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="#FBBC04">
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="#FBBC04">
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                </div>
+              </div>
+              <p class="review-card__text">"Thank you for your constant support and care. Our child's therapist
+                mentioned: 'My primary goal is for your child to grow strong.' Mission accomplished!"</p>
+              <div class="review-card__author">
+                <span class="review-card__name">Priya S.</span>
+                <span class="review-card__role">Parent</span>
+              </div>
+            </div>
+            <!-- Review 2 -->
+            <div class="review-card">
+              <div class="review-card__header">
+                <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
+                  alt="Google" class="review-card__google">
+                <div class="review-card__stars">
+                  <svg viewBox="0 0 24 24" fill="#FBBC04">
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="#FBBC04">
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="#FBBC04">
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="#FBBC04">
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="#FBBC04">
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                </div>
+              </div>
+              <p class="review-card__text">"This place has been wonderful for my son. The therapists are patient and
+                skilled. I've seen remarkable progress in just 6 months!"</p>
+              <div class="review-card__author">
+                <span class="review-card__name">Rajesh K.</span>
+                <span class="review-card__role">Parent</span>
+              </div>
+            </div>
+            <!-- Review 3 -->
+            <div class="review-card">
+              <div class="review-card__header">
+                <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
+                  alt="Google" class="review-card__google">
+                <div class="review-card__stars">
+                  <svg viewBox="0 0 24 24" fill="#FBBC04">
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="#FBBC04">
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="#FBBC04">
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="#FBBC04">
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="#FBBC04">
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                </div>
+              </div>
+              <p class="review-card__text">"Dr. Jansirani and her team are exceptional. The sensory gym is amazing and
+                my daughter loves coming here. Highly recommend!"</p>
+              <div class="review-card__author">
+                <span class="review-card__name">Anitha M.</span>
+                <span class="review-card__role">Parent</span>
+              </div>
+            </div>
+            <!-- Review 4 -->
+            <div class="review-card">
+              <div class="review-card__header">
+                <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
+                  alt="Google" class="review-card__google">
+                <div class="review-card__stars">
+                  <svg viewBox="0 0 24 24" fill="#FBBC04">
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="#FBBC04">
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="#FBBC04">
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="#FBBC04">
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="#FBBC04">
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                </div>
+              </div>
+              <p class="review-card__text">"Best child development center in Chennai! The early intervention program
+                helped my child catch up on milestones. Forever grateful."</p>
+              <div class="review-card__author">
+                <span class="review-card__name">Suresh V.</span>
+                <span class="review-card__role">Parent</span>
+              </div>
+            </div>
+            <!-- Duplicate for loop -->
+            <div class="review-card">
+              <div class="review-card__header">
+                <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
+                  alt="Google" class="review-card__google">
+                <div class="review-card__stars">
+                  <svg viewBox="0 0 24 24" fill="#FBBC04">
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="#FBBC04">
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="#FBBC04">
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="#FBBC04">
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="#FBBC04">
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                </div>
+              </div>
+              <p class="review-card__text">"Thank you for your constant support and care. Our child's therapist
+                mentioned: 'My primary goal is for your child to grow strong.' Mission accomplished!"</p>
+              <div class="review-card__author">
+                <span class="review-card__name">Priya S.</span>
+                <span class="review-card__role">Parent</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- ============================================================
-       7. MULTI-COLUMN FOOTER
-       Ecolevision-inspired: rich deep navy palette (#0F2942),
-       brand emblem, structured navigation, and full contact
-       ============================================================ -->
+  <!-- FOOTER -->
   <footer class="footer" role="contentinfo">
     <div class="footer__shapes" aria-hidden="true">
-      <div class="footer__shape footer__shape--1"></div>
-      <div class="footer__shape footer__shape--2"></div>
+      <div class="footer__shape footer__shape--flower anim-fall-footer" data-delay="0">
+        <svg viewBox="0 0 200 200" fill="#C4D600">
+          <ellipse cx="100" cy="35" rx="30" ry="55" />
+          <ellipse cx="35" cy="100" rx="55" ry="30" />
+          <ellipse cx="165" cy="100" rx="55" ry="30" />
+          <ellipse cx="100" cy="165" rx="30" ry="55" />
+          <circle cx="100" cy="100" r="25" />
+        </svg>
+      </div>
+      <div class="footer__shape footer__shape--circle1 anim-fall-footer" data-delay="100">
+        <svg viewBox="0 0 120 120" fill="#C4D600">
+          <circle cx="60" cy="60" r="58" />
+        </svg>
+      </div>
+      <div class="footer__shape footer__shape--leaf1 anim-fall-footer" data-delay="150">
+        <svg viewBox="0 0 60 120" fill="#C4D600">
+          <ellipse cx="30" cy="60" rx="28" ry="55" />
+        </svg>
+      </div>
     </div>
 
     <div class="container">
-      <div class="footer__grid">
-
-        <!-- Column 1: Brand Info -->
+      <div class="footer__content">
         <div class="footer__brand">
           <div class="footer__logo-badge">
-            <img src="assets/logo.jpg" alt="Suja's Child Development Centre" class="footer__logo-img" width="130" height="48">
-          </div>
-          <span class="footer__logo-name">Suja's Child Development Centre</span>
-          <p class="footer__tagline">"Bringing Every Child Thrive"</p>
-          <p class="footer__desc">
-            Multi-speciality pediatric therapy centre led by <strong>Dr. J. Jansirani, B.O.T.</strong>, dedicated to helping every child support, guide, build skills, and grow together.
-          </p>
-        </div>
-
-        <!-- Column 2: Quick Links -->
-        <div>
-          <h4 class="footer__col-title">Quick Links</h4>
-          <nav class="footer__links" aria-label="Footer quick links">
-            <a href="#hero" class="footer__link">Home</a>
-            <a href="#about" class="footer__link">About Us</a>
-            <a href="#services" class="footer__link">Services</a>
-            <a href="#early-intervention" class="footer__link">Early Intervention</a>
-            <a href="#contact-section" class="footer__link">Book Consultation</a>
-            <a href="#contact-section" class="footer__link">Contact Us</a>
-          </nav>
-        </div>
-
-        <!-- Column 3: Our Therapies -->
-        <div>
-          <h4 class="footer__col-title">Our Therapies</h4>
-          <nav class="footer__links" aria-label="Footer therapy services">
-            <a href="#services" class="footer__link">Occupational Therapy</a>
-            <a href="#services" class="footer__link">Speech Therapy</a>
-            <a href="#services" class="footer__link">Special Education</a>
-            <a href="#early-intervention" class="footer__link">Early Intervention</a>
-            <a href="#services" class="footer__link">Neuro Developmental Therapy</a>
-            <a href="#services" class="footer__link">Behavioural Modification</a>
-            <a href="#services" class="footer__link">Sensory Integration</a>
-          </nav>
-        </div>
-
-        <!-- Column 4: Centre Address & Contact -->
-        <div>
-          <h4 class="footer__col-title">Centre Address</h4>
-          <div class="footer__contact-info">
-            <div class="footer__contact-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
-                <circle cx="12" cy="10" r="3"/>
-              </svg>
-              <span>No. 42A, 3rd Main Road, Radha Nagar, Perumbakkam, Chennai - 600100</span>
-            </div>
-            <div class="footer__contact-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-                <circle cx="12" cy="12" r="10"/>
-                <polyline points="12 6 12 12 16 14"/>
-              </svg>
-              <span>Mon–Fri: 9:30 AM – 8:00 PM<br>Sat: 9:30 AM – 2:00 PM</span>
-            </div>
-            <div class="footer__contact-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
-              </svg>
-              <span><a href="tel:+918682870313">+91 86828 70313</a> / <a href="tel:+916369368177">+91 63693 68177</a></span>
-            </div>
-            <div class="footer__contact-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                <polyline points="22,6 12,13 2,6"/>
-              </svg>
-              <span><a href="mailto:sujascdc0313@gmail.com">sujascdc0313@gmail.com</a></span>
-            </div>
-            <div class="footer__contact-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
-                <polyline points="15 3 21 3 21 9"/>
-                <line x1="10" y1="14" x2="21" y2="3"/>
-              </svg>
-              <span><a href="https://maps.app.goo.gl/KU3LuL8oiaaAWXEZA" target="_blank" rel="noopener noreferrer">View on Google Maps</a></span>
-            </div>
+            <img src="assets/logo.jpg" alt="" width="50" height="50">
           </div>
         </div>
-
+        <nav class="footer__nav">
+          <div class="footer__nav-col">
+            <a href="index.html" class="footer__nav-link">Home</a>
+            <a href="about.html" class="footer__nav-link">About</a>
+            <a href="services.html" class="footer__nav-link">Services</a>
+            <a href="gallery.html" class="footer__nav-link">Gallery</a>
+            <a href="contact.html" class="footer__nav-link">Contact</a>
+          </div>
+          <div class="footer__nav-col">
+            <a href="services.html" class="footer__nav-link">Occupational Therapy</a>
+            <a href="services.html" class="footer__nav-link">Speech Therapy</a>
+            <a href="contact.html" class="footer__nav-link">Book Consultation</a>
+          </div>
+        </nav>
+        <div class="footer__social">
+          <span class="footer__social-label">FACEBOOK</span>
+          <span class="footer__social-label">INSTAGRAM</span>
+        </div>
       </div>
-
-      <!-- Footer Bottom Copyright Bar -->
       <div class="footer__bottom">
-        <p class="footer__copyright">&copy; 2026 Suja's Child Development Centre. All rights reserved.</p>
         <div class="footer__legal">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Use</a>
         </div>
+        <p class="footer__copyright">&copy; 2026 Suja's Child Development Centre. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
-  <!-- ============================================================
-       8. MOBILE STICKY BOTTOM ACTION BAR (md:hidden)
-       4 equal-width icon + label tabs with direct links
-       ============================================================ -->
+  <!-- MOBILE BOTTOM BAR -->
   <nav class="bottom-bar" aria-label="Mobile quick actions">
-    <a href="#contact-section" class="bottom-bar__item">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-        <line x1="16" y1="2" x2="16" y2="6"/>
-        <line x1="8" y1="2" x2="8" y2="6"/>
-        <line x1="3" y1="10" x2="21" y2="10"/>
+    <a href="contact.html" class="bottom-bar__item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="3" y="4" width="18" height="18" rx="2" />
+        <line x1="16" y1="2" x2="16" y2="6" />
+        <line x1="8" y1="2" x2="8" y2="6" />
+        <line x1="3" y1="10" x2="21" y2="10" />
       </svg>
       Book
     </a>
-    <a href="https://wa.me/918682870313?text=Hello%20Suja's%20Child%20Development%20Centre%2C%20I%20would%20like%20to%20enquire%20about%20a%20consultation." target="_blank" rel="noopener noreferrer" class="bottom-bar__item" style="color: var(--color-whatsapp);">
-      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    <a href="https://wa.me/918682870313" target="_blank" class="bottom-bar__item" style="color: var(--color-whatsapp);">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
       </svg>
       WhatsApp
     </a>
     <a href="tel:+918682870313" class="bottom-bar__item">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path
+          d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
       </svg>
       Call
     </a>
-    <a href="https://maps.app.goo.gl/KU3LuL8oiaaAWXEZA" target="_blank" rel="noopener noreferrer" class="bottom-bar__item">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
-        <circle cx="12" cy="10" r="3"/>
+    <a href="https://maps.app.goo.gl/KU3LuL8oiaaAWXEZA" target="_blank" class="bottom-bar__item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+        <circle cx="12" cy="10" r="3" />
       </svg>
       Locate
     </a>
   </nav>
 
-  <!-- JavaScript -->
   <script src="js/main.js"></script>
 
+  <!-- Hero Parallax & Mobile Menu Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Mobile menu toggle
+      const menuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+
+      // Parallax effect on mouse move
+      const parallaxItems = document.querySelectorAll('.parallax-item');
+      let mouseX = 0, mouseY = 0, currentX = 0, currentY = 0;
+
+      window.addEventListener('mousemove', (e) => {
+        mouseX = (e.clientX - window.innerWidth / 2);
+        mouseY = (e.clientY - window.innerHeight / 2);
+      }, { passive: true });
+
+      function updateParallax() {
+        currentX += (mouseX - currentX) * 0.06;
+        currentY += (mouseY - currentY) * 0.06;
+        parallaxItems.forEach((item) => {
+          const speed = parseFloat(item.getAttribute('data-parallax')) || 0.02;
+          const x = currentX * speed;
+          const y = currentY * speed;
+          item.style.transform = `translate3d(${x.toFixed(2)}px, ${y.toFixed(2)}px, 0)`;
+        });
+        requestAnimationFrame(updateParallax);
+      }
+
+      if (window.matchMedia('(pointer: fine)').matches) {
+        requestAnimationFrame(updateParallax);
+      }
+    });
+  </script>
 </body>
+
 </html>
