@@ -1,0 +1,146 @@
+/* ============================================================
+   DESIGN TOKENS — Suja's Child Development Centre
+   Adapted from DESIGN.md with Ecolevision-inspired motion tokens
+   ============================================================ */
+
+:root {
+  /* ── Brand Colors ── */
+  --color-primary:        #0095DA;
+  --color-primary-hover:  #007BB5;
+  --color-primary-light:  #EBF7FD;
+  --color-accent-magenta: #E91E8C;
+  --color-accent-green:   #5E9E2A;
+  --color-accent-gold:    #E08E00;
+
+  /* ── Surfaces ── */
+  --color-bg:        #FFFFFF;
+  --color-bg-warm:   #FAF8F3;
+  --surface-sky:     #EBF7FD;
+  --surface-rose:    #FFF0F7;
+  --surface-mint:    #EEF8E6;
+  --surface-honey:   #FFF7E6;
+
+  /* ── Text & Borders ── */
+  --color-text:           #0F2942;
+  --color-text-secondary: #4A5D73;
+  --color-text-on-dark:   #FFFFFF;
+  --color-border:         #E2E8F0;
+  --color-border-warm:    #EADFC8;
+
+  /* ── WhatsApp ── */
+  --color-whatsapp:       #25D366;
+  --color-whatsapp-hover: #1DA851;
+
+  /* ── Radii (Ecolevision-inspired: generous, rounded) ── */
+  --radius-xs:   12px;
+  --radius-sm:   16px;
+  --radius-card: 28px;
+  --radius-lg:   40px;
+  --radius-xl:   100px;
+  --radius-pill: 9999px;
+
+  /* ── Shadows ── */
+  --shadow-card: 0 10px 30px rgba(15, 41, 66, 0.06);
+  --shadow-soft: 0 4px 16px rgba(15, 41, 66, 0.05);
+  --shadow-nav:  0 0 30px 3px rgba(0, 0, 0, 0.05);
+
+  /* ── Spacing Scale ── */
+  --space-3xs: 4px;
+  --space-2xs: 8px;
+  --space-xs:  12px;
+  --space-sm:  16px;
+  --space-md:  24px;
+  --space-lg:  32px;
+  --space-xl:  48px;
+  --space-2xl: 64px;
+  --space-3xl: 96px;
+  --space-4xl: 128px;
+
+  /* ── Container ── */
+  --container-max: 1280px;
+  --container-gap: 24px;
+
+  /* ── Typography ── */
+  --ff-body: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+  --fw-regular: 400;
+  --fw-medium:  500;
+  --fw-semi:    600;
+  --fw-bold:    700;
+  --fw-extra:   800;
+
+  /* Type Scale */
+  --fs-display: clamp(36px, 5vw, 56px);
+  --fs-h1:      clamp(32px, 4vw, 42px);
+  --fs-h2:      clamp(26px, 3vw, 32px);
+  --fs-h3:      clamp(20px, 2.2vw, 22px);
+  --fs-h4:      18px;
+  --fs-body-lg: 18px;
+  --fs-body:    16px;
+  --fs-small:   14px;
+  --fs-xs:      12px;
+
+  --lh-tight:   1.12;
+  --lh-heading: 1.2;
+  --lh-snug:    1.35;
+  --lh-body:    1.6;
+  --lh-relaxed: 1.5;
+
+  --ls-display: -0.02em;
+  --ls-heading: -0.01em;
+  --ls-body:    0;
+
+  /* ── Z-Index ── */
+  --z-base:    1;
+  --z-dropdown:100;
+  --z-sticky:  200;
+  --z-nav:     300;
+  --z-modal:   400;
+  --z-toast:   500;
+
+  /* ── Motion Tokens (Ecolevision-inspired) ── */
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.61, 1.41);
+  --ease-smooth: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-default:ease;
+
+  --duration-fast:   150ms;
+  --duration-normal: 300ms;
+  --duration-slow:   500ms;
+  --duration-reveal: 700ms;
+  --duration-long:   1000ms;
+
+  --stagger-step: 80ms;
+}
+
+/* ── Responsive Container Gaps (Ecolevision-style) ── */
+@media (min-width: 768px) {
+  :root {
+    --container-gap: 40px;
+  }
+}
+@media (min-width: 1200px) {
+  :root {
+    --container-gap: 64px;
+  }
+}
+
+/* ── Reduced Motion ── */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast:   0ms;
+    --duration-normal: 0ms;
+    --duration-slow:   0ms;
+    --duration-reveal: 0ms;
+    --duration-long:   0ms;
+    --stagger-step:    0ms;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

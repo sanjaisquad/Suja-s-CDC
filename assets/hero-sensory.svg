@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="hSensory" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EBF7FD"/>
+      <stop offset="100%" stop-color="#FAF8F3"/>
+    </linearGradient>
+    <filter id="hShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="15" flood-color="#0F2942" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  <rect width="400" height="480" rx="28" fill="url(#hSensory)"/>
+  
+  <!-- Playful circles & organic shapes -->
+  <circle cx="200" cy="180" r="110" fill="#0095DA" opacity="0.12"/>
+  <circle cx="260" cy="130" r="45" fill="#E91E8C" opacity="0.15"/>
+  <circle cx="130" cy="240" r="55" fill="#5E9E2A" opacity="0.15"/>
+
+  <!-- Building Blocks in Hero 1 -->
+  <g transform="translate(115, 110)" filter="url(#hShadow)">
+    <rect x="30" y="110" width="110" height="45" rx="10" fill="#0095DA"/>
+    <rect x="50" y="65" width="70" height="45" rx="10" fill="#E91E8C"/>
+    <polygon points="85,20 50,65 120,65" fill="#E08E00"/>
+    <circle cx="85" cy="45" r="8" fill="#FFFFFF"/>
+    
+    <!-- Sensory beads -->
+    <circle cx="15" cy="120" r="14" fill="#5E9E2A"/>
+    <circle cx="155" cy="130" r="12" fill="#E08E00"/>
+  </g>
+
+  <!-- Tag Pill -->
+  <g transform="translate(60, 310)" filter="url(#hShadow)">
+    <rect width="280" height="50" rx="25" fill="#FFFFFF"/>
+    <circle cx="35" cy="25" r="14" fill="#EBF7FD"/>
+    <path d="M30 25 L34 29 L41 21" stroke="#0095DA" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <text x="60" y="31" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="700" fill="#0F2942">Sensory &amp; Motor Gym</text>
+  </g>
+
+  <!-- Subtitle -->
+  <text x="200" y="395" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="500" fill="#4A5D73" text-anchor="middle">Active sensory play &amp; motor planning</text>
+  <text x="200" y="420" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="600" fill="#0095DA" text-anchor="middle">Building independence &amp; focus</text>
+</svg>

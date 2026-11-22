@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="hSpeech" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EEF8E6"/>
+      <stop offset="100%" stop-color="#EBF7FD"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="480" rx="28" fill="url(#hSpeech)"/>
+
+  <!-- Speech bubbles interaction in Hero 3 -->
+  <g transform="translate(60, 90)" filter="url(#hShadow)">
+    <path d="M0 20 C0 9 9 0 20 0 L180 0 C191 0 200 9 200 20 L200 90 C200 101 191 110 180 110 L60 110 L30 135 L35 110 L20 110 C9 110 0 101 0 90 Z" fill="#5E9E2A"/>
+    <circle cx="60" cy="55" r="10" fill="#FFFFFF"/>
+    <circle cx="100" cy="55" r="10" fill="#FFFFFF"/>
+    <circle cx="140" cy="55" r="10" fill="#FFFFFF"/>
+    <text x="100" y="90" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">SPEECH CLARITY</text>
+  </g>
+
+  <g transform="translate(140, 180)" filter="url(#hShadow)">
+    <path d="M0 20 C0 9 9 0 20 0 L180 0 C191 0 200 9 200 20 L200 80 C200 91 191 100 180 100 L170 100 L175 125 L145 100 L20 100 C9 100 0 91 0 80 Z" fill="#0095DA"/>
+    <path d="M80 50 Q80 35 95 25 M95 75 Q80 65 80 50" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="65" cy="50" r="10" fill="#FFFFFF"/>
+    <text x="120" y="80" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">CONFIDENCE</text>
+  </g>
+
+  <!-- Tag Pill -->
+  <g transform="translate(60, 330)" filter="url(#hShadow)">
+    <rect width="280" height="50" rx="25" fill="#FFFFFF"/>
+    <circle cx="35" cy="25" r="14" fill="#EEF8E6"/>
+    <path d="M30 25 L34 29 L41 21" stroke="#5E9E2A" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <text x="60" y="31" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="700" fill="#0F2942">Language &amp; Social Fluency</text>
+  </g>
+
+  <!-- Subtitle -->
+  <text x="200" y="415" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="500" fill="#4A5D73" text-anchor="middle">Articulation, oral motor &amp; expression</text>
+  <text x="200" y="440" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="600" fill="#5E9E2A" text-anchor="middle">Empowering every child's voice</text>
+</svg>
