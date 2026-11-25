@@ -85,33 +85,34 @@
 
   <main id="main-content">
 
-    <!-- 1. HERO SECTION (Soft Sky Blue with Falling Blue "+" and Photo Card) -->
+    <!-- 1. HERO SECTION (Soft Sky Blue Banner with Falling & Rotating "+" to "X" & Overlapping Photo Card) -->
     <section class="about-hero">
-      <!-- Top Blue "+" that falls down animate while user opens that page as background -->
-      <div class="about-hero__plus" aria-hidden="true">
-        <svg viewBox="0 0 240 240" fill="#00A3E1">
-          <g transform="translate(120, 120) rotate(45) translate(-120, -120)">
-            <rect x="85" y="15" width="70" height="210" rx="22" />
-            <rect x="15" y="85" width="210" height="70" rx="22" />
-          </g>
-        </svg>
-      </div>
-
-      <!-- Overlapping Photo Card -->
-      <div class="about-hero__photo-card">
-        <img src="assets/Image_to_PDF_20261121_12_57_57_pdf_img1.jpg" alt="Children engaged in interactive learning and developmental play">
-      </div>
-
-      <div class="container">
-        <div class="about-hero__intro">
+      <div class="container about-hero__container">
+        <!-- Left Column: Tagline & Display Title -->
+        <div class="about-hero__left">
           <p class="about-hero__tagline">
-            Enabling children to develop life skills that will be valuable throughout their lives.
+            Enabling children to develop language &amp; life skills that will be valuable throughout their lives.
           </p>
-          <h1 class="about-hero__subtitle">
+          <h1 class="about-hero__title">
             Living Therapy to<br>
             Learn Them<br>
             Naturally
           </h1>
+        </div>
+
+        <!-- Right Column: Visual Composition with Falling/Rotating "+" to "X" & Overlapping Photo Card -->
+        <div class="about-hero__visual">
+          <!-- The Blue Character that slowly falls as an upright "+" and turns into an "X" under gravity -->
+          <div class="about-hero__x-graphic" aria-hidden="true">
+            <svg viewBox="0 0 300 300" fill="#0098EA" xmlns="http://www.w3.org/2000/svg">
+              <path d="M100 0 h100 v100 h100 v100 h-100 v100 h-100 v-100 h-100 v-100 h100 Z" />
+            </svg>
+          </div>
+
+          <!-- Overlapping Photo Card -->
+          <div class="about-hero__photo-card">
+            <img src="assets/Image_to_PDF_20261121_12_57_57_pdf_img1.jpg" alt="Children engaged in interactive developmental learning and therapy">
+          </div>
         </div>
       </div>
     </section>

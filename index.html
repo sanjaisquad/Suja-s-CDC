@@ -375,6 +375,7 @@
       </h1>
     </div>
 
+
     <!-- =======================================================
          LOWER-LEFT EDITORIAL FEATURE BLOCK ("The SCDC Advantage")
          - Styled directly after "The Vision Advantage" in reference
@@ -501,6 +502,12 @@
               About Us
             </a>
           </div>
+          <!-- Background Numbers -->
+          <div class="glance-bg" aria-hidden="true">
+            <span class="glance-bg__num glance-bg__num--1">1</span>
+            <span class="glance-bg__num glance-bg__num--2">2</span>
+            <span class="glance-bg__num glance-bg__num--3">3</span>
+          </div>
           <div class="glance-right">
             <div class="glance-stat reveal">
               <span class="glance-stat__num">10+</span>
@@ -517,200 +524,95 @@
           </div>
         </div>
       </div>
-      <!-- Background Numbers -->
-      <div class="glance-bg" aria-hidden="true">
-        <span class="glance-bg__num glance-bg__num--1">1</span>
-        <span class="glance-bg__num glance-bg__num--2">2</span>
-        <span class="glance-bg__num glance-bg__num--3">3</span>
-      </div>
+
     </section>
 
     <!-- ═══════════════════════════════════════════════════════
          OUR IMPACT - Review Carousel with Google Stars
          ═══════════════════════════════════════════════════════ -->
-    <section class="section impact-section">
-      <div class="container">
+    <section class="section impact-section"
+      style="background-color: #FAF7F2; overflow: hidden; padding: 4.5rem 0 5rem 0;">
+      <div class="container" style="text-align: center; margin-bottom: 1.5rem;">
         <h2 class="impact-title reveal">Our Impact</h2>
+        <p class="impact-subtitle reveal">
+          Real feedback and verified reviews from families supported by Suja's Child Development Centre.
+        </p>
       </div>
 
-      <!-- Review Carousel -->
-      <div class="review-carousel">
-        <div class="review-track">
-          <div class="review-content">
-            <!-- Review 1 -->
-            <div class="review-card">
-              <div class="review-card__header">
-                <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
-                  alt="Google" class="review-card__google">
-                <div class="review-card__stars">
-                  <svg viewBox="0 0 24 24" fill="#FBBC04">
-                    <path
-                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                  </svg>
-                  <svg viewBox="0 0 24 24" fill="#FBBC04">
-                    <path
-                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                  </svg>
-                  <svg viewBox="0 0 24 24" fill="#FBBC04">
-                    <path
-                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                  </svg>
-                  <svg viewBox="0 0 24 24" fill="#FBBC04">
-                    <path
-                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                  </svg>
-                  <svg viewBox="0 0 24 24" fill="#FBBC04">
-                    <path
-                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                  </svg>
+      <!-- ExodeUI Snap Ribbon Review Carousel Container -->
+      <div id="exode-snap-ribbon-root">
+        <!-- High-fidelity fallback rendered while React bundle mounts -->
+        <div style="width: 100%; overflow: hidden; padding: 1.5rem 0 2.5rem 0;">
+          <div style="display: flex; gap: 26px; justify-content: center; align-items: center; padding: 24px 0 32px 0;">
+            <div
+              style="width: 330px; height: 430px; background: #FFFFFF; border-radius: 40px; padding: 2.5rem 2.15rem; box-shadow: 0 8px 24px rgba(0,0,0,0.035); opacity: 0.9; transform: scale(0.96); display: flex; flex-direction: column; justify-content: space-between; border: 1px solid rgba(0,0,0,0.03);">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                  <img src="assets/google-logo.svg" alt="Google" style="height: 23px; width: auto; display: block;">
+                  <div style="display: flex; gap: 3px; color: #FBBC04;">★★★★★</div>
                 </div>
+                <p
+                  style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.04rem; line-height: 1.65; color: #4B5563; margin: 0;">
+                  "Thank you for your constant support and care. Our child's therapist mentioned: 'My primary goal is
+                  for your child to grow strong.' Mission accomplished!"</p>
               </div>
-              <p class="review-card__text">"Thank you for your constant support and care. Our child's therapist
-                mentioned: 'My primary goal is for your child to grow strong.' Mission accomplished!"</p>
-              <div class="review-card__author">
-                <span class="review-card__name">Priya S.</span>
-                <span class="review-card__role">Parent</span>
+              <div>
+                <div
+                  style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.15rem; font-weight: 700; color: #111827; margin-bottom: 4px;">
+                  Priya S.</div>
+                <div
+                  style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #9CA3AF;">
+                  PARENT</div>
               </div>
             </div>
-            <!-- Review 2 -->
-            <div class="review-card">
-              <div class="review-card__header">
-                <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
-                  alt="Google" class="review-card__google">
-                <div class="review-card__stars">
-                  <svg viewBox="0 0 24 24" fill="#FBBC04">
-                    <path
-                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                  </svg>
-                  <svg viewBox="0 0 24 24" fill="#FBBC04">
-                    <path
-                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                  </svg>
-                  <svg viewBox="0 0 24 24" fill="#FBBC04">
-                    <path
-                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                  </svg>
-                  <svg viewBox="0 0 24 24" fill="#FBBC04">
-                    <path
-                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                  </svg>
-                  <svg viewBox="0 0 24 24" fill="#FBBC04">
-                    <path
-                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                  </svg>
+            <div
+              style="width: 330px; height: 430px; background: #FFFFFF; border-radius: 40px; padding: 2.5rem 2.15rem; box-shadow: 0 24px 50px -10px rgba(0,0,0,0.12); transform: translateY(-14px) scale(1.03); display: flex; flex-direction: column; justify-content: space-between; border: 1px solid rgba(0,0,0,0.03);">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                  <img src="assets/google-logo.svg" alt="Google" style="height: 23px; width: auto; display: block;">
+                  <div style="display: flex; gap: 3px; color: #FBBC04;">★★★★★</div>
                 </div>
+                <p
+                  style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.04rem; line-height: 1.65; color: #4B5563; margin: 0;">
+                  "This place has been wonderful for my son. The therapists are patient and skilled. I've seen
+                  remarkable progress in just 6 months!"</p>
               </div>
-              <p class="review-card__text">"This place has been wonderful for my son. The therapists are patient and
-                skilled. I've seen remarkable progress in just 6 months!"</p>
-              <div class="review-card__author">
-                <span class="review-card__name">Rajesh K.</span>
-                <span class="review-card__role">Parent</span>
+              <div>
+                <div
+                  style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.15rem; font-weight: 700; color: #111827; margin-bottom: 4px;">
+                  Rajesh K.</div>
+                <div
+                  style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #9CA3AF;">
+                  PARENT</div>
               </div>
             </div>
-            <!-- Review 3 -->
-            <div class="review-card">
-              <div class="review-card__header">
-                <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
-                  alt="Google" class="review-card__google">
-                <div class="review-card__stars">
-                  <svg viewBox="0 0 24 24" fill="#FBBC04">
-                    <path
-                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                  </svg>
-                  <svg viewBox="0 0 24 24" fill="#FBBC04">
-                    <path
-                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                  </svg>
-                  <svg viewBox="0 0 24 24" fill="#FBBC04">
-                    <path
-                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                  </svg>
-                  <svg viewBox="0 0 24 24" fill="#FBBC04">
-                    <path
-                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                  </svg>
-                  <svg viewBox="0 0 24 24" fill="#FBBC04">
-                    <path
-                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                  </svg>
+            <div
+              style="width: 330px; height: 430px; background: #FFFFFF; border-radius: 40px; padding: 2.5rem 2.15rem; box-shadow: 0 8px 24px rgba(0,0,0,0.035); opacity: 0.9; transform: scale(0.96); display: flex; flex-direction: column; justify-content: space-between; border: 1px solid rgba(0,0,0,0.03);">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                  <img src="assets/google-logo.svg" alt="Google" style="height: 23px; width: auto; display: block;">
+                  <div style="display: flex; gap: 3px; color: #FBBC04;">★★★★★</div>
                 </div>
+                <p
+                  style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.04rem; line-height: 1.65; color: #4B5563; margin: 0;">
+                  "Dr. Jansirani and her team are exceptional. The sensory gym is amazing and my daughter loves coming
+                  here. Highly recommend!"</p>
               </div>
-              <p class="review-card__text">"Dr. Jansirani and her team are exceptional. The sensory gym is amazing and
-                my daughter loves coming here. Highly recommend!"</p>
-              <div class="review-card__author">
-                <span class="review-card__name">Anitha M.</span>
-                <span class="review-card__role">Parent</span>
+              <div>
+                <div
+                  style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.15rem; font-weight: 700; color: #111827; margin-bottom: 4px;">
+                  Anitha M.</div>
+                <div
+                  style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #9CA3AF;">
+                  PARENT</div>
               </div>
             </div>
-            <!-- Review 4 -->
-            <div class="review-card">
-              <div class="review-card__header">
-                <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
-                  alt="Google" class="review-card__google">
-                <div class="review-card__stars">
-                  <svg viewBox="0 0 24 24" fill="#FBBC04">
-                    <path
-                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                  </svg>
-                  <svg viewBox="0 0 24 24" fill="#FBBC04">
-                    <path
-                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                  </svg>
-                  <svg viewBox="0 0 24 24" fill="#FBBC04">
-                    <path
-                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                  </svg>
-                  <svg viewBox="0 0 24 24" fill="#FBBC04">
-                    <path
-                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                  </svg>
-                  <svg viewBox="0 0 24 24" fill="#FBBC04">
-                    <path
-                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                  </svg>
-                </div>
-              </div>
-              <p class="review-card__text">"Best child development center in Chennai! The early intervention program
-                helped my child catch up on milestones. Forever grateful."</p>
-              <div class="review-card__author">
-                <span class="review-card__name">Suresh V.</span>
-                <span class="review-card__role">Parent</span>
-              </div>
-            </div>
-            <!-- Duplicate for loop -->
-            <div class="review-card">
-              <div class="review-card__header">
-                <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
-                  alt="Google" class="review-card__google">
-                <div class="review-card__stars">
-                  <svg viewBox="0 0 24 24" fill="#FBBC04">
-                    <path
-                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                  </svg>
-                  <svg viewBox="0 0 24 24" fill="#FBBC04">
-                    <path
-                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                  </svg>
-                  <svg viewBox="0 0 24 24" fill="#FBBC04">
-                    <path
-                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                  </svg>
-                  <svg viewBox="0 0 24 24" fill="#FBBC04">
-                    <path
-                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                  </svg>
-                  <svg viewBox="0 0 24 24" fill="#FBBC04">
-                    <path
-                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                  </svg>
-                </div>
-              </div>
-              <p class="review-card__text">"Thank you for your constant support and care. Our child's therapist
-                mentioned: 'My primary goal is for your child to grow strong.' Mission accomplished!"</p>
-              <div class="review-card__author">
-                <span class="review-card__name">Priya S.</span>
-                <span class="review-card__role">Parent</span>
-              </div>
+          </div>
+          <!-- Black loading life bar -->
+          <div style="display: flex; justify-content: center; margin-top: 1.25rem;">
+            <div
+              style="width: 160px; height: 3.5px; background: rgba(0, 0, 0, 0.08); border-radius: 999px; overflow: hidden;">
+              <div style="height: 100%; width: 45%; background: #111827; border-radius: 999px;"></div>
             </div>
           </div>
         </div>
@@ -831,7 +733,8 @@
           <p class="footer__copyright">&copy; 2026 Suja's Child Development Centre. All rights reserved.</p>
         </div>
         <div class="footer__credit">
-          <span>Build by <a href="https://beyaincorp.com" target="_blank" rel="noopener noreferrer">Beyaincorp.com</a></span>
+          <span>Build by <a href="https://beyaincorp.com" target="_blank"
+              rel="noopener noreferrer">Beyaincorp.com</a></span>
         </div>
       </div>
     </div>
@@ -909,6 +812,22 @@
 
       if (window.matchMedia('(pointer: fine)').matches) {
         requestAnimationFrame(updateParallax);
+      }
+    });
+  </script>
+
+  <!-- ExodeUI Snap Ribbon Review Component Bundle -->
+  <script src="js/snap-ribbon.bundle.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof window.initSnapRibbonComponent === 'function') {
+        window.initSnapRibbonComponent('exode-snap-ribbon-root', {
+          src: '/snap-ribbon.bexode',
+          springStiffness: 170,
+          springDamping: 22,
+          dragToScroll: true,
+          autoPlay: true
+        });
       }
     });
   </script>

@@ -1,0 +1,350 @@
+{
+  "id": "artboard_gallery_g-clothesline",
+  "name": "Clothesline",
+  "width": 827,
+  "height": 479,
+  "backgroundColor": "#F3F1EC",
+  "objects": [
+    {
+      "id": "gallery_mwkjwbhk48g2",
+      "name": "Clothesline",
+      "type": "Widget",
+      "variant": "listview",
+      "isVisible": true,
+      "isLocked": false,
+      "transform": {
+        "x": 413.5,
+        "y": 239.5,
+        "rotation": 0,
+        "scale_x": 1,
+        "scale_y": 1,
+        "opacity": 1,
+        "skew_x": 0,
+        "skew_y": 0
+      },
+      "geometry": {
+        "type": "ListView",
+        "width": 760,
+        "height": 440
+      },
+      "style": {
+        "fill": {
+          "type": "None",
+          "opacity": 0
+        },
+        "stroke": {
+          "color": "transparent",
+          "width": 0,
+          "opacity": 0
+        }
+      },
+      "options": {
+        "motion": "g-clothesline",
+        "motionTheme": "paper",
+        "motionParams": {},
+        "motionData": {
+          "titles": "var_mwkjwbhk48g2_titles",
+          "subtitles": "var_mwkjwbhk48g2_subtitles",
+          "meta": "var_mwkjwbhk48g2_meta",
+          "details": "var_mwkjwbhk48g2_details",
+          "images": "var_mwkjwbhk48g2_images"
+        },
+        "motionInputs": {
+          "index": "lv_mwkjwbhk48g2_index",
+          "stiffness": "lv_mwkjwbhk48g2_stiffness",
+          "damping": "lv_mwkjwbhk48g2_damping",
+          "amount": "lv_mwkjwbhk48g2_amount",
+          "drag": "lv_mwkjwbhk48g2_drag",
+          "replay": "lv_mwkjwbhk48g2_replay",
+          "clicked": "lv_mwkjwbhk48g2_clicked",
+          "selTitle": "lv_mwkjwbhk48g2_selTitle",
+          "selItem": "lv_mwkjwbhk48g2_selItem"
+        },
+        "card": {},
+        "rowMotion": {},
+        "items": [
+          "Alpine Ridge",
+          "White Village",
+          "Field at Dusk",
+          "River at Night",
+          "Violet Bloom",
+          "Canal Houses",
+          "Summit Trail",
+          "Dune at Dusk",
+          "Leopard",
+          "Black Lab",
+          "Red Rock",
+          "Rangefinder"
+        ],
+        "isDataVarEnabled": false,
+        "orientation": "vertical",
+        "glassEffect": false,
+        "glowIntensity": 0,
+        "showScrollbar": false,
+        "cornerRadius": 16,
+        "accentColor": "#FF5A36",
+        "listBackgroundColor": "#F3F1EC",
+        "itemBackgroundColor": "#FFFFFF",
+        "itemTextColor": "#17161A",
+        "itemBorderColor": "#E7E2D9",
+        "itemBorderWidth": 1,
+        "itemCornerRadius": 16
+      }
+    }
+  ],
+  "animations": [],
+  "inputs": [],
+  "stateMachine": {
+    "inputs": [
+      {
+        "id": "lv_mwkjwbhk48g2_index",
+        "name": "Clothesline · Selected row",
+        "value": {
+          "type": "Number",
+          "value": 0,
+          "defaultValue": 0,
+          "min": 0,
+          "max": 12,
+          "step": 1
+        },
+        "nodes": [
+          {
+            "id": "in_index_node_0",
+            "x": 120,
+            "y": 120
+          }
+        ]
+      },
+      {
+        "id": "lv_mwkjwbhk48g2_stiffness",
+        "name": "Clothesline · Spring stiffness",
+        "value": {
+          "type": "Number",
+          "value": 150,
+          "defaultValue": 150,
+          "min": 40,
+          "max": 600,
+          "step": 10
+        },
+        "nodes": [
+          {
+            "id": "in_stiffness_node_0",
+            "x": 160,
+            "y": 154
+          }
+        ]
+      },
+      {
+        "id": "lv_mwkjwbhk48g2_damping",
+        "name": "Clothesline · Spring damping",
+        "value": {
+          "type": "Number",
+          "value": 10,
+          "defaultValue": 10,
+          "min": 2,
+          "max": 60,
+          "step": 1
+        },
+        "nodes": [
+          {
+            "id": "in_damping_node_0",
+            "x": 200,
+            "y": 188
+          }
+        ]
+      },
+      {
+        "id": "lv_mwkjwbhk48g2_amount",
+        "name": "Clothesline · Effect amount",
+        "value": {
+          "type": "Number",
+          "value": 1,
+          "defaultValue": 1,
+          "min": 0,
+          "max": 2,
+          "step": 0.05
+        },
+        "nodes": [
+          {
+            "id": "in_amount_node_0",
+            "x": 240,
+            "y": 222
+          }
+        ]
+      },
+      {
+        "id": "lv_mwkjwbhk48g2_drag",
+        "name": "Clothesline · Drag to scroll",
+        "value": {
+          "type": "Boolean",
+          "value": true
+        },
+        "nodes": [
+          {
+            "id": "in_drag_node_0",
+            "x": 280,
+            "y": 256
+          }
+        ]
+      },
+      {
+        "id": "lv_mwkjwbhk48g2_replay",
+        "name": "Clothesline · Replay",
+        "value": {
+          "type": "Trigger",
+          "value": false
+        },
+        "nodes": [
+          {
+            "id": "in_replay_node_0",
+            "x": 320,
+            "y": 290
+          }
+        ]
+      },
+      {
+        "id": "lv_mwkjwbhk48g2_clicked",
+        "name": "Clothesline · Item clicked",
+        "value": {
+          "type": "Trigger",
+          "value": false
+        },
+        "nodes": [
+          {
+            "id": "in_clicked_node_0",
+            "x": 120,
+            "y": 324
+          }
+        ]
+      },
+      {
+        "id": "lv_mwkjwbhk48g2_selTitle",
+        "name": "Clothesline · Selected title",
+        "value": {
+          "type": "Text",
+          "value": ""
+        },
+        "nodes": [
+          {
+            "id": "in_selTitle_node_0",
+            "x": 160,
+            "y": 358
+          }
+        ]
+      },
+      {
+        "id": "lv_mwkjwbhk48g2_selItem",
+        "name": "Clothesline · Selected item",
+        "value": {
+          "type": "Text",
+          "value": ""
+        },
+        "nodes": [
+          {
+            "id": "in_selItem_node_0",
+            "x": 200,
+            "y": 392
+          }
+        ]
+      }
+    ],
+    "layers": []
+  },
+  "stateVariables": [
+    {
+      "id": "var_mwkjwbhk48g2_titles",
+      "name": "Clothesline Titles",
+      "type": "Array",
+      "value": [
+        "Alpine Ridge",
+        "White Village",
+        "Field at Dusk",
+        "River at Night",
+        "Violet Bloom",
+        "Canal Houses",
+        "Summit Trail",
+        "Dune at Dusk",
+        "Leopard",
+        "Black Lab",
+        "Red Rock",
+        "Rangefinder"
+      ]
+    },
+    {
+      "id": "var_mwkjwbhk48g2_subtitles",
+      "name": "Clothesline Subtitles",
+      "type": "Array",
+      "value": [
+        "Bernese Oberland",
+        "Santorini",
+        "Tuscany",
+        "London",
+        "Garden study",
+        "Bruges",
+        "Dolomites",
+        "Erg Chebbi",
+        "Serengeti",
+        "Studio portrait",
+        "Outback",
+        "Still life"
+      ]
+    },
+    {
+      "id": "var_mwkjwbhk48g2_meta",
+      "name": "Clothesline Meta",
+      "type": "Array",
+      "value": [
+        "2019",
+        "2018",
+        "2020",
+        "2017",
+        "2021",
+        "2019",
+        "2020",
+        "2016",
+        "2018",
+        "2022",
+        "2015",
+        "2019"
+      ]
+    },
+    {
+      "id": "var_mwkjwbhk48g2_details",
+      "name": "Clothesline Details",
+      "type": "Array",
+      "value": [
+        "First light over a ridge of fresh snow.",
+        "Lime-washed houses stacked above the caldera.",
+        "The last warm light across a wheat field.",
+        "St Paul's and the Millennium Bridge after dark.",
+        "A petunia close up after the rain.",
+        "Painted facades leaning over still water.",
+        "The final switchback before the col.",
+        "A single crest catching the sunset.",
+        "Mid-stride on a dusty track at noon.",
+        "Patience, one treat away.",
+        "Sandstone glowing under a blue sky.",
+        "A well-worn camera on the desk."
+      ]
+    },
+    {
+      "id": "var_mwkjwbhk48g2_images",
+      "name": "Clothesline Image URLs",
+      "type": "Array",
+      "value": [
+        "https://picsum.photos/id/29/600/750",
+        "https://picsum.photos/id/49/600/750",
+        "https://picsum.photos/id/110/600/750",
+        "https://picsum.photos/id/122/600/750",
+        "https://picsum.photos/id/152/600/750",
+        "https://picsum.photos/id/164/600/750",
+        "https://picsum.photos/id/177/600/750",
+        "https://picsum.photos/id/184/600/750",
+        "https://picsum.photos/id/219/600/750",
+        "https://picsum.photos/id/237/600/750",
+        "https://picsum.photos/id/247/600/750",
+        "https://picsum.photos/id/250/600/750"
+      ]
+    }
+  ]
+}

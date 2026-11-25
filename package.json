@@ -13,5 +13,14 @@
     "speech-therapy"
   ],
   "author": "Suja's CDC",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "exodeui": "^7.2.26",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "three": "^0.187.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  }
 }

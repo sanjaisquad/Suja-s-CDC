@@ -1,0 +1,548 @@
+{
+  "id": "artboard_listview_snap-ribbon",
+  "name": "Screen 1",
+  "width": 1024,
+  "height": 768,
+  "cornerRadius": 0,
+  "deviceFrame": "none",
+  "fit": "Layout",
+  "responsive": {
+    "enabled": true,
+    "mode": "constraint",
+    "width": {
+      "type": "fixed"
+    },
+    "height": {
+      "type": "fixed"
+    },
+    "maintainAspectRatio": true,
+    "scaleObjects": true
+  },
+  "backgroundColor": "#FFFFFF",
+  "x": 0,
+  "y": 0,
+  "stateMachine": {
+    "inputs": [
+      {
+        "id": "lv_mwkv1q4w5u2z_index",
+        "name": "Snapping Ribbon · Selected row",
+        "value": {
+          "type": "Number",
+          "value": 0,
+          "defaultValue": 0,
+          "min": 0,
+          "max": 10,
+          "step": 1
+        },
+        "nodes": [
+          {
+            "id": "in_index_node_0",
+            "x": 120,
+            "y": 120
+          }
+        ]
+      },
+      {
+        "id": "lv_mwkv1q4w5u2z_stiffness",
+        "name": "Snapping Ribbon · Spring stiffness",
+        "value": {
+          "type": "Number",
+          "value": 170,
+          "defaultValue": 170,
+          "min": 40,
+          "max": 600,
+          "step": 10
+        },
+        "nodes": [
+          {
+            "id": "in_stiffness_node_0",
+            "x": 160,
+            "y": 154
+          }
+        ]
+      },
+      {
+        "id": "lv_mwkv1q4w5u2z_damping",
+        "name": "Snapping Ribbon · Spring damping",
+        "value": {
+          "type": "Number",
+          "value": 22,
+          "defaultValue": 22,
+          "min": 2,
+          "max": 60,
+          "step": 1
+        },
+        "nodes": [
+          {
+            "id": "in_damping_node_0",
+            "x": 200,
+            "y": 188
+          }
+        ]
+      },
+      {
+        "id": "lv_mwkv1q4w5u2z_amount",
+        "name": "Snapping Ribbon · Effect amount",
+        "value": {
+          "type": "Number",
+          "value": 1,
+          "defaultValue": 1,
+          "min": 0,
+          "max": 2,
+          "step": 0.05
+        },
+        "nodes": [
+          {
+            "id": "in_amount_node_0",
+            "x": 240,
+            "y": 222
+          }
+        ]
+      },
+      {
+        "id": "lv_mwkv1q4w5u2z_drag",
+        "name": "Snapping Ribbon · Drag to scroll",
+        "value": {
+          "type": "Boolean",
+          "value": true
+        },
+        "nodes": [
+          {
+            "id": "in_drag_node_0",
+            "x": 280,
+            "y": 256
+          }
+        ]
+      },
+      {
+        "id": "lv_mwkv1q4w5u2z_interval",
+        "name": "Snapping Ribbon · Autoplay interval (s)",
+        "value": {
+          "type": "Number",
+          "value": 2.2,
+          "defaultValue": 2.2,
+          "min": 0.6,
+          "max": 10,
+          "step": 0.1
+        },
+        "nodes": [
+          {
+            "id": "in_interval_node_0",
+            "x": 320,
+            "y": 290
+          }
+        ]
+      },
+      {
+        "id": "lv_mwkv1q4w5u2z_autoplay",
+        "name": "Snapping Ribbon · Autoplay",
+        "value": {
+          "type": "Boolean",
+          "value": true
+        },
+        "nodes": [
+          {
+            "id": "in_autoplay_node_0",
+            "x": 120,
+            "y": 324
+          }
+        ]
+      },
+      {
+        "id": "lv_mwkv1q4w5u2z_pauseOnHover",
+        "name": "Snapping Ribbon · Pause on hover",
+        "value": {
+          "type": "Boolean",
+          "value": true
+        },
+        "nodes": [
+          {
+            "id": "in_pauseOnHover_node_0",
+            "x": 160,
+            "y": 358
+          }
+        ]
+      },
+      {
+        "id": "lv_mwkv1q4w5u2z_replay",
+        "name": "Snapping Ribbon · Replay",
+        "value": {
+          "type": "Trigger",
+          "value": false
+        },
+        "nodes": [
+          {
+            "id": "in_replay_node_0",
+            "x": 200,
+            "y": 392
+          }
+        ]
+      },
+      {
+        "id": "lv_mwkv1q4w5u2z_next",
+        "name": "Snapping Ribbon · Next row",
+        "value": {
+          "type": "Trigger",
+          "value": false
+        },
+        "nodes": [
+          {
+            "id": "in_next_node_0",
+            "x": 240,
+            "y": 426
+          }
+        ]
+      },
+      {
+        "id": "lv_mwkv1q4w5u2z_prev",
+        "name": "Snapping Ribbon · Previous row",
+        "value": {
+          "type": "Trigger",
+          "value": false
+        },
+        "nodes": [
+          {
+            "id": "in_prev_node_0",
+            "x": 280,
+            "y": 460
+          }
+        ]
+      },
+      {
+        "id": "lv_mwkv1q4w5u2z_clicked",
+        "name": "Snapping Ribbon · Item clicked",
+        "value": {
+          "type": "Trigger",
+          "value": false
+        },
+        "nodes": [
+          {
+            "id": "in_clicked_node_0",
+            "x": 320,
+            "y": 494
+          }
+        ]
+      },
+      {
+        "id": "lv_mwkv1q4w5u2z_selTitle",
+        "name": "Snapping Ribbon · Selected title",
+        "value": {
+          "type": "Text",
+          "value": ""
+        },
+        "nodes": [
+          {
+            "id": "in_selTitle_node_0",
+            "x": 120,
+            "y": 528
+          }
+        ]
+      },
+      {
+        "id": "lv_mwkv1q4w5u2z_selItem",
+        "name": "Snapping Ribbon · Selected item",
+        "value": {
+          "type": "Text",
+          "value": ""
+        },
+        "nodes": [
+          {
+            "id": "in_selItem_node_0",
+            "x": 160,
+            "y": 562
+          }
+        ]
+      }
+    ],
+    "layers": [
+      {
+        "name": "Base Layer",
+        "entryStateId": "entry",
+        "states": [
+          {
+            "id": "entry",
+            "name": "Entry",
+            "x": 100,
+            "y": 100
+          },
+          {
+            "id": "exit",
+            "name": "Exit",
+            "x": 500,
+            "y": 100
+          }
+        ]
+      }
+    ]
+  },
+  "physics": {
+    "enabled": false,
+    "gravity": {
+      "x": 0,
+      "y": 9.8
+    },
+    "wind": {
+      "x": 0,
+      "y": 0
+    },
+    "timeScale": 1,
+    "collideWithBounds": true
+  },
+  "animations": [
+    {
+      "id": "anim_1795603379757_onload",
+      "name": "onLoad",
+      "duration": 3
+    }
+  ],
+  "objects": [
+    {
+      "id": "listview_mwkv1q4w5u2z",
+      "name": "Snapping Ribbon",
+      "type": "Component",
+      "transform": {
+        "x": 512,
+        "y": 384,
+        "scale_x": 1.99,
+        "scale_y": 2,
+        "flip_x": false,
+        "flip_y": false,
+        "pivot_x": 0,
+        "pivot_y": 0,
+        "rotate_x": 0,
+        "rotate_y": 0,
+        "translate_z": 0
+      },
+      "variant": "listview",
+      "options": {
+        "motion": "snap-ribbon",
+        "motionTheme": "paper",
+        "motionData": {
+          "titles": "var_mwkv1q4w5u2z_titles",
+          "subtitles": "var_mwkv1q4w5u2z_subtitles",
+          "meta": "var_mwkv1q4w5u2z_meta",
+          "details": "var_mwkv1q4w5u2z_details",
+          "images": "var_mwkv1q4w5u2z_images"
+        },
+        "motionInputs": {
+          "index": "lv_mwkv1q4w5u2z_index",
+          "stiffness": "lv_mwkv1q4w5u2z_stiffness",
+          "damping": "lv_mwkv1q4w5u2z_damping",
+          "amount": "lv_mwkv1q4w5u2z_amount",
+          "drag": "lv_mwkv1q4w5u2z_drag",
+          "interval": "lv_mwkv1q4w5u2z_interval",
+          "autoplay": "lv_mwkv1q4w5u2z_autoplay",
+          "pauseOnHover": "lv_mwkv1q4w5u2z_pauseOnHover",
+          "replay": "lv_mwkv1q4w5u2z_replay",
+          "next": "lv_mwkv1q4w5u2z_next",
+          "prev": "lv_mwkv1q4w5u2z_prev",
+          "clicked": "lv_mwkv1q4w5u2z_clicked",
+          "selTitle": "lv_mwkv1q4w5u2z_selTitle",
+          "selItem": "lv_mwkv1q4w5u2z_selItem"
+        },
+        "rowMotion": {
+          "x": [
+            [
+              -10,
+              -2220
+            ],
+            [
+              10,
+              2220
+            ]
+          ],
+          "s": [
+            [
+              -10,
+              0.88
+            ],
+            [
+              -1,
+              0.88
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0.88
+            ],
+            [
+              10,
+              0.88
+            ]
+          ],
+          "op": [
+            [
+              -10,
+              0
+            ],
+            [
+              -4.75,
+              0
+            ],
+            [
+              -4.62,
+              0.01
+            ],
+            [
+              -1.37,
+              0.99
+            ],
+            [
+              -1.25,
+              1
+            ],
+            [
+              1.25,
+              1
+            ],
+            [
+              1.38,
+              0.99
+            ],
+            [
+              4.63,
+              0.01
+            ],
+            [
+              4.75,
+              0
+            ],
+            [
+              10,
+              0
+            ]
+          ]
+        },
+        "items": [
+          "Maya Chen",
+          "Leo Park",
+          "Studio North",
+          "Ava Rossi",
+          "Noah Kim",
+          "Priya Shah",
+          "Elena Ruiz",
+          "Sam Lee",
+          "Iris Wong",
+          "Omar Haddad"
+        ],
+        "isDataVarEnabled": false,
+        "orientation": "vertical",
+        "glassEffect": false,
+        "glowIntensity": 0,
+        "showScrollbar": false,
+        "cornerRadius": 16,
+        "accentColor": "#FF5A36",
+        "listBackgroundColor": "#F3F1EC",
+        "itemBackgroundColor": "#FFFFFF",
+        "itemTextColor": "#17161A",
+        "itemBorderColor": "#E7E2D9",
+        "itemBorderWidth": 1,
+        "itemCornerRadius": 16,
+        "scrollOffset": 0
+      },
+      "geometry": {
+        "type": "ListView",
+        "width": 973,
+        "height": 272
+      },
+      "style": {
+        "fill": {
+          "type": "None"
+        },
+        "stroke": {
+          "color": "transparent",
+          "width": 0
+        }
+      },
+      "width": 973,
+      "height": 272,
+      "_authoredSpatial": {
+        "x": 320,
+        "y": 320,
+        "w": 589,
+        "h": 272,
+        "artW": 640,
+        "artH": 640
+      }
+    }
+  ],
+  "stateVariables": [
+    {
+      "id": "var_mwkv1q4w5u2z_titles",
+      "name": "Snapping Ribbon Titles",
+      "type": "Array",
+      "value": [
+        "Maya Chen",
+        "Leo Park",
+        "Studio North",
+        "Ava Rossi",
+        "Noah Kim",
+        "Priya Shah",
+        "Elena Ruiz",
+        "Sam Lee",
+        "Iris Wong",
+        "Omar Haddad"
+      ]
+    },
+    {
+      "id": "var_mwkv1q4w5u2z_subtitles",
+      "name": "Snapping Ribbon Subtitles",
+      "type": "Array",
+      "value": [
+        "Final cut is ready for review",
+        "Lunch on Thursday?",
+        "Invoice #2041 paid",
+        "Moodboard v3",
+        "Flight AC 871 confirmed",
+        "Sprint retro notes",
+        "New comment on Homepage",
+        "Your weekly report",
+        "Photos from the shoot",
+        "Contract draft v2"
+      ]
+    },
+    {
+      "id": "var_mwkv1q4w5u2z_meta",
+      "name": "Snapping Ribbon Meta",
+      "type": "Array",
+      "value": [
+        "2m",
+        "9m",
+        "1h",
+        "2h",
+        "3h",
+        "5h",
+        "6h",
+        "1d",
+        "1d",
+        "2d"
+      ]
+    },
+    {
+      "id": "var_mwkv1q4w5u2z_details",
+      "name": "Snapping Ribbon Details",
+      "type": "Array",
+      "value": [
+        "I tightened the intro and swapped the score. Can you sign off before the 4pm sync?",
+        "The new ramen place on 5th opens at noon. I can book for four if Ava is in.",
+        "Payment received for the brand refresh. Receipt and tax summary are attached.",
+        "Warmer palette, fewer gradients, and the type pairing you liked from round two.",
+        "Departs 08:40 from Gate 22. Seat 14A, carry-on only. Check-in opens tonight.",
+        "Three wins, two blockers, and one experiment for next sprint. Notes are in the doc.",
+        "Love the hero motion. Could the second section load a beat earlier on mobile?",
+        "Sessions up 18%, signups up 9%. The pricing page is the new top entry point.",
+        "Forty selects, colour-graded. The rooftop set came out especially well.",
+        "Updated the payment terms and the usage rights section. Ready for your review."
+      ]
+    },
+    {
+      "id": "var_mwkv1q4w5u2z_images",
+      "name": "Snapping Ribbon Image URLs",
+      "type": "Array"
+    }
+  ],
+  "lastModified": 1795603723194
+}

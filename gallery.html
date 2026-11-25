@@ -16,6 +16,23 @@
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+  <style>
+    body,
+    p,
+    span,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    a,
+    button,
+    input,
+    label {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+    }
+  </style>
 </head>
 
 <body>
@@ -85,33 +102,28 @@
 
   <main id="main-content">
 
-    <!-- GALLERY HERO -->
-    <section class="gallery-hero">
-
+    <!-- PAGE HERO - "Our Gallery" title (Ecolevision style) -->
+    <section class="page-hero page-hero--gallery page-hero--contact">
       <div class="container">
-        <h1 class="gallery-hero__title">
-          <span class="gallery-hero__title-line">Our</span>
-          <span class="gallery-hero__title-line">Gall<span class="title-icon title-icon--camera"><svg
-                viewBox="0 0 60 50" fill="#00A3E1">
-                <rect x="5" y="12" width="50" height="35" rx="6" />
-                <circle cx="30" cy="30" r="12" />
-                <rect x="20" y="5" width="20" height="10" rx="3" />
-              </svg></span>ry</span>
+        <h1 class="page-hero__title page-hero__title--centered">
+          Our Gallery
         </h1>
       </div>
-      <!-- Decorative shapes -->
-      <div class="gallery-hero__shapes" aria-hidden="true">
-        <div class="gallery-shape gallery-shape--circle anim-fall" data-delay="0">
+      <!-- Decorative background shapes -->
+      <div class="page-hero__shapes" aria-hidden="true">
+        <div class="page-shape page-shape--contact-1 anim-fall" data-delay="0">
           <svg viewBox="0 0 100 100" fill="#00A3E1">
             <circle cx="50" cy="50" r="48" />
           </svg>
         </div>
-        <div class="gallery-shape gallery-shape--leaf anim-fall" data-delay="100">
+        <div class="page-shape anim-fall" data-delay="100"
+          style="position: absolute; width: 60px; top: 35%; left: 8%; opacity: 0.7;">
           <svg viewBox="0 0 60 100" fill="#C4D600">
             <ellipse cx="30" cy="50" rx="28" ry="48" />
           </svg>
         </div>
-        <div class="gallery-shape gallery-shape--plus anim-fall" data-delay="150">
+        <div class="page-shape anim-fall" data-delay="150"
+          style="position: absolute; width: 65px; bottom: 15%; right: 12%; opacity: 0.7;">
           <svg viewBox="0 0 80 80" fill="#C4D600">
             <rect x="28" y="0" width="24" height="80" rx="12" />
             <rect x="0" y="28" width="80" height="24" rx="12" />
@@ -402,7 +414,8 @@
           <p class="footer__copyright">&copy; 2026 Suja's Child Development Centre. All rights reserved.</p>
         </div>
         <div class="footer__credit">
-          <span>Build by <a href="https://beyaincorp.com" target="_blank" rel="noopener noreferrer">Beyaincorp.com</a></span>
+          <span>Build by <a href="https://beyaincorp.com" target="_blank"
+              rel="noopener noreferrer">Beyaincorp.com</a></span>
         </div>
       </div>
     </div>

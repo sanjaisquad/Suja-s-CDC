@@ -13,6 +13,8 @@ const MIME_TYPES = {
   '.svg': 'image/svg+xml',
   '.ico': 'image/x-icon',
   '.pdf': 'application/pdf',
+  '.bexode': 'application/octet-stream',
+  '.exode': 'text/plain',
 };
 
 const server = http.createServer((req, res) => {
