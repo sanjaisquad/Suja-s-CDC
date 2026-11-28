@@ -73,10 +73,10 @@
     </div>
   </header>
 
-  <!-- MOBILE NAV -->
+  <!-- MOBILE NAV (Inspired by Vision École Trilingue mobile menu) -->
   <div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Mobile navigation" aria-hidden="true">
     <div class="mobile-nav__header">
-      <a href="index.html" class="header__logo" aria-label="Home">
+      <a href="index.html" class="header__logo" aria-label="Suja's Child Development Centre Home">
         <div class="header__logo-badge">
           <img src="assets/logo.jpg" alt="" width="44" height="44">
         </div>
@@ -85,180 +85,493 @@
           <span class="header__logo-sub">Child Dev Centre</span>
         </div>
       </a>
-      <button class="mobile-nav__close" aria-label="Close menu">Close</button>
+      <button class="mobile-nav__close" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18"
+          aria-hidden="true">
+          <path d="M18 6L6 18M6 6l12 12" />
+        </svg>
+        <span>Close</span>
+      </button>
     </div>
-    <nav class="mobile-nav__body" aria-label="Mobile menu links">
-      <a href="index.html" class="mobile-nav-link">Home</a>
-      <a href="about.html" class="mobile-nav-link">About</a>
-      <a href="services.html" class="mobile-nav-link">Services</a>
-      <a href="gallery.html" class="mobile-nav-link">Gallery</a>
-      <a href="contact.html" class="mobile-nav-link">Contact</a>
-    </nav>
-    <div class="mobile-nav__footer">
-      <a href="contact.html" class="btn btn--primary" style="width:100%;">Book Consultation</a>
-      <a href="tel:+918682870313" class="btn btn--outline" style="width:100%;">Call +91 86828 70313</a>
+
+    <div class="mobile-nav__scroll-wrap">
+      <div class="mobile-nav__body">
+        <!-- Primary Monumental Links -->
+        <nav class="mobile-nav__primary" aria-label="Primary mobile links">
+          <a href="index.html" class="mobile-nav-link">Home</a>
+          <a href="about.html" class="mobile-nav-link">About Us</a>
+          <a href="services.html" class="mobile-nav-link">Our Services</a>
+          <a href="gallery.html" class="mobile-nav-link">Our Gallery</a>
+          <a href="contact.html" class="mobile-nav-link">Contact</a>
+        </nav>
+
+        <!-- Secondary Links -->
+        <nav class="mobile-nav__secondary" aria-label="Specialized therapy services">
+          <a href="services.html" class="mobile-nav-sublink">Occupational Therapy</a>
+          <a href="services.html" class="mobile-nav-sublink">Speech &amp; Oral Therapy</a>
+          <a href="services.html" class="mobile-nav-sublink">Early Intervention</a>
+          <a href="https://maps.app.goo.gl/KU3LuL8oiaaAWXEZA" target="_blank" rel="noopener noreferrer"
+            class="mobile-nav-sublink mobile-nav-sublink--external">
+            <span>Our Centre Location</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"
+              aria-hidden="true">
+              <path d="M7 17L17 7M17 7H7M17 7V17" />
+            </svg>
+          </a>
+        </nav>
+
+        <!-- CTA Action Pill -->
+        <div class="mobile-nav__actions">
+          <a href="contact.html" class="mobile-nav__pill-btn">Book Consultation</a>
+        </div>
+
+        <!-- Division Footnote Label -->
+        <div class="mobile-nav__division">
+          <span>OUR PEDIATRIC DIVISIONS</span>
+        </div>
+      </div>
+
+      <!-- Artistic Collage Backdrop Shapes -->
+      <div class="mobile-nav__shapes" aria-hidden="true">
+        <!-- Sky Blue Organic Scalloped Cloud -->
+        <svg class="mobile-nav__shape mobile-nav__shape--cloud" viewBox="0 0 200 200" fill="#CEE5F2">
+          <path
+            d="M100 18C118 18 132 30 135 46C151 42 168 50 175 66C182 82 175 99 161 108C174 118 179 136 171 151C163 166 145 173 130 167C125 183 110 193 93 191C76 189 63 176 61 160C45 164 28 155 22 139C16 123 23 106 37 97C24 87 19 69 27 54C35 39 53 32 68 38C74 25 86 18 100 18Z" />
+        </svg>
+
+        <!-- Large Pale Lime Circle Bubble -->
+        <svg class="mobile-nav__shape mobile-nav__shape--circle" viewBox="0 0 240 240" fill="#DDECAE">
+          <circle cx="120" cy="120" r="115" />
+        </svg>
+
+        <!-- Sharp Chartreuse Lime Triangle Wedge -->
+        <svg class="mobile-nav__shape mobile-nav__shape--triangle" viewBox="0 0 160 160" fill="#C4D600">
+          <polygon points="10,150 150,150 80,10" />
+        </svg>
+      </div>
     </div>
   </div>
 
   <main id="main-content">
 
-    <!-- PAGE HERO - "Our Gallery" title (Ecolevision style) -->
-    <section class="page-hero page-hero--gallery page-hero--contact">
-      <div class="container">
-        <h1 class="page-hero__title page-hero__title--centered">
-          Our Gallery
-        </h1>
-      </div>
-      <!-- Decorative background shapes -->
-      <div class="page-hero__shapes" aria-hidden="true">
-        <div class="page-shape page-shape--contact-1 anim-fall" data-delay="0">
-          <svg viewBox="0 0 100 100" fill="#00A3E1">
-            <circle cx="50" cy="50" r="48" />
+    <!-- PAGE HERO - UPGRADED GALLERY HERO (Frontend Design Lead Style) -->
+    <section class="gallery-hero-v2" aria-labelledby="gallery-main-heading">
+      <div class="gallery-hero-v2__bg-shapes" aria-hidden="true">
+        <!-- Playful geometric elements in Suja's logo palette -->
+        <div class="gh-shape gh-shape--starburst">
+          <svg viewBox="0 0 100 100" fill="#B5DC17">
+            <path d="M50 0 L58 35 L93 25 L70 50 L93 75 L58 65 L50 100 L42 65 L7 75 L30 50 L7 25 L42 35 Z" />
           </svg>
         </div>
-        <div class="page-shape anim-fall" data-delay="100"
-          style="position: absolute; width: 60px; top: 35%; left: 8%; opacity: 0.7;">
-          <svg viewBox="0 0 60 100" fill="#C4D600">
-            <ellipse cx="30" cy="50" rx="28" ry="48" />
+        <div class="gh-shape gh-shape--cloud">
+          <svg viewBox="0 0 160 120" fill="#20A7DB">
+            <path
+              d="M40 80 C20 80 10 65 20 45 C25 30 45 25 55 35 C65 15 95 10 115 30 C125 25 145 35 145 55 C155 70 145 85 130 85 Z" />
           </svg>
         </div>
-        <div class="page-shape anim-fall" data-delay="150"
-          style="position: absolute; width: 65px; bottom: 15%; right: 12%; opacity: 0.7;">
-          <svg viewBox="0 0 80 80" fill="#C4D600">
+        <div class="gh-shape gh-shape--plus">
+          <svg viewBox="0 0 80 80" fill="#B5DC17">
             <rect x="28" y="0" width="24" height="80" rx="12" />
             <rect x="0" y="28" width="80" height="24" rx="12" />
           </svg>
         </div>
+        <div class="gh-shape gh-shape--heart">
+          <svg viewBox="0 0 32 32" fill="#F43F85">
+            <path
+              d="M16 28.5S2 19 2 9.5C2 5.5 5 2.5 9 2.5c3 0 5.5 2 7 4.5 1.5-2.5 4-4.5 7-4.5 4 0 7 3 7 7 0 9.5-14 19-14 19z" />
+          </svg>
+        </div>
+        <div class="gh-shape gh-shape--disc"></div>
       </div>
-    </section>
 
-    <!-- MARQUEE ROW 1 - Left to Right -->
-    <section class="gallery-marquee">
-      <div class="marquee-track marquee-track--left">
-        <div class="marquee-content">
-          <!-- Images will be duplicated for infinite scroll effect -->
-          <div class="marquee-item marquee-item--blue">
-            <img src="assets/hero-sensory.svg" alt="Sensory therapy session">
+      <div class="container gallery-hero-v2__inner">
+        <div class="gallery-hero-v2__header">
+          <!-- <div class="gallery-hero-v2__badge">
+            <span class="gh-badge__dot"></span>
+            A Visual Walkthrough of Our Centre
+          </div> -->
+          <h1 id="gallery-main-heading" class="gallery-hero-v2__title">
+            Our Gallery
+          </h1>
+          <p class="gallery-hero-v2__subtitle">
+            Step inside our specialized sensory gym, speech therapy pods, and early intervention classrooms in
+            Perumbakkam, Chennai. See how tailored play nurtures every child’s communication, movement, and confidence.
+          </p>
+
+          <!-- Interactive Filter Tabs -->
+          <!-- <div class="gallery-filter-bar" role="tablist" aria-label="Gallery category filters">
+            <button class="gallery-filter-btn is-active" role="tab" aria-selected="true" data-filter="all">
+              All Moments
+            </button>
+            <button class="gallery-filter-btn" role="tab" aria-selected="false" data-filter="sensory">
+              Sensory Gym
+            </button>
+            <button class="gallery-filter-btn" role="tab" aria-selected="false" data-filter="speech">
+              Speech Pods
+            </button>
+            <button class="gallery-filter-btn" role="tab" aria-selected="false" data-filter="motor">
+              Motor &amp; Play
+            </button>
+            <button class="gallery-filter-btn" role="tab" aria-selected="false" data-filter="early">
+              Early Intervention
+            </button>
+          </div> -->
+        </div>
+
+        <!-- Hero Curated Feature Composition -->
+        <div class="gallery-hero-v2__mosaic">
+          <!-- Card 1: Sensory Integration -->
+          <div class="gh-card gh-card--side gh-card--left">
+            <div class="gh-card__media">
+              <img src="assets/hero-sensory.svg" alt="Sensory integration therapy setup" loading="eager" />
+              <div class="gh-card__overlay">
+                <span class="gh-card__tag gh-card__tag--blue">Sensory Gym</span>
+                <span class="gh-card__meta">Vestibular Swing &amp; Balance</span>
+              </div>
+            </div>
+            <div class="gh-card__caption">
+              <strong>Sensory Regulation</strong>
+              <span>Custom swings &amp; tactile textures calming overactive nervous systems.</span>
+            </div>
           </div>
-          <div class="marquee-item">
-            <img src="assets/hero-care.svg" alt="Child care moment">
+
+          <!-- Card 2: Centre Spotlight (Elevated Centerpiece) -->
+          <div class="gh-card gh-card--center">
+            <div class="gh-card__media">
+              <img src="assets/hero-care.svg" alt="Therapist guiding a child through developmental milestone play"
+                loading="eager" />
+              <div class="gh-card__overlay">
+                <span class="gh-card__tag gh-card__tag--rose">Clinical Focus</span>
+                <span class="gh-card__meta">One-on-One Guided Sessions</span>
+              </div>
+            </div>
+            <div class="gh-card__caption gh-card__caption--spotlight">
+              <div class="gh-card__avatar">
+                <img src="assets/logo.jpg" alt="Suja's Child Development Centre" />
+              </div>
+              <div class="gh-card__text">
+                <strong>Empowering Every Milestone</strong>
+                <span>Certified occupational &amp; speech therapists guiding children through evidence-backed
+                  development.</span>
+              </div>
+            </div>
           </div>
-          <div class="marquee-item marquee-item--lime">
-            <img src="assets/hero-speech.svg" alt="Speech therapy">
-          </div>
-          <div class="marquee-item">
-            <img src="assets/hero-sensory.svg" alt="Therapy activity">
-          </div>
-          <div class="marquee-item marquee-item--blue">
-            <img src="assets/hero-care.svg" alt="Development session">
-          </div>
-          <div class="marquee-item">
-            <img src="assets/hero-speech.svg" alt="Communication therapy">
-          </div>
-          <!-- Duplicate for seamless loop -->
-          <div class="marquee-item marquee-item--blue">
-            <img src="assets/hero-sensory.svg" alt="Sensory therapy session">
-          </div>
-          <div class="marquee-item">
-            <img src="assets/hero-care.svg" alt="Child care moment">
-          </div>
-          <div class="marquee-item marquee-item--lime">
-            <img src="assets/hero-speech.svg" alt="Speech therapy">
-          </div>
-          <div class="marquee-item">
-            <img src="assets/hero-sensory.svg" alt="Therapy activity">
-          </div>
-          <div class="marquee-item marquee-item--blue">
-            <img src="assets/hero-care.svg" alt="Development session">
-          </div>
-          <div class="marquee-item">
-            <img src="assets/hero-speech.svg" alt="Communication therapy">
+
+          <!-- Card 3: Speech & Communication -->
+          <div class="gh-card gh-card--side gh-card--right">
+            <div class="gh-card__media">
+              <img src="assets/hero-speech.svg" alt="Speech and language therapy session" loading="eager" />
+              <div class="gh-card__overlay">
+                <span class="gh-card__tag gh-card__tag--lime">Speech Pods</span>
+                <span class="gh-card__meta">Expressive Language &amp; Clarity</span>
+              </div>
+            </div>
+            <div class="gh-card__caption">
+              <strong>Oral Placement &amp; Speech</strong>
+              <span>Interactive phonics, PECS communication boards, and articulation games.</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- VIDEO SECTION 1 -->
+    <!-- SECTION DIVIDER BANNER -->
+    <!-- <div class="gallery-ticker-banner">
+      <div class="gallery-ticker-content" aria-hidden="true">
+        <span>• Occupational Therapy</span>
+        <span>• Sensory Integration</span>
+        <span>• Speech Therapy</span>
+        <span>• Autism Support</span>
+        <span>• ADHD Guidance</span>
+        <span>• Early Intervention</span>
+        <span>• Gross Motor Gym</span>
+        <span>• Occupational Therapy</span>
+        <span>• Sensory Integration</span>
+        <span>• Speech Therapy</span>
+        <span>• Autism Support</span>
+        <span>• ADHD Guidance</span>
+        <span>• Early Intervention</span>
+      </div>
+    </div> -->
+
+    <!-- MARQUEE ROW 1 - Stream 1: Movement & Sensory Experience -->
+    <section class="gallery-marquee-section">
+      <div class="gallery-marquee-header container">
+        <span class="gallery-marquee-eyebrow">Gallery Stream 01</span>
+        <h2 class="gallery-marquee-heading">Active Therapy &amp; Sensory Exploration</h2>
+      </div>
+      <div class="gallery-marquee">
+        <div class="marquee-track marquee-track--left">
+          <div class="marquee-content">
+            <!-- Item 1: Sensory -->
+            <div class="marquee-item marquee-item--blue" data-category="sensory">
+              <img src="assets/hero-sensory.svg" alt="Vestibular Swing Practice" loading="lazy">
+              <div class="marquee-item__info">
+                <span class="marquee-item__pill">Sensory Gym</span>
+                <p class="marquee-item__text">Vestibular Swing &amp; Equilibrium</p>
+              </div>
+            </div>
+            <!-- Item 2: Care -->
+            <div class="marquee-item" data-category="motor">
+              <img src="assets/hero-care.svg" alt="Fine Motor Dexterity Practice" loading="lazy">
+              <div class="marquee-item__info">
+                <span class="marquee-item__pill">Fine Motor</span>
+                <p class="marquee-item__text">Pegboards &amp; Pincer Grip Play</p>
+              </div>
+            </div>
+            <!-- Item 3: Speech -->
+            <div class="marquee-item marquee-item--lime" data-category="speech">
+              <img src="assets/hero-speech.svg" alt="Phonological Clarity Training" loading="lazy">
+              <div class="marquee-item__info">
+                <span class="marquee-item__pill">Speech Pod</span>
+                <p class="marquee-item__text">Sound Modeling &amp; Articulation</p>
+              </div>
+            </div>
+            <!-- Item 4: Early Intervention -->
+            <div class="marquee-item" data-category="early">
+              <img src="assets/therapy-ei.svg" alt="Early Infant Tracking" loading="lazy">
+              <div class="marquee-item__info">
+                <span class="marquee-item__pill">Early Intervention</span>
+                <p class="marquee-item__text">Visual Tracking &amp; Milestones</p>
+              </div>
+            </div>
+            <!-- Item 5: Occupational Therapy -->
+            <div class="marquee-item marquee-item--blue" data-category="motor">
+              <img src="assets/therapy-ot.svg" alt="Postural Balance & Core Tone" loading="lazy">
+              <div class="marquee-item__info">
+                <span class="marquee-item__pill">OT Core</span>
+                <p class="marquee-item__text">Balance Beam &amp; Spatial Awareness</p>
+              </div>
+            </div>
+            <!-- Item 6: Special Education -->
+            <div class="marquee-item" data-category="early">
+              <img src="assets/therapy-se.svg" alt="School Readiness" loading="lazy">
+              <div class="marquee-item__info">
+                <span class="marquee-item__pill">School Readiness</span>
+                <p class="marquee-item__text">Task Sequencing &amp; Circle Time</p>
+              </div>
+            </div>
+
+            <!-- Loop Duplicates for Smooth Infinite Marquee -->
+            <div class="marquee-item marquee-item--blue" data-category="sensory">
+              <img src="assets/hero-sensory.svg" alt="Vestibular Swing Practice" loading="lazy">
+              <div class="marquee-item__info">
+                <span class="marquee-item__pill">Sensory Gym</span>
+                <p class="marquee-item__text">Vestibular Swing &amp; Equilibrium</p>
+              </div>
+            </div>
+            <div class="marquee-item" data-category="motor">
+              <img src="assets/hero-care.svg" alt="Fine Motor Dexterity Practice" loading="lazy">
+              <div class="marquee-item__info">
+                <span class="marquee-item__pill">Fine Motor</span>
+                <p class="marquee-item__text">Pegboards &amp; Pincer Grip Play</p>
+              </div>
+            </div>
+            <div class="marquee-item marquee-item--lime" data-category="speech">
+              <img src="assets/hero-speech.svg" alt="Phonological Clarity Training" loading="lazy">
+              <div class="marquee-item__info">
+                <span class="marquee-item__pill">Speech Pod</span>
+                <p class="marquee-item__text">Sound Modeling &amp; Articulation</p>
+              </div>
+            </div>
+            <div class="marquee-item" data-category="early">
+              <img src="assets/therapy-ei.svg" alt="Early Infant Tracking" loading="lazy">
+              <div class="marquee-item__info">
+                <span class="marquee-item__pill">Early Intervention</span>
+                <p class="marquee-item__text">Visual Tracking &amp; Milestones</p>
+              </div>
+            </div>
+            <div class="marquee-item marquee-item--blue" data-category="motor">
+              <img src="assets/therapy-ot.svg" alt="Postural Balance & Core Tone" loading="lazy">
+              <div class="marquee-item__info">
+                <span class="marquee-item__pill">OT Core</span>
+                <p class="marquee-item__text">Balance Beam &amp; Spatial Awareness</p>
+              </div>
+            </div>
+            <div class="marquee-item" data-category="early">
+              <img src="assets/therapy-se.svg" alt="School Readiness" loading="lazy">
+              <div class="marquee-item__info">
+                <span class="marquee-item__pill">School Readiness</span>
+                <p class="marquee-item__text">Task Sequencing &amp; Circle Time</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO SHOWCASE 1: THERAPY IN ACTION -->
     <section class="section gallery-video-section">
       <div class="container">
-        <div class="gallery-video-card reveal">
-          <div class="gallery-video__content">
-            <h3 class="gallery-video__title">Therapy in Action</h3>
-            <p class="gallery-video__desc">Watch how our therapists work with children to build skills through
-              play-based learning.</p>
-          </div>
-          <button class="gallery-video__play" aria-label="Play video" data-video="therapy-video-1">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
-              <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2" />
-              <path d="M10 8l6 4-6 4V8z" />
-            </svg>
-            Watch
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- MARQUEE ROW 2 - Right to Left -->
-    <section class="gallery-marquee">
-      <div class="marquee-track marquee-track--right">
-        <div class="marquee-content">
-          <div class="marquee-item">
-            <img src="assets/hero-speech.svg" alt="Speech session">
-          </div>
-          <div class="marquee-item marquee-item--lime">
-            <img src="assets/hero-sensory.svg" alt="Sensory play">
-          </div>
-          <div class="marquee-item">
-            <img src="assets/hero-care.svg" alt="Care moment">
-          </div>
-          <div class="marquee-item marquee-item--blue">
-            <img src="assets/hero-speech.svg" alt="Language therapy">
-          </div>
-          <div class="marquee-item">
-            <img src="assets/hero-sensory.svg" alt="Motor skills">
-          </div>
-          <div class="marquee-item marquee-item--lime">
-            <img src="assets/hero-care.svg" alt="Child development">
-          </div>
-          <!-- Duplicate for seamless loop -->
-          <div class="marquee-item">
-            <img src="assets/hero-speech.svg" alt="Speech session">
-          </div>
-          <div class="marquee-item marquee-item--lime">
-            <img src="assets/hero-sensory.svg" alt="Sensory play">
-          </div>
-          <div class="marquee-item">
-            <img src="assets/hero-care.svg" alt="Care moment">
-          </div>
-          <div class="marquee-item marquee-item--blue">
-            <img src="assets/hero-speech.svg" alt="Language therapy">
-          </div>
-          <div class="marquee-item">
-            <img src="assets/hero-sensory.svg" alt="Motor skills">
-          </div>
-          <div class="marquee-item marquee-item--lime">
-            <img src="assets/hero-care.svg" alt="Child development">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- VIDEO SECTION 2 -->
-    <section class="section gallery-video-section">
-      <div class="container">
-        <div class="gallery-video-card gallery-video-card--alt reveal">
-          <div class="gallery-video__content">
-            <h3 class="gallery-video__title">Parent Testimonials</h3>
-            <p class="gallery-video__desc">Hear from families about their journey with Suja's Child Development Centre.
+        <div class="gallery-feature-card reveal">
+          <div class="gallery-feature-card__glow" aria-hidden="true"></div>
+          <div class="gallery-feature-card__content">
+            <span class="gallery-feature-card__badge">Centre Video Spotlight</span>
+            <h3 class="gallery-feature-card__title">Therapy in Action: Evidence in Every Session</h3>
+            <p class="gallery-feature-card__desc">
+              Watch how our occupational and speech therapists turn evidence-based exercises into engaging play routines
+              that build attention span, bilateral coordination, and joyful self-expression.
             </p>
+            <div class="gallery-feature-card__stats">
+              <div class="gfc-stat">
+                <span class="gfc-stat__val">1:1</span>
+                <span class="gfc-stat__lbl">Individualized Attention</span>
+              </div>
+              <div class="gfc-stat">
+                <span class="gfc-stat__val">100%</span>
+                <span class="gfc-stat__lbl">Child-Led Play Activities</span>
+              </div>
+            </div>
           </div>
-          <button class="gallery-video__play" aria-label="Play video" data-video="therapy-video-2">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
-              <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2" />
-              <path d="M10 8l6 4-6 4V8z" />
-            </svg>
-            Watch
-          </button>
+          <div class="gallery-feature-card__action">
+            <button class="gallery-video__play-v2" aria-label="Watch Therapy in Action video"
+              data-video="therapy-video-1">
+              <span class="play-btn-circle">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </span>
+              <span class="play-btn-label">
+                <strong>Watch Session Walkthrough</strong>
+                <small>2 min video tour</small>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE ROW 2 - Stream 2: Communication, Confidence & Social Connection -->
+    <section class="gallery-marquee-section">
+      <div class="gallery-marquee-header container">
+        <span class="gallery-marquee-eyebrow">Gallery Stream 02</span>
+        <h2 class="gallery-marquee-heading">Communication, Social Interaction &amp; Focus</h2>
+      </div>
+      <div class="gallery-marquee">
+        <div class="marquee-track marquee-track--right">
+          <div class="marquee-content">
+            <div class="marquee-item" data-category="speech">
+              <img src="assets/therapy-speech.svg" alt="Expressive Language Stimulation" loading="lazy">
+              <div class="marquee-item__info">
+                <span class="marquee-item__pill">Speech Pod</span>
+                <p class="marquee-item__text">Expressive Vocabulary &amp; Phonics</p>
+              </div>
+            </div>
+            <div class="marquee-item marquee-item--lime" data-category="sensory">
+              <img src="assets/hero-sensory.svg" alt="Tactile Texture Wall" loading="lazy">
+              <div class="marquee-item__info">
+                <span class="marquee-item__pill">Sensory Gym</span>
+                <p class="marquee-item__text">Tactile Exploration &amp; Desensitization</p>
+              </div>
+            </div>
+            <div class="marquee-item" data-category="motor">
+              <img src="assets/hero-care.svg" alt="Postural Alignment & Seating" loading="lazy">
+              <div class="marquee-item__info">
+                <span class="marquee-item__pill">Motor &amp; Play</span>
+                <p class="marquee-item__text">Core Tone &amp; Ergonomic Posture</p>
+              </div>
+            </div>
+            <div class="marquee-item marquee-item--blue" data-category="speech">
+              <img src="assets/hero-speech.svg" alt="AAC & Picture Communication" loading="lazy">
+              <div class="marquee-item__info">
+                <span class="marquee-item__pill">Communication</span>
+                <p class="marquee-item__text">PECS &amp; Visual Symbol Scheduling</p>
+              </div>
+            </div>
+            <div class="marquee-item" data-category="early">
+              <img src="assets/therapy-ei.svg" alt="Joint Attention Developmental Games" loading="lazy">
+              <div class="marquee-item__info">
+                <span class="marquee-item__pill">Early Intervention</span>
+                <p class="marquee-item__text">Joint Attention &amp; Turn-Taking</p>
+              </div>
+            </div>
+            <div class="marquee-item marquee-item--lime" data-category="motor">
+              <img src="assets/therapy-ot.svg" alt="Bilateral Coordination Exercise" loading="lazy">
+              <div class="marquee-item__info">
+                <span class="marquee-item__pill">Motor &amp; Play</span>
+                <p class="marquee-item__text">Scissor Skills &amp; Hand-Eye Coordination</p>
+              </div>
+            </div>
+
+            <!-- Loop Duplicates for Marquee -->
+            <div class="marquee-item" data-category="speech">
+              <img src="assets/therapy-speech.svg" alt="Expressive Language Stimulation" loading="lazy">
+              <div class="marquee-item__info">
+                <span class="marquee-item__pill">Speech Pod</span>
+                <p class="marquee-item__text">Expressive Vocabulary &amp; Phonics</p>
+              </div>
+            </div>
+            <div class="marquee-item marquee-item--lime" data-category="sensory">
+              <img src="assets/hero-sensory.svg" alt="Tactile Texture Wall" loading="lazy">
+              <div class="marquee-item__info">
+                <span class="marquee-item__pill">Sensory Gym</span>
+                <p class="marquee-item__text">Tactile Exploration &amp; Desensitization</p>
+              </div>
+            </div>
+            <div class="marquee-item" data-category="motor">
+              <img src="assets/hero-care.svg" alt="Postural Alignment & Seating" loading="lazy">
+              <div class="marquee-item__info">
+                <span class="marquee-item__pill">Motor &amp; Play</span>
+                <p class="marquee-item__text">Core Tone &amp; Ergonomic Posture</p>
+              </div>
+            </div>
+            <div class="marquee-item marquee-item--blue" data-category="speech">
+              <img src="assets/hero-speech.svg" alt="AAC & Picture Communication" loading="lazy">
+              <div class="marquee-item__info">
+                <span class="marquee-item__pill">Communication</span>
+                <p class="marquee-item__text">PECS &amp; Visual Symbol Scheduling</p>
+              </div>
+            </div>
+            <div class="marquee-item" data-category="early">
+              <img src="assets/therapy-ei.svg" alt="Joint Attention Developmental Games" loading="lazy">
+              <div class="marquee-item__info">
+                <span class="marquee-item__pill">Early Intervention</span>
+                <p class="marquee-item__text">Joint Attention &amp; Turn-Taking</p>
+              </div>
+            </div>
+            <div class="marquee-item marquee-item--lime" data-category="motor">
+              <img src="assets/therapy-ot.svg" alt="Bilateral Coordination Exercise" loading="lazy">
+              <div class="marquee-item__info">
+                <span class="marquee-item__pill">Motor &amp; Play</span>
+                <p class="marquee-item__text">Scissor Skills &amp; Hand-Eye Coordination</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO SHOWCASE 2: PARENT VOICES -->
+    <section class="section gallery-video-section">
+      <div class="container">
+        <div class="gallery-feature-card gallery-feature-card--alt reveal">
+          <div class="gallery-feature-card__content">
+            <span class="gallery-feature-card__badge gallery-feature-card__badge--gold">Parent Journeys</span>
+            <h3 class="gallery-feature-card__title">Voices of Growth: Real Family Stories</h3>
+            <p class="gallery-feature-card__desc">
+              Listen to parents from Perumbakkam, Medavakkam, and Sholinganallur reflect on the breakthrough moments —
+              from their child’s first spoken sentence to confident classroom transitions.
+            </p>
+            <div class="gallery-feature-card__quote">
+              <p>“Within three months, my son went from zero eye contact to asking for his favourite toy with a smile.
+                The environment here makes every therapy hour feel like playtime.”</p>
+              <cite>— Priya S., Mother of a 4-year-old in Early Intervention</cite>
+            </div>
+          </div>
+          <div class="gallery-feature-card__action">
+            <button class="gallery-video__play-v2 gallery-video__play-v2--gold"
+              aria-label="Watch Parent Testimonials video" data-video="therapy-video-2">
+              <span class="play-btn-circle">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </span>
+              <span class="play-btn-label">
+                <strong>Hear Parent Stories</strong>
+                <small>3 min documentary</small>
+              </span>
+            </button>
+          </div>
         </div>
       </div>
     </section>

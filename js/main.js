@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initLightbox();
   initParallaxShapes();
   initHeroCardHover();
+  initGalleryFilter();
+  initStepsPopOnScroll();
 });
 
 /* ══════════════════════════════════════════════════════════
@@ -153,7 +155,7 @@ function initMobileNav() {
   if (closeBtn) closeBtn.addEventListener('click', closeNav);
 
   // Close on link click
-  mobileNav.querySelectorAll('.mobile-nav-link').forEach(link => {
+  mobileNav.querySelectorAll('.mobile-nav-link, .mobile-nav-sublink').forEach(link => {
     link.addEventListener('click', () => {
       setTimeout(closeNav, 100);
     });
@@ -167,7 +169,7 @@ function initMobileNav() {
   });
 
   // Close on CTA button click
-  mobileNav.querySelectorAll('.btn').forEach(btn => {
+  mobileNav.querySelectorAll('.btn, .mobile-nav__pill-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       setTimeout(closeNav, 100);
     });
@@ -510,6 +512,81 @@ function initHeroCardHover() {
       resetCard();
     });
   });
+}
+
+/* ══════════════════════════════════════════════════════════
+   GALLERY CATEGORY FILTER
+   ══════════════════════════════════════════════════════════ */
+function initGalleryFilter() {
+  const filterBtns = document.querySelectorAll('.gallery-filter-btn');
+  const marqueeItems = document.querySelectorAll('.marquee-item[data-category]');
+  if (!filterBtns.length) return;
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetCategory = btn.getAttribute('data-filter');
+
+      // Update active button state
+      filterBtns.forEach(b => {
+        b.classList.remove('is-active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      btn.classList.add('is-active');
+      btn.setAttribute('aria-selected', 'true');
+
+      // Filter or highlight marquee items
+      marqueeItems.forEach(item => {
+        const itemCat = item.getAttribute('data-category');
+        if (targetCategory === 'all' || itemCat === targetCategory) {
+          item.classList.remove('is-dimmed');
+          if (targetCategory !== 'all') {
+            item.classList.add('is-highlighted');
+          } else {
+            item.classList.remove('is-highlighted');
+          }
+        } else {
+          item.classList.add('is-dimmed');
+          item.classList.remove('is-highlighted');
+        }
+      });
+    });
+  });
+}
+
+/* ══════════════════════════════════════════════════════════
+   1 2 3 NUMBERS POP-IN ON SCROLL
+   ══════════════════════════════════════════════════════════ */
+function initStepsPopOnScroll() {
+  const container = document.querySelector('.steps-pop-container');
+  if (!container) return;
+
+  const chars = container.querySelectorAll('.step-pop-char');
+  if (!chars.length) return;
+
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    container.classList.add('is-visible');
+    chars.forEach(c => c.classList.add('is-popped'));
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        container.classList.add('is-visible');
+        chars.forEach((char, index) => {
+          setTimeout(() => {
+            char.classList.add('is-popped');
+          }, (index + 1) * 160);
+        });
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.18,
+    rootMargin: '0px 0px -40px 0px'
+  });
+
+  observer.observe(container);
 }
 
 /* ══════════════════════════════════════════════════════════

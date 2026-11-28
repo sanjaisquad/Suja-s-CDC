@@ -56,10 +56,10 @@
     </div>
   </header>
 
-  <!-- MOBILE NAV -->
+  <!-- MOBILE NAV (Inspired by Vision École Trilingue mobile menu) -->
   <div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Mobile navigation" aria-hidden="true">
     <div class="mobile-nav__header">
-      <a href="index.html" class="header__logo" aria-label="Home">
+      <a href="index.html" class="header__logo" aria-label="Suja's Child Development Centre Home">
         <div class="header__logo-badge">
           <img src="assets/logo.jpg" alt="" width="44" height="44">
         </div>
@@ -68,18 +68,70 @@
           <span class="header__logo-sub">Child Dev Centre</span>
         </div>
       </a>
-      <button class="mobile-nav__close" aria-label="Close menu">Close</button>
+      <button class="mobile-nav__close" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18"
+          aria-hidden="true">
+          <path d="M18 6L6 18M6 6l12 12" />
+        </svg>
+        <span>Close</span>
+      </button>
     </div>
-    <nav class="mobile-nav__body" aria-label="Mobile menu links">
-      <a href="index.html" class="mobile-nav-link">Home</a>
-      <a href="about.html" class="mobile-nav-link">About</a>
-      <a href="services.html" class="mobile-nav-link">Services</a>
-      <a href="gallery.html" class="mobile-nav-link">Gallery</a>
-      <a href="contact.html" class="mobile-nav-link">Contact</a>
-    </nav>
-    <div class="mobile-nav__footer">
-      <a href="contact.html" class="btn btn--primary" style="width:100%;">Book Consultation</a>
-      <a href="tel:+918682870313" class="btn btn--outline" style="width:100%;">Call +91 86828 70313</a>
+
+    <div class="mobile-nav__scroll-wrap">
+      <div class="mobile-nav__body">
+        <!-- Primary Monumental Links -->
+        <nav class="mobile-nav__primary" aria-label="Primary mobile links">
+          <a href="index.html" class="mobile-nav-link">Home</a>
+          <a href="about.html" class="mobile-nav-link">About Us</a>
+          <a href="services.html" class="mobile-nav-link">Our Services</a>
+          <a href="gallery.html" class="mobile-nav-link">Our Gallery</a>
+          <a href="contact.html" class="mobile-nav-link">Contact</a>
+        </nav>
+
+        <!-- Secondary Links -->
+        <nav class="mobile-nav__secondary" aria-label="Specialized therapy services">
+          <a href="services.html" class="mobile-nav-sublink">Occupational Therapy</a>
+          <a href="services.html" class="mobile-nav-sublink">Speech &amp; Oral Therapy</a>
+          <a href="services.html" class="mobile-nav-sublink">Early Intervention</a>
+          <a href="https://maps.app.goo.gl/KU3LuL8oiaaAWXEZA" target="_blank" rel="noopener noreferrer"
+            class="mobile-nav-sublink mobile-nav-sublink--external">
+            <span>Our Centre Location</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"
+              aria-hidden="true">
+              <path d="M7 17L17 7M17 7H7M17 7V17" />
+            </svg>
+          </a>
+        </nav>
+
+        <!-- CTA Action Pill -->
+        <div class="mobile-nav__actions">
+          <a href="contact.html" class="mobile-nav__pill-btn">Book Consultation</a>
+        </div>
+
+        <!-- Division Footnote Label -->
+        <div class="mobile-nav__division">
+          <span>OUR PEDIATRIC DIVISIONS</span>
+        </div>
+      </div>
+
+      <!-- Artistic Collage Backdrop Shapes -->
+      <div class="mobile-nav__shapes" aria-hidden="true">
+        <!-- Sky Blue Organic Scalloped Cloud -->
+        <svg class="mobile-nav__shape mobile-nav__shape--cloud" viewBox="0 0 200 200" fill="#CEE5F2">
+          <path
+            d="M100 18C118 18 132 30 135 46C151 42 168 50 175 66C182 82 175 99 161 108C174 118 179 136 171 151C163 166 145 173 130 167C125 183 110 193 93 191C76 189 63 176 61 160C45 164 28 155 22 139C16 123 23 106 37 97C24 87 19 69 27 54C35 39 53 32 68 38C74 25 86 18 100 18Z" />
+        </svg>
+
+        <!-- Large Pale Lime Circle Bubble -->
+        <svg class="mobile-nav__shape mobile-nav__shape--circle" viewBox="0 0 240 240" fill="#DDECAE">
+          <circle cx="120" cy="120" r="115" />
+        </svg>
+
+        <!-- Sharp Chartreuse Lime Triangle Wedge -->
+        <svg class="mobile-nav__shape mobile-nav__shape--triangle" viewBox="0 0 160 160" fill="#C4D600">
+          <polygon points="10,150 150,150 80,10" />
+        </svg>
+      </div>
     </div>
   </div>
 
@@ -91,27 +143,23 @@
         <!-- Left Column: Tagline & Display Title -->
         <div class="about-hero__left">
           <p class="about-hero__tagline">
-            Enabling children to develop language &amp; life skills that will be valuable throughout their lives.
+            Helping children build speech, motor skills, and confidence to thrive in school and everyday life.
           </p>
           <h1 class="about-hero__title">
-            Living Therapy to<br>
-            Learn Them<br>
+            Play, Learn &amp;<br>
+            Grow Together<br>
             Naturally
           </h1>
         </div>
 
-        <!-- Right Column: Visual Composition with Falling/Rotating "+" to "X" & Overlapping Photo Card -->
+        <!-- Right Column: Visual Composition with Rotating Organic Scalloped Cloud / Flower -->
         <div class="about-hero__visual">
-          <!-- The Blue Character that slowly falls as an upright "+" and turns into an "X" under gravity -->
-          <div class="about-hero__x-graphic" aria-hidden="true">
-            <svg viewBox="0 0 300 300" fill="#0098EA" xmlns="http://www.w3.org/2000/svg">
-              <path d="M100 0 h100 v100 h100 v100 h-100 v100 h-100 v-100 h-100 v-100 h100 Z" />
+          <!-- Sky Blue Organic Scalloped Cloud rotating like a flower -->
+          <div class="about-hero__cloud-graphic" aria-hidden="true">
+            <svg class="about-hero__cloud-svg" viewBox="0 0 200 200" fill="#0098EA" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M100 18C118 18 132 30 135 46C151 42 168 50 175 66C182 82 175 99 161 108C174 118 179 136 171 151C163 166 145 173 130 167C125 183 110 193 93 191C76 189 63 176 61 160C45 164 28 155 22 139C16 123 23 106 37 97C24 87 19 69 27 54C35 39 53 32 68 38C74 25 86 18 100 18Z" />
             </svg>
-          </div>
-
-          <!-- Overlapping Photo Card -->
-          <div class="about-hero__photo-card">
-            <img src="assets/Image_to_PDF_20261121_12_57_57_pdf_img1.jpg" alt="Children engaged in interactive developmental learning and therapy">
           </div>
         </div>
       </div>
@@ -123,7 +171,9 @@
         <div class="about-immersion-title-wrap">
           <h2 class="about-immersion-title">
             <span class="block">Hol<em class="title-slant-i">i</em>stic</span>
-            <span class="block">Devel<span class="title-arrow-mark"><svg viewBox="0 0 24 38" fill="#00A3E1"><path d="M4 14 L12 2 L20 14 L16 14 L16 38 L8 38 L8 14 Z"/></svg></span>pment</span>
+            <span class="block">Devel<span class="title-arrow-mark"><svg viewBox="0 0 24 38" fill="#00A3E1">
+                  <path d="M4 14 L12 2 L20 14 L16 14 L16 38 L8 38 L8 14 Z" />
+                </svg></span>pment</span>
           </h2>
         </div>
 
@@ -131,10 +181,12 @@
           <!-- Left Column: Mission Description -->
           <div class="about-immersion__text reveal">
             <p class="about-immersion__lead">
-              Suja's Child Development Centre stands out as the premier pediatric therapy centre in Chennai. Our shared goal is to offer children aged 0 to 12 a comprehensive, multidisciplinary pathway from an early age, fostering seamless and natural development.
+              Every child develops in their own unique way. At Suja's Child Development Centre in Perumbakkam, Chennai,
+              we offer warm, play-based therapy for children aged 0 to 12 to help them grow and thrive.
             </p>
             <p class="about-immersion__body">
-              Through evidence-based occupational therapy, speech training, and sensory integration, our therapists guide children to achieve foundational developmental milestones while building confidence and daily independence.
+              Our centre brings sensory gym play, speech training, motor coordination, and behavioral guidance together
+              under one roof, making therapy enjoyable, engaging, and meaningful for your child.
             </p>
           </div>
 
@@ -142,22 +194,25 @@
           <div class="about-shapes-cluster reveal">
             <!-- Shape 1: Top Blue Scalloped Card -->
             <div class="organic-card organic-card--blue">
-              <h3 class="organic-card__title">Lasting Achievements</h3>
-              <p class="organic-card__desc">A majority of children we support successfully transition into mainstream classrooms with confidence and independence.</p>
+              <h3 class="organic-card__title">Lasting Progress</h3>
+              <p class="organic-card__desc">Children build the focus, communication, and independence needed for
+                mainstream school.</p>
             </div>
 
             <!-- Bottom Row: Apple Shape + Lime Shape -->
             <div class="about-shapes-cluster__bottom-row">
               <!-- Shape 2: Pale Apple Shape -->
               <div class="organic-card organic-card--apple">
-                <h3 class="organic-card__title">Over 500+ Hours of Sensory Practice</h3>
-                <p class="organic-card__desc">Structured play gym routines designed to build sitting tolerance, motor planning, and classroom readiness.</p>
+                <h3 class="organic-card__title">Active Sensory Gym</h3>
+                <p class="organic-card__desc">Swings, climbing, and balance play that help kids stay calm, attentive,
+                  and coordinated.</p>
               </div>
 
               <!-- Shape 3: Vibrant Lime Cloud Shape -->
               <div class="organic-card organic-card--lime">
-                <h3 class="organic-card__title">Certified Specialist Care</h3>
-                <p class="organic-card__desc">Individualized therapy plans led by Dr. J. Jansirani, B.O.T., addressing autism, speech, and motor milestones.</p>
+                <h3 class="organic-card__title">Customized Care</h3>
+                <p class="organic-card__desc">One-on-one therapy tailored to your child's speech, motor, and learning
+                  goals.</p>
               </div>
             </div>
           </div>
@@ -168,7 +223,8 @@
     <!-- 3. SECTION 3: "Our Approach" (Pale Sage Green with Stepped Inverted Pyramid Backdrop) -->
     <section class="about-approach-section">
       <!-- Stepped Geometric Backdrop -->
-      <svg class="approach-stepped-backdrop" viewBox="0 0 1000 600" preserveAspectRatio="none" fill="#F7F5EE" aria-hidden="true">
+      <svg class="approach-stepped-backdrop" viewBox="0 0 1000 600" preserveAspectRatio="none" fill="#F7F5EE"
+        aria-hidden="true">
         <polygon points="40,0 960,0 870,150 130,150 790,300 210,300 710,450 290,450 630,600 370,600" />
       </svg>
 
@@ -182,13 +238,17 @@
           <div class="about-approach__media reveal">
             <div class="approach-preview-card">
               <div class="approach-preview-card__visual">
-                <img src="assets/hero-sensory.svg" alt="Sensory play gym and motor planning therapy">
+                <img src="assets/Image_to_PDF_20261121_12_57_57_pdf_img1.jpg"
+                  alt="Dr. J. Jansirani, B.O.T. - Founder & Lead Pediatric Occupational Therapist at Suja's Child Development Centre"
+                  style="width: 100%; height: 100%; object-fit: cover; border-radius: 16px;">
               </div>
               <div class="approach-preview-card__footer">
-                <span class="approach-preview-card__tag">Sensory Gym &amp; Motor Therapy</span>
-                <a href="services.html" class="approach-preview-card__btn">
-                  <span>Explore</span>
-                  <svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M8 5v14l11-7z"/></svg>
+                <span class="approach-preview-card__tag">Dr. J. Jansirani, B.O.T. • Founder</span>
+                <a href="contact.html" class="approach-preview-card__btn">
+                  <span>Consult</span>
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
                 </a>
               </div>
             </div>
@@ -198,25 +258,44 @@
           <div class="about-approach__text reveal">
             <div class="approach-info-text">
               <p class="approach-info-text__lead">
-                The Suja's Child Development Centre adopts a holistic, play-based therapeutic approach that is unparalleled across Chennai.
+                Our therapy programs are led by Founder &amp; Lead Pediatric Occupational Therapist Dr. J. Jansirani,
+                B.O.T.
               </p>
               <p class="approach-info-text__body">
-                Beyond developmental therapy, our centre focuses on balanced growth, blending sensory regulation, speech fluency, and motor confidence in a family-oriented, caring environment.
+                With a <strong>Bachelor of Occupational Therapy (B.O.T.)</strong> and advanced clinical training in
+                child development, Dr. Jansirani brings rich hands-on experience in Chennai treating Autism, ADHD,
+                Cerebral Palsy, and developmental delays.<br><br>
+                Guided by our philosophy — <em>"Support • Guide • Build Skills • Grow"</em> — she combines
+                <strong>Sensory Integration (SI)</strong>, <strong>Neuro-Developmental Therapy (NDT)</strong>,
+                <strong>Oral Stimulation</strong>, and <strong>Behavior Guidance</strong> into personalized,
+                step-by-step sessions so every child can thrive.
               </p>
 
               <div class="approach-docs-block">
-                <span class="approach-docs-label">DOCUMENTATION</span>
+                <span class="approach-docs-label">CLINICAL THERAPY DOMAINS</span>
                 <a href="services.html" class="approach-doc-item">
-                  <span>Occupational Therapy &amp; Sensory Gym Services</span>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                  <span>Sensory Integration &amp; Occupational Therapy</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                    <path d="M7 17L17 7M17 7H7M17 7V17" />
+                  </svg>
                 </a>
                 <a href="services.html" class="approach-doc-item">
-                  <span>Speech Stimulation &amp; Fluency Pathways</span>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                  <span>Neuro-Developmental Therapy (NDT) &amp; Motor Skills</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                    <path d="M7 17L17 7M17 7H7M17 7V17" />
+                  </svg>
+                </a>
+                <a href="services.html" class="approach-doc-item">
+                  <span>Speech, Oral Stimulation &amp; Behavior Support</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                    <path d="M7 17L17 7M17 7H7M17 7V17" />
+                  </svg>
                 </a>
                 <a href="contact.html" class="approach-doc-item">
-                  <span>Why Choose Suja's Child Dev Centre</span>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                  <span>Book Consultation with Dr. Jansirani</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                    <path d="M7 17L17 7M17 7H7M17 7V17" />
+                  </svg>
                 </a>
               </div>
             </div>
@@ -234,12 +313,15 @@
             <svg viewBox="0 0 380 380" fill="none" xmlns="http://www.w3.org/2000/svg">
               <!-- Giant tilted blue 'ñ' -->
               <g transform="translate(35, 25) rotate(-10)">
-                <path d="M30,22 Q60,10 90,24 Q105,28 115,20" stroke="#00A3E1" stroke-width="18" stroke-linecap="round" fill="none" />
-                <path d="M35,50 L35,160 M35,80 C60,45 125,45 125,90 L125,160" stroke="#00A3E1" stroke-width="28" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                <path d="M30,22 Q60,10 90,24 Q105,28 115,20" stroke="#00A3E1" stroke-width="18" stroke-linecap="round"
+                  fill="none" />
+                <path d="M35,50 L35,160 M35,80 C60,45 125,45 125,90 L125,160" stroke="#00A3E1" stroke-width="28"
+                  stroke-linecap="round" stroke-linejoin="round" fill="none" />
               </g>
               <!-- Sky-blue soft organic arch and dot -->
               <circle cx="280" cy="115" r="38" fill="#CEE5F2" />
-              <path d="M195,100 Q240,55 280,100" stroke="#CEE5F2" stroke-width="26" stroke-linecap="round" fill="none" />
+              <path d="M195,100 Q240,55 280,100" stroke="#CEE5F2" stroke-width="26" stroke-linecap="round"
+                fill="none" />
               <!-- Giant lime green interlocking loops 'oe' -->
               <g transform="translate(65, 170)">
                 <circle cx="95" cy="85" r="65" stroke="#C4D600" stroke-width="32" fill="none" />
@@ -257,37 +339,38 @@
             </h2>
 
             <p class="benefits-lead-text">
-              The advantages of beginning developmental therapy at a young age go far beyond meeting immediate clinical milestones.
+              Early support during the first 12 years helps children build vital lifelong abilities.
             </p>
             <p class="benefits-body-text">
-              When children engage in early sensory, speech, and occupational routines, their brains form strong neural pathways that foster cognitive adaptability, emotional regulation, and communication for life.
+              When therapy begins early, children learn faster and adapt naturally. Simple sensory, speech, and movement
+              routines lay a strong foundation for learning, school readiness, and self-confidence.
             </p>
 
-            <h3 class="benefits-subtitle">The main benefits include:</h3>
+            <h3 class="benefits-subtitle">Key benefits for your child:</h3>
             <ul class="benefits-checklist">
               <li>
                 <span class="benefits-check-icon">✓</span>
-                <span>Improved sitting tolerance and classroom attention span</span>
+                <span>Better attention span, sitting tolerance, and classroom focus</span>
               </li>
               <li>
                 <span class="benefits-check-icon">✓</span>
-                <span>Confident speech articulation and vocabulary expansion</span>
+                <span>Clearer speech, word clarity, and confident talking</span>
               </li>
               <li>
                 <span class="benefits-check-icon">✓</span>
-                <span>Enhanced fine motor grip, handwriting, and self-care skills</span>
+                <span>Neater handwriting, pencil grasp, and daily self-care skills</span>
               </li>
               <li>
                 <span class="benefits-check-icon">✓</span>
-                <span>Active sensory regulation and reduced emotional meltdowns</span>
+                <span>Calmer response to bright lights, loud sounds, and new textures</span>
               </li>
               <li>
                 <span class="benefits-check-icon">✓</span>
-                <span>Constructive management of hyperactivity and impulsivity</span>
+                <span>Helpful behavior guidance to manage restlessness and tantrums</span>
               </li>
               <li>
                 <span class="benefits-check-icon">✓</span>
-                <span>Seamless transition into mainstream school environments</span>
+                <span>Smooth, joyful transition into mainstream school and friendships</span>
               </li>
             </ul>
           </div>
